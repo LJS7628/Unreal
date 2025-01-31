@@ -33,5 +33,6 @@ private:
 
 	void OnRun();
 	void OffRun();
+	void OnJump();
 
 };

@@ -44,6 +44,8 @@ void ACPlayer::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
 
 	PlayerInputComponent->BindAction("Run", EInputEvent::IE_Pressed, this, &ACPlayer::OnRun);
 	PlayerInputComponent->BindAction("Run", EInputEvent::IE_Released, this, &ACPlayer::OffRun);
+
+	PlayerInputComponent->BindAction("Jumping", EInputEvent::IE_Pressed, this, &ACPlayer::OnJump);
 }
 
 // 전후 이동
@@ -88,3 +90,8 @@ void ACPlayer::OffRun()
 	GetCharacterMovement()->MaxWalkSpeed = 400;
 }
 
+void ACPlayer::OnJump()
+{
+	GetCharacterMovement()->JumpZVelocity = 800.f;
+	Jump();
+}
