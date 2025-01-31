@@ -11,6 +11,7 @@
     <None Include="..\..\Source\MyPortfolioEditor.Target.cs">
       <Filter>Source</Filter>
     </None>
+    <None Include="..\..\.vsconfig" />
     <Filter Include="Config">
       <UniqueIdentifier>{FA535FFB-25E1-3D20-B416-52F9BE21E06E}</UniqueIdentifier>
     </Filter>
@@ -29,6 +30,27 @@
     <Filter Include="Source\MyPortfolio">
       <UniqueIdentifier>{BE2857DD-C070-3EED-BE0B-631E8F7C41C7}</UniqueIdentifier>
     </Filter>
+    <ClCompile Include="..\..\Source\MyPortfolio\CAnimInstance.cpp">
+      <Filter>Source\MyPortfolio</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\MyPortfolio\CAnimInstance.h">
+      <Filter>Source\MyPortfolio</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\MyPortfolio\CGameMode.cpp">
+      <Filter>Source\MyPortfolio</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\MyPortfolio\CGameMode.h">
+      <Filter>Source\MyPortfolio</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\MyPortfolio\CPlayer.cpp">
+      <Filter>Source\MyPortfolio</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\MyPortfolio\CPlayer.h">
+      <Filter>Source\MyPortfolio</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\MyPortfolio\Global.h">
+      <Filter>Source\MyPortfolio</Filter>
+    </ClInclude>
     <None Include="..\..\Source\MyPortfolio\MyPortfolio.Build.cs">
       <Filter>Source\MyPortfolio</Filter>
     </None>
@@ -37,6 +59,21 @@
     </ClCompile>
     <ClInclude Include="..\..\Source\MyPortfolio\MyPortfolio.h">
       <Filter>Source\MyPortfolio</Filter>
+    </ClInclude>
+    <Filter Include="Source\MyPortfolio\Utilities">
+      <UniqueIdentifier>{C1ACBC1A-2D53-3BD3-BBC0-394A50235245}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\MyPortfolio\Utilities\CHelpers.cpp">
+      <Filter>Source\MyPortfolio\Utilities</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\MyPortfolio\Utilities\CHelpers.h">
+      <Filter>Source\MyPortfolio\Utilities</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\MyPortfolio\Utilities\CLog.cpp">
+      <Filter>Source\MyPortfolio\Utilities</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\MyPortfolio\Utilities\CLog.h">
+      <Filter>Source\MyPortfolio\Utilities</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
