@@ -41,6 +41,12 @@ public:
 		InActor->SetRootComponent(*OutComponent);
 	}
 
+	template<typename T> //ActorComponent를 편하게 추가하기 위함
+	static void CreateActorComponent(AActor* InActor, T** OutComponent, FName InName)
+	{
+		*OutComponent = InActor->CreateDefaultSubobject<T>(InName);
+	}
+
 	template<typename T> //생성자에서 에셋을 연결해야 할 때 가져오는 기능
 	static void GetAsset(T** OutObject, FString InPath)
 	{

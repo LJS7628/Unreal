@@ -30,22 +30,10 @@
     <Filter Include="Source\MyPortfolio">
       <UniqueIdentifier>{BE2857DD-C070-3EED-BE0B-631E8F7C41C7}</UniqueIdentifier>
     </Filter>
-    <ClCompile Include="..\..\Source\MyPortfolio\CAnimInstance.cpp">
-      <Filter>Source\MyPortfolio</Filter>
-    </ClCompile>
-    <ClInclude Include="..\..\Source\MyPortfolio\CAnimInstance.h">
-      <Filter>Source\MyPortfolio</Filter>
-    </ClInclude>
     <ClCompile Include="..\..\Source\MyPortfolio\CGameMode.cpp">
       <Filter>Source\MyPortfolio</Filter>
     </ClCompile>
     <ClInclude Include="..\..\Source\MyPortfolio\CGameMode.h">
-      <Filter>Source\MyPortfolio</Filter>
-    </ClInclude>
-    <ClCompile Include="..\..\Source\MyPortfolio\CPlayer.cpp">
-      <Filter>Source\MyPortfolio</Filter>
-    </ClCompile>
-    <ClInclude Include="..\..\Source\MyPortfolio\CPlayer.h">
       <Filter>Source\MyPortfolio</Filter>
     </ClInclude>
     <ClInclude Include="..\..\Source\MyPortfolio\Global.h">
@@ -59,6 +47,30 @@
     </ClCompile>
     <ClInclude Include="..\..\Source\MyPortfolio\MyPortfolio.h">
       <Filter>Source\MyPortfolio</Filter>
+    </ClInclude>
+    <Filter Include="Source\MyPortfolio\Characters">
+      <UniqueIdentifier>{71756EB4-5967-30DA-89E4-1D8A2740E08C}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\MyPortfolio\Characters\CAnimInstance.cpp">
+      <Filter>Source\MyPortfolio\Characters</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\MyPortfolio\Characters\CAnimInstance.h">
+      <Filter>Source\MyPortfolio\Characters</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\MyPortfolio\Characters\CPlayer.cpp">
+      <Filter>Source\MyPortfolio\Characters</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\MyPortfolio\Characters\CPlayer.h">
+      <Filter>Source\MyPortfolio\Characters</Filter>
+    </ClInclude>
+    <Filter Include="Source\MyPortfolio\Components">
+      <UniqueIdentifier>{04CEF9F2-E057-35EF-B02C-2103B7367564}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\MyPortfolio\Components\CStateComponent.cpp">
+      <Filter>Source\MyPortfolio\Components</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\MyPortfolio\Components\CStateComponent.h">
+      <Filter>Source\MyPortfolio\Components</Filter>
     </ClInclude>
     <Filter Include="Source\MyPortfolio\Utilities">
       <UniqueIdentifier>{C1ACBC1A-2D53-3BD3-BBC0-394A50235245}</UniqueIdentifier>
