@@ -17,10 +17,10 @@ protected:
 	float Direction; //이동 방향
 
 	UPROPERTY(BlueprintReadOnly, EditAnywhere, Category = "Animation")
-	float Pitch;
+	float Pitch; //조준 각도
 
 	UPROPERTY(BlueprintReadOnly, EditAnywhere, Category = "Animation")
-	bool bFalling;
+	bool bFalling; //점프 가능 여부 체크
 
 public:
 	void NativeBeginPlay() override;

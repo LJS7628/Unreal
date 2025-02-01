@@ -98,7 +98,13 @@ void EmptyLinkFunctionForGeneratedCodeCAnimInstance() {}
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UCAnimInstance_Statics::NewProp_bFalling_MetaData[] = {
 		{ "Category", "Animation" },
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "//\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd \xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\n" },
+#endif
 		{ "ModuleRelativePath", "Characters/CAnimInstance.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd \xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd" },
+#endif
 	};
 #endif
 	void Z_Construct_UClass_UCAnimInstance_Statics::NewProp_bFalling_SetBit(void* Obj)
@@ -151,9 +157,9 @@ void EmptyLinkFunctionForGeneratedCodeCAnimInstance() {}
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_MyPortfolio_Source_MyPortfolio_Characters_CAnimInstance_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_UCAnimInstance, UCAnimInstance::StaticClass, TEXT("UCAnimInstance"), &Z_Registration_Info_UClass_UCAnimInstance, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UCAnimInstance), 4281072789U) },
+		{ Z_Construct_UClass_UCAnimInstance, UCAnimInstance::StaticClass, TEXT("UCAnimInstance"), &Z_Registration_Info_UClass_UCAnimInstance, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UCAnimInstance), 604088813U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_MyPortfolio_Source_MyPortfolio_Characters_CAnimInstance_h_4039182061(TEXT("/Script/MyPortfolio"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_MyPortfolio_Source_MyPortfolio_Characters_CAnimInstance_h_4049089974(TEXT("/Script/MyPortfolio"),
 		Z_CompiledInDeferFile_FID_MyPortfolio_Source_MyPortfolio_Characters_CAnimInstance_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_MyPortfolio_Source_MyPortfolio_Characters_CAnimInstance_h_Statics::ClassInfo),
 		nullptr, 0,
 		nullptr, 0);

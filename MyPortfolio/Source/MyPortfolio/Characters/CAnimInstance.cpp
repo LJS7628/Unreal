@@ -3,7 +3,7 @@
 
 #include "../Characters/CPlayer.h"
 #include "GameFramework/Character.h"
-#include "GameFramework/CharacterMovementComponent.h"
+#include "GameFramework/CharacterMovementComponent.h"  //캐릭터 이동 관리 Component
 
 void UCAnimInstance::NativeBeginPlay()
 {

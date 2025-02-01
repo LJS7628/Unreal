@@ -1,21 +1,28 @@
 #include "../Characters/CPlayer.h"
 #include "../Global.h"
+
 #include "GameFramework/SpringArmComponent.h" //스프링 암
-#include "GameFramework/CharacterMovementComponent.h" //캐릭터 이동
 #include "Camera/CameraComponent.h" //카메라
+
 #include "Components/CapsuleComponent.h" //캡슐 컴포넌트
 //#include "Components/InputComponent.h"
 #include "Components/SkeletalMeshComponent.h" //스켈레탈 메쉬
 
 #include "../Characters/CAnimInstance.h" //캐릭터 애니메이션
-#include "../Components/CStateComponent.h" //캐릭터 상태 관리
+#include "../Components/CStateComponent.h" //캐릭터 상태 관리 Component
+#include "GameFramework/CharacterMovementComponent.h" //캐릭터 이동
+#include "../Components/CMovementComponent.h" //캐릭터 이동 관리 Component
 
 
 ACPlayer::ACPlayer()
 {
+	//Camera 연결
 	CHelpers::CreateComponent(this, &SpringArm, "SpringArm", GetCapsuleComponent());
 	CHelpers::CreateComponent(this, &Camera, "Camera", SpringArm);
+
+	//Component 연결
 	CHelpers::CreateActorComponent(this, &State, "State");
+	CHelpers::CreateActorComponent(this, &Movement, "Movement");
 
 	//메쉬 설정
 	USkeletalMesh* mesh;
@@ -43,66 +50,33 @@ void ACPlayer::BeginPlay()
 {
 	Super::BeginPlay();
 
-	GetController<APlayerController>()->PlayerCameraManager->ViewPitchMin = PitchAngle.X;
-	GetController<APlayerController>()->PlayerCameraManager->ViewPitchMax = PitchAngle.Y;
-
+	//State Delegate 와 함수 연결
+	State->OnStateTypeChanged.AddDynamic(this, &ACPlayer::OnStateTypeChanged);
 }
 
 void ACPlayer::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
 {
 	Super::SetupPlayerInputComponent(PlayerInputComponent);
 
-	PlayerInputComponent->BindAxis("MoveForward", this, &ACPlayer::OnMoveForward);
-	PlayerInputComponent->BindAxis("MoveRight", this, &ACPlayer::OnMoveRight);
-	PlayerInputComponent->BindAxis("HorizontalLook", this, &ACPlayer::OnHorizontalLook);
-	PlayerInputComponent->BindAxis("VerticalLook", this, &ACPlayer::OnVerticalLook);
+	//걷기 이동
+	PlayerInputComponent->BindAxis("MoveForward", Movement, &UCMovementComponent::OnMoveForward);
+	PlayerInputComponent->BindAxis("MoveRight", Movement, &UCMovementComponent::OnMoveRight);
 
-	PlayerInputComponent->BindAction("Run", EInputEvent::IE_Pressed, this, &ACPlayer::OnRun);
-	PlayerInputComponent->BindAction("Run", EInputEvent::IE_Released, this, &ACPlayer::OffRun);
+	//카메라
+	PlayerInputComponent->BindAxis("HorizontalLook", Movement, &UCMovementComponent::OnHorizontalLook);
+	PlayerInputComponent->BindAxis("VerticalLook", Movement, &UCMovementComponent::OnVerticalLook);
 
+	//달리기
+	PlayerInputComponent->BindAction("Sprint", EInputEvent::IE_Pressed, Movement, &UCMovementComponent::OnSprint);
+	PlayerInputComponent->BindAction("Sprint", EInputEvent::IE_Released, Movement, &UCMovementComponent::OnRun);
+
+	//점프, 회피
 	PlayerInputComponent->BindAction("Jumping", EInputEvent::IE_Pressed, this, &ACPlayer::OnJump);
+	PlayerInputComponent->BindAction("Evade", EInputEvent::IE_Pressed, this, &ACPlayer::OnEvade);
 }
 
-// 전후 이동
-void ACPlayer::OnMoveForward(float InAxisValue)
+void ACPlayer::OnStateTypeChanged(EStateType InPrevType, EStateType InNewType)
 {
-	FRotator rotation = FRotator(0, GetControlRotation().Yaw, 0);
-	FVector direction = FQuat(rotation).GetForwardVector();
-
-	AddMovementInput(direction, InAxisValue);
-}
-
-// 좌우 이동
-void ACPlayer::OnMoveRight(float InAxisValue)
-{
-	FRotator rotation = FRotator(0, GetControlRotation().Yaw, 0);
-	FVector direction = FQuat(rotation).GetRightVector();
-
-	AddMovementInput(direction, InAxisValue);
-}
-
-// 마우스 수평 회전처리
-void ACPlayer::OnHorizontalLook(float InAxisValue)
-{
-	AddControllerYawInput(InAxisValue);
-}
-
-// 마우스 수직 회전 처리
-void ACPlayer::OnVerticalLook(float InAxisValue)
-{
-	AddControllerPitchInput(InAxisValue);
-}
-
-// 달리기
-void ACPlayer::OnRun()
-{
-	GetCharacterMovement()->MaxWalkSpeed = 600;
-}
-
-// 달리기 해제 : 걷기 속도 400으로 Rollback
-void ACPlayer::OffRun()
-{
-	GetCharacterMovement()->MaxWalkSpeed = 400;
 }
 
 // 점프
@@ -110,4 +84,15 @@ void ACPlayer::OnJump()
 {
 	GetCharacterMovement()->JumpZVelocity = 800.f;
 	Jump();
+}
+
+//회피
+void ACPlayer::OnEvade()
+{
+}
+
+//카메라 확대
+void ACPlayer::OnZoom(float InAxisValue)
+{
+
 }

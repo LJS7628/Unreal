@@ -8,11 +8,8 @@ UCLASS()
 class MYPORTFOLIO_API ACPlayer : public ACharacter
 {
 	GENERATED_BODY()
-	
-private:
-	UPROPERTY(EditDefaultsOnly,Category = "Camera")
-	FVector2D PitchAngle = FVector2D(-40, +40);
 
+//카메라
 private:
 	UPROPERTY(VisibleAnywhere)
 	class USpringArmComponent* SpringArm;
@@ -20,19 +17,20 @@ private:
 	UPROPERTY(VisibleAnywhere)
 	class UCameraComponent* Camera;
 
+//컴포넌트
 private:
 	UPROPERTY(VisibleAnywhere)
 	class UCStateComponent* State;
 
-private:
-	void OnMoveForward(float InAxisValue);
-	void OnMoveRight(float InAxisValue);
-	void OnHorizontalLook(float InAxisValue);
-	void OnVerticalLook(float InAxisValue);
+	UPROPERTY(VisibleAnywhere)
+	class UCMovementComponent* Movement;
 
-	void OnRun();
-	void OffRun();
+private:
 	void OnJump();
+	void OnEvade();
+
+private:
+	void OnZoom(float InAxisValue);
 
 public:
 	ACPlayer();
@@ -43,6 +41,9 @@ protected:
 public:	
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
 
-
+private:
+	//CStateComponent delegate 연결 함수
+	UFUNCTION()
+	void OnStateTypeChanged(EStateType InPrevType, EStateType InNewType);
 
 };

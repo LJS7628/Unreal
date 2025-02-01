@@ -66,6 +66,12 @@
     <Filter Include="Source\MyPortfolio\Components">
       <UniqueIdentifier>{04CEF9F2-E057-35EF-B02C-2103B7367564}</UniqueIdentifier>
     </Filter>
+    <ClCompile Include="..\..\Source\MyPortfolio\Components\CMovementComponent.cpp">
+      <Filter>Source\MyPortfolio\Components</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\MyPortfolio\Components\CMovementComponent.h">
+      <Filter>Source\MyPortfolio\Components</Filter>
+    </ClInclude>
     <ClCompile Include="..\..\Source\MyPortfolio\Components\CStateComponent.cpp">
       <Filter>Source\MyPortfolio\Components</Filter>
     </ClCompile>
