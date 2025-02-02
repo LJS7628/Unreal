@@ -98,3 +98,23 @@ void UCMovementComponent::Stop()
 	bCanMove = false;
 }
 
+void UCMovementComponent::EnableControlRotation()
+{
+	
+	OwnerCharacter->bUseControllerRotationYaw = true; 
+	OwnerCharacter->GetCharacterMovement()->bOrientRotationToMovement = false;
+}
+
+void UCMovementComponent::DisenableControlRotation()
+{
+	OwnerCharacter->bUseControllerRotationYaw =false; // 컨트롤러 Yaw회전 사용 X
+	OwnerCharacter->GetCharacterMovement()->bOrientRotationToMovement = true; //이동방향에 맞춰서 회전
+}
+
+void UCMovementComponent::BackStep()
+{
+	EnableControlRotation();
+
+	OwnerCharacter->PlayAnimMontage(BackStepMontage, BackStepMontage_PlayRate);
+}
+

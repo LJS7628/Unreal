@@ -78,6 +78,15 @@
     <ClInclude Include="..\..\Source\MyPortfolio\Components\CStateComponent.h">
       <Filter>Source\MyPortfolio\Components</Filter>
     </ClInclude>
+    <Filter Include="Source\MyPortfolio\Notifies">
+      <UniqueIdentifier>{41D3CC83-578C-3355-9DF8-D3B7A148A967}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\MyPortfolio\Notifies\CAnimNotify_EndState.cpp">
+      <Filter>Source\MyPortfolio\Notifies</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\MyPortfolio\Notifies\CAnimNotify_EndState.h">
+      <Filter>Source\MyPortfolio\Notifies</Filter>
+    </ClInclude>
     <Filter Include="Source\MyPortfolio\Utilities">
       <UniqueIdentifier>{C1ACBC1A-2D53-3BD3-BBC0-394A50235245}</UniqueIdentifier>
     </Filter>

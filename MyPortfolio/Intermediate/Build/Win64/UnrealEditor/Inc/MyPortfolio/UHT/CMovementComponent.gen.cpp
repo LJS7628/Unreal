@@ -11,6 +11,7 @@ void EmptyLinkFunctionForGeneratedCodeCMovementComponent() {}
 // Cross Module References
 	COREUOBJECT_API UScriptStruct* Z_Construct_UScriptStruct_FVector2D();
 	ENGINE_API UClass* Z_Construct_UClass_UActorComponent();
+	ENGINE_API UClass* Z_Construct_UClass_UAnimMontage_NoRegister();
 	MYPORTFOLIO_API UClass* Z_Construct_UClass_UCMovementComponent();
 	MYPORTFOLIO_API UClass* Z_Construct_UClass_UCMovementComponent_NoRegister();
 	MYPORTFOLIO_API UEnum* Z_Construct_UEnum_MyPortfolio_ESpeedType();
@@ -108,6 +109,14 @@ void EmptyLinkFunctionForGeneratedCodeCMovementComponent() {}
 		static const UECodeGen_Private::FMetaDataPairParam NewProp_VerticalLook_MetaData[];
 #endif
 		static const UECodeGen_Private::FFloatPropertyParams NewProp_VerticalLook;
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam NewProp_BackStepMontage_MetaData[];
+#endif
+		static const UECodeGen_Private::FObjectPropertyParams NewProp_BackStepMontage;
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam NewProp_BackStepMontage_PlayRate_MetaData[];
+#endif
+		static const UECodeGen_Private::FFloatPropertyParams NewProp_BackStepMontage_PlayRate;
 		static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 		static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
 		static const UECodeGen_Private::FClassParams ClassParams;
@@ -178,11 +187,39 @@ void EmptyLinkFunctionForGeneratedCodeCMovementComponent() {}
 	};
 #endif
 	const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_UCMovementComponent_Statics::NewProp_VerticalLook = { "VerticalLook", nullptr, (EPropertyFlags)0x0040000000010001, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UCMovementComponent, VerticalLook), METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_UCMovementComponent_Statics::NewProp_VerticalLook_MetaData), Z_Construct_UClass_UCMovementComponent_Statics::NewProp_VerticalLook_MetaData) };
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UCMovementComponent_Statics::NewProp_BackStepMontage_MetaData[] = {
+		{ "Category", "Evade" },
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "//Evade Montage\n" },
+#endif
+		{ "ModuleRelativePath", "Components/CMovementComponent.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "Evade Montage" },
+#endif
+	};
+#endif
+	const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UCMovementComponent_Statics::NewProp_BackStepMontage = { "BackStepMontage", nullptr, (EPropertyFlags)0x0040000000000001, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UCMovementComponent, BackStepMontage), Z_Construct_UClass_UAnimMontage_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_UCMovementComponent_Statics::NewProp_BackStepMontage_MetaData), Z_Construct_UClass_UCMovementComponent_Statics::NewProp_BackStepMontage_MetaData) };
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UCMovementComponent_Statics::NewProp_BackStepMontage_PlayRate_MetaData[] = {
+		{ "Category", "Evade" },
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "//Evade Animation \xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xd3\xb5\xef\xbf\xbd\n" },
+#endif
+		{ "ModuleRelativePath", "Components/CMovementComponent.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "Evade Animation \xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xd3\xb5\xef\xbf\xbd" },
+#endif
+	};
+#endif
+	const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_UCMovementComponent_Statics::NewProp_BackStepMontage_PlayRate = { "BackStepMontage_PlayRate", nullptr, (EPropertyFlags)0x0040000000000001, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UCMovementComponent, BackStepMontage_PlayRate), METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_UCMovementComponent_Statics::NewProp_BackStepMontage_PlayRate_MetaData), Z_Construct_UClass_UCMovementComponent_Statics::NewProp_BackStepMontage_PlayRate_MetaData) };
 	const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_UCMovementComponent_Statics::PropPointers[] = {
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UCMovementComponent_Statics::NewProp_Speed,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UCMovementComponent_Statics::NewProp_PitchAngle,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UCMovementComponent_Statics::NewProp_HorizontalLook,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UCMovementComponent_Statics::NewProp_VerticalLook,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UCMovementComponent_Statics::NewProp_BackStepMontage,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UCMovementComponent_Statics::NewProp_BackStepMontage_PlayRate,
 	};
 	const FCppClassTypeInfoStatic Z_Construct_UClass_UCMovementComponent_Statics::StaticCppClassTypeInfo = {
 		TCppClassTypeTraits<UCMovementComponent>::IsAbstract,
@@ -226,9 +263,9 @@ void EmptyLinkFunctionForGeneratedCodeCMovementComponent() {}
 		{ ESpeedType_StaticEnum, TEXT("ESpeedType"), &Z_Registration_Info_UEnum_ESpeedType, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 3349901852U) },
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_MyPortfolio_Source_MyPortfolio_Components_CMovementComponent_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_UCMovementComponent, UCMovementComponent::StaticClass, TEXT("UCMovementComponent"), &Z_Registration_Info_UClass_UCMovementComponent, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UCMovementComponent), 4181992848U) },
+		{ Z_Construct_UClass_UCMovementComponent, UCMovementComponent::StaticClass, TEXT("UCMovementComponent"), &Z_Registration_Info_UClass_UCMovementComponent, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UCMovementComponent), 3475528041U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_MyPortfolio_Source_MyPortfolio_Components_CMovementComponent_h_3269464534(TEXT("/Script/MyPortfolio"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_MyPortfolio_Source_MyPortfolio_Components_CMovementComponent_h_2783029906(TEXT("/Script/MyPortfolio"),
 		Z_CompiledInDeferFile_FID_MyPortfolio_Source_MyPortfolio_Components_CMovementComponent_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_MyPortfolio_Source_MyPortfolio_Components_CMovementComponent_h_Statics::ClassInfo),
 		nullptr, 0,
 		Z_CompiledInDeferFile_FID_MyPortfolio_Source_MyPortfolio_Components_CMovementComponent_h_Statics::EnumInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_MyPortfolio_Source_MyPortfolio_Components_CMovementComponent_h_Statics::EnumInfo));

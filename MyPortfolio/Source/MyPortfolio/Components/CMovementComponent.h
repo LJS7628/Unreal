@@ -35,6 +35,16 @@ private:
 	UPROPERTY(EditDefaultsOnly, Category = "Camera")
 	float VerticalLook = 45;
 
+	
+private:
+	//Evade Montage
+	UPROPERTY(EditAnywhere, Category = "Evade")
+	class UAnimMontage* BackStepMontage;
+
+	//Evade Animation 재생속도
+	UPROPERTY(EditAnywhere, Category = "Evade")
+	float BackStepMontage_PlayRate=1.25f;
+
 public:	
 	UCMovementComponent();
 
@@ -58,11 +68,24 @@ public:
 	void OnRun();
 	void OnWalk();
 
+public:
+//bCanMove Check 용
+	FORCEINLINE bool CanMove() { return bCanMove; }
+
 //bCanMove 설정
 public:
 	void Move();
 	void Stop();
 	
+public:
+	//무기 장착시 카메라 회전 사용
+	void EnableControlRotation();
+	//무기 해제시 카메라 회전 사용 해제
+	void DisenableControlRotation();
+
+public:
+	void BackStep();
+
 private:
 	class ACharacter* OwnerCharacter;
 

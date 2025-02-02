@@ -19,6 +19,10 @@ class MYPORTFOLIO_API UCStateComponent : public UActorComponent
 {
 	GENERATED_BODY()
 
+public:
+	// Idle State Check ¿ë
+	FORCEINLINE bool IsIdleMode() { return currentType == EStateType::Idle; }
+
 public:	
 
 	UCStateComponent();

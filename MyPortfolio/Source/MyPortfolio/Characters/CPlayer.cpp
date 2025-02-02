@@ -5,7 +5,7 @@
 #include "Camera/CameraComponent.h" //카메라
 
 #include "Components/CapsuleComponent.h" //캡슐 컴포넌트
-//#include "Components/InputComponent.h"
+#include "Components/InputComponent.h"  //Input 처리 컴포넌트
 #include "Components/SkeletalMeshComponent.h" //스켈레탈 메쉬
 
 #include "../Characters/CAnimInstance.h" //캐릭터 애니메이션
@@ -36,9 +36,8 @@ ACPlayer::ACPlayer()
 	CHelpers::GetClass<UCAnimInstance>(&animInstance, "/Script/Engine.AnimBlueprint'/Game/Characters/ABP_Character.ABP_Character_C'");
 	GetMesh()->SetAnimClass(animInstance);
 
-	bUseControllerRotationYaw = false;  //컨트롤러 Yaw회전 사용 X
-	GetCharacterMovement()->bOrientRotationToMovement = true; //이동방향에 맞춰서 회전
 	GetCharacterMovement()->MaxWalkSpeed = 400; //걷기 최대 속도 
+	GetCharacterMovement()->RotationRate = FRotator(0, 720, 0); //카메라 회전 2배
 
 	SpringArm->SetRelativeLocation(FVector(0, 0, 60));
 	SpringArm->TargetArmLength = 200;
@@ -52,6 +51,8 @@ void ACPlayer::BeginPlay()
 
 	//State Delegate 와 함수 연결
 	State->OnStateTypeChanged.AddDynamic(this, &ACPlayer::OnStateTypeChanged);
+
+	Movement->DisenableControlRotation();
 }
 
 void ACPlayer::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
@@ -77,7 +78,13 @@ void ACPlayer::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
 
 void ACPlayer::OnStateTypeChanged(EStateType InPrevType, EStateType InNewType)
 {
+	switch (InNewType) 
+	{
+		case EStateType::Evade : Movement->BackStep(); break;
+
+	}
 }
+
 
 // 점프
 void ACPlayer::OnJump()
@@ -89,6 +96,15 @@ void ACPlayer::OnJump()
 //회피
 void ACPlayer::OnEvade()
 {
+	//무기를 장착하지 않고
+	CheckFalse(State->IsIdleMode());
+	//움직일 수 있고
+	CheckFalse(Movement->CanMove());
+	//전방으로 움직이지 않을 때 실행 가능
+	CheckTrue(InputComponent->GetAxisValue("MoveForward") >= 0.0f);
+
+	State->SetEvadeMode();
+
 }
 
 //카메라 확대
