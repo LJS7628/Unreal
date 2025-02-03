@@ -25,7 +25,9 @@
             "c:\\program files\\epic games\\ue_5.3\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\kismetmathlibrary.generated.h",
             "c:\\program files\\epic games\\ue_5.3\\engine\\source\\runtime\\engine\\classes\\kismet\\kismetmathlibrary.inl",
             "d:\\unrealproject\\unreal\\myportfolio\\source\\myportfolio\\utilities\\clog.h",
-            "d:\\unrealproject\\unreal\\myportfolio\\source\\myportfolio\\utilities\\chelpers.h"
+            "d:\\unrealproject\\unreal\\myportfolio\\source\\myportfolio\\utilities\\chelpers.h",
+            "d:\\unrealproject\\unreal\\myportfolio\\source\\myportfolio\\interfaces\\istatable.h",
+            "d:\\unrealproject\\unreal\\myportfolio\\intermediate\\build\\win64\\unrealeditor\\inc\\myportfolio\\uht\\istatable.generated.h"
         ],
         "ImportedModules": [],
         "ImportedHeaderUnits": []

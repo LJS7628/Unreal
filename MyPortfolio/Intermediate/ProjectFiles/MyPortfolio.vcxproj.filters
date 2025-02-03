@@ -78,6 +78,15 @@
     <ClInclude Include="..\..\Source\MyPortfolio\Components\CStateComponent.h">
       <Filter>Source\MyPortfolio\Components</Filter>
     </ClInclude>
+    <Filter Include="Source\MyPortfolio\Interfaces">
+      <UniqueIdentifier>{FCADC6B4-EF33-3F19-9FEB-FAA8E9BBD291}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\MyPortfolio\Interfaces\IStatable.cpp">
+      <Filter>Source\MyPortfolio\Interfaces</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\MyPortfolio\Interfaces\IStatable.h">
+      <Filter>Source\MyPortfolio\Interfaces</Filter>
+    </ClInclude>
     <Filter Include="Source\MyPortfolio\Notifies">
       <UniqueIdentifier>{41D3CC83-578C-3355-9DF8-D3B7A148A967}</UniqueIdentifier>
     </Filter>

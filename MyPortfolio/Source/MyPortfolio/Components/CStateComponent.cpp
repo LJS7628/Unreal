@@ -19,27 +19,27 @@ void UCStateComponent::SetIdleMode()
 
 void UCStateComponent::SetEvadeMode()
 {
-	ChangeType(EStateType::Idle);
+	ChangeType(EStateType::Evade);
 }
 
 void UCStateComponent::SetEquipMode()
 {
-	ChangeType(EStateType::Idle);
+	ChangeType(EStateType::Equip);
 }
 
 void UCStateComponent::SetDamagedMode()
 {
-	ChangeType(EStateType::Idle);
+	ChangeType(EStateType::Damaged);
 }
 
 void UCStateComponent::SetActionMode()
 {
-	ChangeType(EStateType::Idle);
+	ChangeType(EStateType::Action);
 }
 
 void UCStateComponent::SetDeadMode()
 {
-	ChangeType(EStateType::Idle);
+	ChangeType(EStateType::Dead);
 }
 
 void UCStateComponent::ChangeType(EStateType InType)

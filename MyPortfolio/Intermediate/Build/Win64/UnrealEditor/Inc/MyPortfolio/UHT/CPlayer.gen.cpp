@@ -16,6 +16,7 @@ void EmptyLinkFunctionForGeneratedCodeCPlayer() {}
 	MYPORTFOLIO_API UClass* Z_Construct_UClass_ACPlayer_NoRegister();
 	MYPORTFOLIO_API UClass* Z_Construct_UClass_UCMovementComponent_NoRegister();
 	MYPORTFOLIO_API UClass* Z_Construct_UClass_UCStateComponent_NoRegister();
+	MYPORTFOLIO_API UClass* Z_Construct_UClass_UIStatable_NoRegister();
 	MYPORTFOLIO_API UEnum* Z_Construct_UEnum_MyPortfolio_EStateType();
 	UPackage* Z_Construct_UPackage__Script_MyPortfolio();
 // End Cross Module References
@@ -115,6 +116,7 @@ void EmptyLinkFunctionForGeneratedCodeCPlayer() {}
 #endif
 		static const UECodeGen_Private::FObjectPropertyParams NewProp_Movement;
 		static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+		static const UECodeGen_Private::FImplementedInterfaceParams InterfaceParams[];
 		static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
 		static const UECodeGen_Private::FClassParams ClassParams;
 	};
@@ -172,6 +174,10 @@ void EmptyLinkFunctionForGeneratedCodeCPlayer() {}
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACPlayer_Statics::NewProp_State,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACPlayer_Statics::NewProp_Movement,
 	};
+		const UECodeGen_Private::FImplementedInterfaceParams Z_Construct_UClass_ACPlayer_Statics::InterfaceParams[] = {
+			{ Z_Construct_UClass_UIStatable_NoRegister, (int32)VTABLE_OFFSET(ACPlayer, IIStatable), false },  // 3651956757
+		};
+	static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_ACPlayer_Statics::InterfaceParams) < 64);
 	const FCppClassTypeInfoStatic Z_Construct_UClass_ACPlayer_Statics::StaticCppClassTypeInfo = {
 		TCppClassTypeTraits<ACPlayer>::IsAbstract,
 	};
@@ -182,11 +188,11 @@ void EmptyLinkFunctionForGeneratedCodeCPlayer() {}
 		DependentSingletons,
 		FuncInfo,
 		Z_Construct_UClass_ACPlayer_Statics::PropPointers,
-		nullptr,
+		InterfaceParams,
 		UE_ARRAY_COUNT(DependentSingletons),
 		UE_ARRAY_COUNT(FuncInfo),
 		UE_ARRAY_COUNT(Z_Construct_UClass_ACPlayer_Statics::PropPointers),
-		0,
+		UE_ARRAY_COUNT(InterfaceParams),
 		0x009000A4u,
 		METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_ACPlayer_Statics::Class_MetaDataParams), Z_Construct_UClass_ACPlayer_Statics::Class_MetaDataParams)
 	};
@@ -210,9 +216,9 @@ void EmptyLinkFunctionForGeneratedCodeCPlayer() {}
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_MyPortfolio_Source_MyPortfolio_Characters_CPlayer_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_ACPlayer, ACPlayer::StaticClass, TEXT("ACPlayer"), &Z_Registration_Info_UClass_ACPlayer, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ACPlayer), 3187957343U) },
+		{ Z_Construct_UClass_ACPlayer, ACPlayer::StaticClass, TEXT("ACPlayer"), &Z_Registration_Info_UClass_ACPlayer, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ACPlayer), 3117742631U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_MyPortfolio_Source_MyPortfolio_Characters_CPlayer_h_3847313455(TEXT("/Script/MyPortfolio"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_MyPortfolio_Source_MyPortfolio_Characters_CPlayer_h_204782850(TEXT("/Script/MyPortfolio"),
 		Z_CompiledInDeferFile_FID_MyPortfolio_Source_MyPortfolio_Characters_CPlayer_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_MyPortfolio_Source_MyPortfolio_Characters_CPlayer_h_Statics::ClassInfo),
 		nullptr, 0,
 		nullptr, 0);

@@ -12,6 +12,7 @@
 #include "../Components/CStateComponent.h" //캐릭터 상태 관리 Component
 #include "GameFramework/CharacterMovementComponent.h" //캐릭터 이동
 #include "../Components/CMovementComponent.h" //캐릭터 이동 관리 Component
+#include "Animation/AnimMontage.h" // 애님 몽타주
 
 
 ACPlayer::ACPlayer()
@@ -80,9 +81,15 @@ void ACPlayer::OnStateTypeChanged(EStateType InPrevType, EStateType InNewType)
 {
 	switch (InNewType) 
 	{
-		case EStateType::Evade : Movement->BackStep(); break;
+	case EStateType::Evade: Movement->BackStep(); break;
 
 	}
+}
+
+void ACPlayer::End_Backstep()
+{
+	Movement->DisenableControlRotation();
+	State->SetIdleMode();
 }
 
 

@@ -1,6 +1,7 @@
 D:\UnrealProject\Unreal\MyPortfolio\Source\MyPortfolio\CGameMode.h
 D:\UnrealProject\Unreal\MyPortfolio\Source\MyPortfolio\Characters\CAnimInstance.h
+D:\UnrealProject\Unreal\MyPortfolio\Source\MyPortfolio\Components\CMovementComponent.h
 D:\UnrealProject\Unreal\MyPortfolio\Source\MyPortfolio\Characters\CPlayer.h
 D:\UnrealProject\Unreal\MyPortfolio\Source\MyPortfolio\Components\CStateComponent.h
-D:\UnrealProject\Unreal\MyPortfolio\Source\MyPortfolio\Components\CMovementComponent.h
+D:\UnrealProject\Unreal\MyPortfolio\Source\MyPortfolio\Interfaces\IStatable.h
 D:\UnrealProject\Unreal\MyPortfolio\Source\MyPortfolio\Notifies\CAnimNotify_EndState.h

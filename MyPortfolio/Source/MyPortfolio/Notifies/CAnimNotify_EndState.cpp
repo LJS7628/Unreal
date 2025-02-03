@@ -1,5 +1,6 @@
 #include "../Notifies/CAnimNotify_EndState.h"
 #include "../Global.h"
+#include "../Interfaces/IStatable.h"
 
 FString UCAnimNotify_EndState::GetNotifyName_Implementation() const
 {
@@ -12,8 +13,12 @@ void UCAnimNotify_EndState::Notify(USkeletalMeshComponent* MeshComp, UAnimSequen
 	CheckNull(MeshComp);
 	CheckNull(MeshComp->GetOwner());
 
+
+	IIStatable* state = Cast<IIStatable>(MeshComp->GetOwner());
+	CheckNull(state);
+
 	switch (StateType) 
 	{
-	case EStateType::Evade: break;
+		case EStateType::Evade: state->End_Backstep(); break;
 	}
 }

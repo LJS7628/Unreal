@@ -15,25 +15,26 @@ enum class EStateType : uint8;
 #endif
 #define MYPORTFOLIO_CPlayer_generated_h
 
-#define FID_MyPortfolio_Source_MyPortfolio_Characters_CPlayer_h_10_SPARSE_DATA
-#define FID_MyPortfolio_Source_MyPortfolio_Characters_CPlayer_h_10_SPARSE_DATA_PROPERTY_ACCESSORS
-#define FID_MyPortfolio_Source_MyPortfolio_Characters_CPlayer_h_10_EDITOR_ONLY_SPARSE_DATA_PROPERTY_ACCESSORS
-#define FID_MyPortfolio_Source_MyPortfolio_Characters_CPlayer_h_10_RPC_WRAPPERS_NO_PURE_DECLS \
+#define FID_MyPortfolio_Source_MyPortfolio_Characters_CPlayer_h_14_SPARSE_DATA
+#define FID_MyPortfolio_Source_MyPortfolio_Characters_CPlayer_h_14_SPARSE_DATA_PROPERTY_ACCESSORS
+#define FID_MyPortfolio_Source_MyPortfolio_Characters_CPlayer_h_14_EDITOR_ONLY_SPARSE_DATA_PROPERTY_ACCESSORS
+#define FID_MyPortfolio_Source_MyPortfolio_Characters_CPlayer_h_14_RPC_WRAPPERS_NO_PURE_DECLS \
  \
 	DECLARE_FUNCTION(execOnStateTypeChanged);
 
 
-#define FID_MyPortfolio_Source_MyPortfolio_Characters_CPlayer_h_10_ACCESSORS
-#define FID_MyPortfolio_Source_MyPortfolio_Characters_CPlayer_h_10_INCLASS_NO_PURE_DECLS \
+#define FID_MyPortfolio_Source_MyPortfolio_Characters_CPlayer_h_14_ACCESSORS
+#define FID_MyPortfolio_Source_MyPortfolio_Characters_CPlayer_h_14_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesACPlayer(); \
 	friend struct Z_Construct_UClass_ACPlayer_Statics; \
 public: \
 	DECLARE_CLASS(ACPlayer, ACharacter, COMPILED_IN_FLAGS(0 | CLASS_Config), CASTCLASS_None, TEXT("/Script/MyPortfolio"), NO_API) \
-	DECLARE_SERIALIZER(ACPlayer)
+	DECLARE_SERIALIZER(ACPlayer) \
+	virtual UObject* _getUObject() const override { return const_cast<ACPlayer*>(this); }
 
 
-#define FID_MyPortfolio_Source_MyPortfolio_Characters_CPlayer_h_10_ENHANCED_CONSTRUCTORS \
+#define FID_MyPortfolio_Source_MyPortfolio_Characters_CPlayer_h_14_ENHANCED_CONSTRUCTORS \
 private: \
 	/** Private move- and copy-constructors, should never be used */ \
 	NO_API ACPlayer(ACPlayer&&); \
@@ -45,17 +46,17 @@ public: \
 	NO_API virtual ~ACPlayer();
 
 
-#define FID_MyPortfolio_Source_MyPortfolio_Characters_CPlayer_h_7_PROLOG
-#define FID_MyPortfolio_Source_MyPortfolio_Characters_CPlayer_h_10_GENERATED_BODY \
+#define FID_MyPortfolio_Source_MyPortfolio_Characters_CPlayer_h_8_PROLOG
+#define FID_MyPortfolio_Source_MyPortfolio_Characters_CPlayer_h_14_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_MyPortfolio_Source_MyPortfolio_Characters_CPlayer_h_10_SPARSE_DATA \
-	FID_MyPortfolio_Source_MyPortfolio_Characters_CPlayer_h_10_SPARSE_DATA_PROPERTY_ACCESSORS \
-	FID_MyPortfolio_Source_MyPortfolio_Characters_CPlayer_h_10_EDITOR_ONLY_SPARSE_DATA_PROPERTY_ACCESSORS \
-	FID_MyPortfolio_Source_MyPortfolio_Characters_CPlayer_h_10_RPC_WRAPPERS_NO_PURE_DECLS \
-	FID_MyPortfolio_Source_MyPortfolio_Characters_CPlayer_h_10_ACCESSORS \
-	FID_MyPortfolio_Source_MyPortfolio_Characters_CPlayer_h_10_INCLASS_NO_PURE_DECLS \
-	FID_MyPortfolio_Source_MyPortfolio_Characters_CPlayer_h_10_ENHANCED_CONSTRUCTORS \
+	FID_MyPortfolio_Source_MyPortfolio_Characters_CPlayer_h_14_SPARSE_DATA \
+	FID_MyPortfolio_Source_MyPortfolio_Characters_CPlayer_h_14_SPARSE_DATA_PROPERTY_ACCESSORS \
+	FID_MyPortfolio_Source_MyPortfolio_Characters_CPlayer_h_14_EDITOR_ONLY_SPARSE_DATA_PROPERTY_ACCESSORS \
+	FID_MyPortfolio_Source_MyPortfolio_Characters_CPlayer_h_14_RPC_WRAPPERS_NO_PURE_DECLS \
+	FID_MyPortfolio_Source_MyPortfolio_Characters_CPlayer_h_14_ACCESSORS \
+	FID_MyPortfolio_Source_MyPortfolio_Characters_CPlayer_h_14_INCLASS_NO_PURE_DECLS \
+	FID_MyPortfolio_Source_MyPortfolio_Characters_CPlayer_h_14_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 

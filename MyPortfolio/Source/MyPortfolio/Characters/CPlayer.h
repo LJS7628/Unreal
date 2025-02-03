@@ -1,11 +1,15 @@
 #pragma once
 
 #include "CoreMinimal.h"
+#include "../Interfaces/IStatable.h" // 상태 인터페이스
 #include "GameFramework/Character.h"
 #include "CPlayer.generated.h"
 
 UCLASS()
-class MYPORTFOLIO_API ACPlayer : public ACharacter
+class MYPORTFOLIO_API ACPlayer 
+	: public ACharacter
+	, public IIStatable
+
 {
 	GENERATED_BODY()
 
@@ -45,5 +49,8 @@ private:
 	//CStateComponent delegate 연결 함수
 	UFUNCTION()
 	void OnStateTypeChanged(EStateType InPrevType, EStateType InNewType);
+
+public:
+	void  End_Backstep() override;
 
 };
