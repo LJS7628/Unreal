@@ -111,5 +111,26 @@
     <ClInclude Include="..\..\Source\MyPortfolio\Utilities\CLog.h">
       <Filter>Source\MyPortfolio\Utilities</Filter>
     </ClInclude>
+    <Filter Include="Source\MyPortfolio\Weapons">
+      <UniqueIdentifier>{0B60D5B6-9240-32D5-9632-47050705EC51}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\MyPortfolio\Weapons\CAttachment.cpp">
+      <Filter>Source\MyPortfolio\Weapons</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\MyPortfolio\Weapons\CAttachment.h">
+      <Filter>Source\MyPortfolio\Weapons</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\MyPortfolio\Weapons\CWeapon.cpp">
+      <Filter>Source\MyPortfolio\Weapons</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\MyPortfolio\Weapons\CWeapon.h">
+      <Filter>Source\MyPortfolio\Weapons</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\MyPortfolio\Weapons\CWeaponStructures.cpp">
+      <Filter>Source\MyPortfolio\Weapons</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\MyPortfolio\Weapons\CWeaponStructures.h">
+      <Filter>Source\MyPortfolio\Weapons</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
