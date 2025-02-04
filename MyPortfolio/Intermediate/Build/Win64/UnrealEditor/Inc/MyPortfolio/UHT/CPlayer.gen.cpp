@@ -16,6 +16,7 @@ void EmptyLinkFunctionForGeneratedCodeCPlayer() {}
 	MYPORTFOLIO_API UClass* Z_Construct_UClass_ACPlayer_NoRegister();
 	MYPORTFOLIO_API UClass* Z_Construct_UClass_UCMovementComponent_NoRegister();
 	MYPORTFOLIO_API UClass* Z_Construct_UClass_UCStateComponent_NoRegister();
+	MYPORTFOLIO_API UClass* Z_Construct_UClass_UCWeaponComponent_NoRegister();
 	MYPORTFOLIO_API UClass* Z_Construct_UClass_UIStatable_NoRegister();
 	MYPORTFOLIO_API UEnum* Z_Construct_UEnum_MyPortfolio_EStateType();
 	UPackage* Z_Construct_UPackage__Script_MyPortfolio();
@@ -108,6 +109,10 @@ void EmptyLinkFunctionForGeneratedCodeCPlayer() {}
 #endif
 		static const UECodeGen_Private::FObjectPropertyParams NewProp_Camera;
 #if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam NewProp_Weapon_MetaData[];
+#endif
+		static const UECodeGen_Private::FObjectPropertyParams NewProp_Weapon;
+#if WITH_METADATA
 		static const UECodeGen_Private::FMetaDataPairParam NewProp_State_MetaData[];
 #endif
 		static const UECodeGen_Private::FObjectPropertyParams NewProp_State;
@@ -153,6 +158,14 @@ void EmptyLinkFunctionForGeneratedCodeCPlayer() {}
 #endif
 	const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ACPlayer_Statics::NewProp_Camera = { "Camera", nullptr, (EPropertyFlags)0x00400000000a0009, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ACPlayer, Camera), Z_Construct_UClass_UCameraComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_ACPlayer_Statics::NewProp_Camera_MetaData), Z_Construct_UClass_ACPlayer_Statics::NewProp_Camera_MetaData) };
 #if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ACPlayer_Statics::NewProp_Weapon_MetaData[] = {
+		{ "Category", "CPlayer" },
+		{ "EditInline", "true" },
+		{ "ModuleRelativePath", "Characters/CPlayer.h" },
+	};
+#endif
+	const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ACPlayer_Statics::NewProp_Weapon = { "Weapon", nullptr, (EPropertyFlags)0x00400000000a0009, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ACPlayer, Weapon), Z_Construct_UClass_UCWeaponComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_ACPlayer_Statics::NewProp_Weapon_MetaData), Z_Construct_UClass_ACPlayer_Statics::NewProp_Weapon_MetaData) };
+#if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ACPlayer_Statics::NewProp_State_MetaData[] = {
 		{ "Category", "CPlayer" },
 		{ "EditInline", "true" },
@@ -171,6 +184,7 @@ void EmptyLinkFunctionForGeneratedCodeCPlayer() {}
 	const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_ACPlayer_Statics::PropPointers[] = {
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACPlayer_Statics::NewProp_SpringArm,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACPlayer_Statics::NewProp_Camera,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACPlayer_Statics::NewProp_Weapon,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACPlayer_Statics::NewProp_State,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACPlayer_Statics::NewProp_Movement,
 	};
@@ -216,9 +230,9 @@ void EmptyLinkFunctionForGeneratedCodeCPlayer() {}
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_MyPortfolio_Source_MyPortfolio_Characters_CPlayer_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_ACPlayer, ACPlayer::StaticClass, TEXT("ACPlayer"), &Z_Registration_Info_UClass_ACPlayer, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ACPlayer), 3117742631U) },
+		{ Z_Construct_UClass_ACPlayer, ACPlayer::StaticClass, TEXT("ACPlayer"), &Z_Registration_Info_UClass_ACPlayer, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ACPlayer), 1861341979U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_MyPortfolio_Source_MyPortfolio_Characters_CPlayer_h_204782850(TEXT("/Script/MyPortfolio"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_MyPortfolio_Source_MyPortfolio_Characters_CPlayer_h_3436907759(TEXT("/Script/MyPortfolio"),
 		Z_CompiledInDeferFile_FID_MyPortfolio_Source_MyPortfolio_Characters_CPlayer_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_MyPortfolio_Source_MyPortfolio_Characters_CPlayer_h_Statics::ClassInfo),
 		nullptr, 0,
 		nullptr, 0);

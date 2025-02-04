@@ -24,6 +24,9 @@ private:
 //ÄÄÆ÷³ÍÆ®
 private:
 	UPROPERTY(VisibleAnywhere)
+	class UCWeaponComponent* Weapon;
+
+	UPROPERTY(VisibleAnywhere)
 	class UCStateComponent* State;
 
 	UPROPERTY(VisibleAnywhere)

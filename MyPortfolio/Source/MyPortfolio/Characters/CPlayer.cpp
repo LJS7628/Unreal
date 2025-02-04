@@ -9,6 +9,7 @@
 #include "Components/SkeletalMeshComponent.h" //스켈레탈 메쉬
 
 #include "../Characters/CAnimInstance.h" //캐릭터 애니메이션
+#include "../Components/CWeaponComponent.h" //캐릭터 무기 Component
 #include "../Components/CStateComponent.h" //캐릭터 상태 관리 Component
 #include "GameFramework/CharacterMovementComponent.h" //캐릭터 이동
 #include "../Components/CMovementComponent.h" //캐릭터 이동 관리 Component
@@ -22,6 +23,7 @@ ACPlayer::ACPlayer()
 	CHelpers::CreateComponent(this, &Camera, "Camera", SpringArm);
 
 	//Component 연결
+	CHelpers::CreateActorComponent(this, &Weapon, "Weapon");
 	CHelpers::CreateActorComponent(this, &State, "State");
 	CHelpers::CreateActorComponent(this, &Movement, "Movement");
 

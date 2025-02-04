@@ -78,6 +78,12 @@
     <ClInclude Include="..\..\Source\MyPortfolio\Components\CStateComponent.h">
       <Filter>Source\MyPortfolio\Components</Filter>
     </ClInclude>
+    <ClCompile Include="..\..\Source\MyPortfolio\Components\CWeaponComponent.cpp">
+      <Filter>Source\MyPortfolio\Components</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\MyPortfolio\Components\CWeaponComponent.h">
+      <Filter>Source\MyPortfolio\Components</Filter>
+    </ClInclude>
     <Filter Include="Source\MyPortfolio\Interfaces">
       <UniqueIdentifier>{FCADC6B4-EF33-3F19-9FEB-FAA8E9BBD291}</UniqueIdentifier>
     </Filter>
@@ -124,6 +130,12 @@
       <Filter>Source\MyPortfolio\Weapons</Filter>
     </ClCompile>
     <ClInclude Include="..\..\Source\MyPortfolio\Weapons\CWeapon.h">
+      <Filter>Source\MyPortfolio\Weapons</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\MyPortfolio\Weapons\CWeaponAsset.cpp">
+      <Filter>Source\MyPortfolio\Weapons</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\MyPortfolio\Weapons\CWeaponAsset.h">
       <Filter>Source\MyPortfolio\Weapons</Filter>
     </ClInclude>
     <ClCompile Include="..\..\Source\MyPortfolio\Weapons\CWeaponStructures.cpp">

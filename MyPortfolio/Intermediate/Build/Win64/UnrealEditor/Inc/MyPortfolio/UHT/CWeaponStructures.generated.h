@@ -14,12 +14,12 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #endif
 #define MYPORTFOLIO_CWeaponStructures_generated_h
 
-#define FID_MyPortfolio_Source_MyPortfolio_Weapons_CWeaponStructures_h_10_SPARSE_DATA
-#define FID_MyPortfolio_Source_MyPortfolio_Weapons_CWeaponStructures_h_10_SPARSE_DATA_PROPERTY_ACCESSORS
-#define FID_MyPortfolio_Source_MyPortfolio_Weapons_CWeaponStructures_h_10_EDITOR_ONLY_SPARSE_DATA_PROPERTY_ACCESSORS
-#define FID_MyPortfolio_Source_MyPortfolio_Weapons_CWeaponStructures_h_10_RPC_WRAPPERS_NO_PURE_DECLS
-#define FID_MyPortfolio_Source_MyPortfolio_Weapons_CWeaponStructures_h_10_ACCESSORS
-#define FID_MyPortfolio_Source_MyPortfolio_Weapons_CWeaponStructures_h_10_INCLASS_NO_PURE_DECLS \
+#define FID_MyPortfolio_Source_MyPortfolio_Weapons_CWeaponStructures_h_17_SPARSE_DATA
+#define FID_MyPortfolio_Source_MyPortfolio_Weapons_CWeaponStructures_h_17_SPARSE_DATA_PROPERTY_ACCESSORS
+#define FID_MyPortfolio_Source_MyPortfolio_Weapons_CWeaponStructures_h_17_EDITOR_ONLY_SPARSE_DATA_PROPERTY_ACCESSORS
+#define FID_MyPortfolio_Source_MyPortfolio_Weapons_CWeaponStructures_h_17_RPC_WRAPPERS_NO_PURE_DECLS
+#define FID_MyPortfolio_Source_MyPortfolio_Weapons_CWeaponStructures_h_17_ACCESSORS
+#define FID_MyPortfolio_Source_MyPortfolio_Weapons_CWeaponStructures_h_17_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesUCWeaponStructures(); \
 	friend struct Z_Construct_UClass_UCWeaponStructures_Statics; \
@@ -28,7 +28,7 @@ public: \
 	DECLARE_SERIALIZER(UCWeaponStructures)
 
 
-#define FID_MyPortfolio_Source_MyPortfolio_Weapons_CWeaponStructures_h_10_ENHANCED_CONSTRUCTORS \
+#define FID_MyPortfolio_Source_MyPortfolio_Weapons_CWeaponStructures_h_17_ENHANCED_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API UCWeaponStructures(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()); \
 private: \
@@ -42,17 +42,17 @@ public: \
 	NO_API virtual ~UCWeaponStructures();
 
 
-#define FID_MyPortfolio_Source_MyPortfolio_Weapons_CWeaponStructures_h_7_PROLOG
-#define FID_MyPortfolio_Source_MyPortfolio_Weapons_CWeaponStructures_h_10_GENERATED_BODY \
+#define FID_MyPortfolio_Source_MyPortfolio_Weapons_CWeaponStructures_h_14_PROLOG
+#define FID_MyPortfolio_Source_MyPortfolio_Weapons_CWeaponStructures_h_17_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_MyPortfolio_Source_MyPortfolio_Weapons_CWeaponStructures_h_10_SPARSE_DATA \
-	FID_MyPortfolio_Source_MyPortfolio_Weapons_CWeaponStructures_h_10_SPARSE_DATA_PROPERTY_ACCESSORS \
-	FID_MyPortfolio_Source_MyPortfolio_Weapons_CWeaponStructures_h_10_EDITOR_ONLY_SPARSE_DATA_PROPERTY_ACCESSORS \
-	FID_MyPortfolio_Source_MyPortfolio_Weapons_CWeaponStructures_h_10_RPC_WRAPPERS_NO_PURE_DECLS \
-	FID_MyPortfolio_Source_MyPortfolio_Weapons_CWeaponStructures_h_10_ACCESSORS \
-	FID_MyPortfolio_Source_MyPortfolio_Weapons_CWeaponStructures_h_10_INCLASS_NO_PURE_DECLS \
-	FID_MyPortfolio_Source_MyPortfolio_Weapons_CWeaponStructures_h_10_ENHANCED_CONSTRUCTORS \
+	FID_MyPortfolio_Source_MyPortfolio_Weapons_CWeaponStructures_h_17_SPARSE_DATA \
+	FID_MyPortfolio_Source_MyPortfolio_Weapons_CWeaponStructures_h_17_SPARSE_DATA_PROPERTY_ACCESSORS \
+	FID_MyPortfolio_Source_MyPortfolio_Weapons_CWeaponStructures_h_17_EDITOR_ONLY_SPARSE_DATA_PROPERTY_ACCESSORS \
+	FID_MyPortfolio_Source_MyPortfolio_Weapons_CWeaponStructures_h_17_RPC_WRAPPERS_NO_PURE_DECLS \
+	FID_MyPortfolio_Source_MyPortfolio_Weapons_CWeaponStructures_h_17_ACCESSORS \
+	FID_MyPortfolio_Source_MyPortfolio_Weapons_CWeaponStructures_h_17_INCLASS_NO_PURE_DECLS \
+	FID_MyPortfolio_Source_MyPortfolio_Weapons_CWeaponStructures_h_17_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
@@ -62,5 +62,14 @@ template<> MYPORTFOLIO_API UClass* StaticClass<class UCWeaponStructures>();
 #undef CURRENT_FILE_ID
 #define CURRENT_FILE_ID FID_MyPortfolio_Source_MyPortfolio_Weapons_CWeaponStructures_h
 
+
+#define FOREACH_ENUM_EWEAPONTYPE(op) \
+	op(EWeaponType::Sword) \
+	op(EWeaponType::Axe) \
+	op(EWeaponType::Max) 
+
+enum class EWeaponType : uint8;
+template<> struct TIsUEnumClass<EWeaponType> { enum { Value = true }; };
+template<> MYPORTFOLIO_API UEnum* StaticEnum<EWeaponType>();
 
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
