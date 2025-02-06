@@ -1,6 +1,7 @@
 #include "../Components/CWeaponComponent.h"
 #include "../Global.h"
 #include "GameFramework/Character.h"
+#include "CStateComponent.h"
 #include "../Weapons/CWeaponAsset.h"
 
 UCWeaponComponent::UCWeaponComponent()
@@ -32,4 +33,82 @@ void UCWeaponComponent::TickComponent(float DeltaTime, ELevelTick TickType, FAct
 	Super::TickComponent(DeltaTime, TickType, ThisTickFunction);
 
 }
+
+bool UCWeaponComponent::IsIdleMode()
+{
+	return CHelpers::GetComponent<UCStateComponent>(OwnerCharacter)->IsIdleMode();
+}
+
+UCWeaponAsset* UCWeaponComponent::GetWeaponAsset(EWeaponType InType)
+{
+	for (UCWeaponAsset* asset : DataAssets)
+	{
+		if (Current == asset->GetWeaponType())
+			return asset;
+	}
+
+	return nullptr;
+}
+
+ACAttachment* UCWeaponComponent::GetAttachment()
+{
+	CheckTrueResult(IsUnarmedMode(), nullptr);
+
+	UCWeaponAsset* asset = GetWeaponAsset(Current);
+	CheckNullResult(asset, nullptr);
+
+	return asset->GetAttachment();
+}
+
+UCEquipment* UCWeaponComponent::GetEquipment()
+{
+	CheckTrueResult(IsUnarmedMode(), nullptr);
+
+	UCWeaponAsset* asset = GetWeaponAsset(Current);
+	CheckNullResult(asset, nullptr);
+
+	return asset->GetEquipment();
+}
+
+void UCWeaponComponent::SetUnarmedMode()
+{
+	ChangeType(EWeaponType::Max);
+}
+
+void UCWeaponComponent::SetSwordMode()
+{
+	CheckFalse(IsIdleMode());
+
+	SetMode(EWeaponType::Sword);
+}
+
+void UCWeaponComponent::SetMode(EWeaponType InType)
+{
+	if (Current == InType) 
+	{
+		SetUnarmedMode();
+
+		return;
+	}
+
+	else if (IsUnarmedMode() == false) 
+	{
+		// unequip
+	}
+
+	UCWeaponAsset* asset = GetWeaponAsset(InType);
+
+	if (!!asset) 
+	{
+		//asset->GetEquipment()->Equip();
+		ChangeType(InType);
+	}
+}
+
+void UCWeaponComponent::ChangeType(EWeaponType InType)
+{
+}
+
+
+
 

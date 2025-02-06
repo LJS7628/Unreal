@@ -126,6 +126,12 @@
     <ClInclude Include="..\..\Source\MyPortfolio\Weapons\CAttachment.h">
       <Filter>Source\MyPortfolio\Weapons</Filter>
     </ClInclude>
+    <ClCompile Include="..\..\Source\MyPortfolio\Weapons\CEquipment.cpp">
+      <Filter>Source\MyPortfolio\Weapons</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\MyPortfolio\Weapons\CEquipment.h">
+      <Filter>Source\MyPortfolio\Weapons</Filter>
+    </ClInclude>
     <ClCompile Include="..\..\Source\MyPortfolio\Weapons\CWeapon.cpp">
       <Filter>Source\MyPortfolio\Weapons</Filter>
     </ClCompile>

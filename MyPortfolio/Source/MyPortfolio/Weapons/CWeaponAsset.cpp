@@ -2,10 +2,12 @@
 #include "../Global.h"
 #include "GameFramework/Character.h"
 #include "CAttachment.h"
+#include "CEquipment.h"
 
 UCWeaponAsset::UCWeaponAsset()
 {
 	AttachmentClass = ACAttachment::StaticClass();
+	EquipmentClass = UCEquipment::StaticClass();
 }
 
 void UCWeaponAsset::BeginPlay(ACharacter* InOwner)
@@ -16,5 +18,11 @@ void UCWeaponAsset::BeginPlay(ACharacter* InOwner)
 		parms.Owner = InOwner;
 
 		Attachment=InOwner->GetWorld()->SpawnActor<ACAttachment>(AttachmentClass, parms);
+	}
+
+	if (!!EquipmentClass) 
+	{
+		Equipment = NewObject<UCEquipment>(this, EquipmentClass);
+		Equipment->BeginPlay(InOwner, EquipmentData);
 	}
 }

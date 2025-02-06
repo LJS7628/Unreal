@@ -2,6 +2,7 @@
 
 #include "CoreMinimal.h"
 #include "Components/ActorComponent.h"
+#include "../Weapons/CWeaponStructures.h"
 #include "CWeaponComponent.generated.h"
 
 
@@ -15,6 +16,10 @@ class MYPORTFOLIO_API UCWeaponComponent : public UActorComponent
 private:
 	UPROPERTY(EditAnywhere, Category = "DataAsset");
 	TArray<class UCWeaponAsset*> DataAssets;
+
+public:
+	FORCEINLINE bool IsUnarmedMode() { return Current == EWeaponType::Max; }
+
 public:	
 	UCWeaponComponent();
 
@@ -25,6 +30,28 @@ public:
 	virtual void TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction) override;
 
 private:
+	bool IsIdleMode();
+
+public:
+	class UCWeaponAsset* GetWeaponAsset(EWeaponType InType);
+	class ACAttachment* GetAttachment();
+	class UCEquipment* GetEquipment();
+
+public:
+	void SetUnarmedMode();
+	void SetSwordMode();
+
+private:
+	void SetMode(EWeaponType InType);
+	void ChangeType(EWeaponType InType);
+
+private:
 	class ACharacter* OwnerCharacter;
+
+private:
+	EWeaponType Current = EWeaponType::Max;
 		
+//private:
+//	UPROPERTY()
+//	TArray<class UCWeaponData*> Datas;
 };

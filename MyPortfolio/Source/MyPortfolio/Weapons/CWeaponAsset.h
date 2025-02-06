@@ -17,8 +17,17 @@ private :
 	UPROPERTY(EditAnywhere)
 	TSubclassOf<class ACAttachment> AttachmentClass;
 
+	UPROPERTY(EditAnywhere)
+	TSubclassOf<class UCEquipment> EquipmentClass;
+
+	UPROPERTY(EditAnywhere)
+	FEquipmentData EquipmentData;
+
 public:
 	FORCEINLINE EWeaponType GetWeaponType() { return WeaponType; }
+
+	FORCEINLINE class ACAttachment* GetAttachment() { return Attachment; }
+	FORCEINLINE class UCEquipment* GetEquipment() { return Equipment; }
 
 public:
 	UCWeaponAsset();
@@ -29,5 +38,8 @@ public:
 private:
 	UPROPERTY()
 	class ACAttachment* Attachment;
+
+	UPROPERTY()
+	class UCEquipment* Equipment;
 
 };

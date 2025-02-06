@@ -88,4 +88,34 @@ public:
 				OutActors.Add(Cast<T>(actor));
 		}
 	}
+
+
+	//캐릭터 소켓에 액터 부착
+	static void AttachTo(AActor* InActor, USceneComponent* InParent, FName InSocketName)
+	{
+		InActor->AttachToComponent(InParent, FAttachmentTransformRules(EAttachmentRule::KeepRelative, true), InSocketName);
+	}
+
+	//컴포넌트 가져오기
+	template<typename T>  
+	static T* GetComponent(AActor* InActor)
+	{
+		return Cast<T>(InActor->GetComponentByClass(T::StaticClass()));
+	}
+
+	//이름으로 검색해서 컴포넌트 가져오기
+	template<typename T> 
+	static T* GetComponent(AActor* InActor, const FString& InName)
+	{
+		TArray<T*> components;
+		InActor->GetComponents<T>(components);
+
+		for (T* component : components)
+		{
+			if (component->GetName() == InName)
+				return component;
+		}
+
+		return nullptr;
+	}
 };
