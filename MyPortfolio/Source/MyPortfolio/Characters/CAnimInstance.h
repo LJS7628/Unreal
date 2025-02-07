@@ -2,6 +2,7 @@
 
 #include "CoreMinimal.h"
 #include "Animation/AnimInstance.h"
+#include "../Weapons/CWeaponStructures.h"
 #include "CAnimInstance.generated.h"
 
 UCLASS()
@@ -22,12 +23,23 @@ protected:
 	UPROPERTY(BlueprintReadOnly, EditAnywhere, Category = "Animation")
 	bool bFalling; //점프 가능 여부 체크
 
+protected:
+	UPROPERTY(BlueprintReadOnly, EditAnywhere, Category = "Weapon")
+	EWeaponType WeaponType = EWeaponType::Max;
+
 public:
 	void NativeBeginPlay() override;
 	void NativeUpdateAnimation(float DeltaSeconds) override;
 
 private:
+	UFUNCTION()
+	void OnWeaponTypeChanged(EWeaponType InPrevType, EWeaponType InNewType);
+
+private:
 	class ACharacter* OwnerCharacter;
+
+private:
+	class UCWeaponComponent* Weapon;
 
 	FRotator PrevRotation; //
 	

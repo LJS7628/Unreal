@@ -1,9 +1,11 @@
 #include "../Characters/CAnimInstance.h"
 #include "../Global.h"
 
-#include "../Characters/CPlayer.h"
 #include "GameFramework/Character.h"
 #include "GameFramework/CharacterMovementComponent.h"  //캐릭터 이동 관리 Component
+
+#include "../Characters/CPlayer.h"
+#include "../Components/CWeaponComponent.h"
 
 void UCAnimInstance::NativeBeginPlay()
 {
@@ -11,6 +13,11 @@ void UCAnimInstance::NativeBeginPlay()
 
 	OwnerCharacter = Cast<ACharacter>(TryGetPawnOwner());
 	CheckNull(OwnerCharacter);
+
+	Weapon = CHelpers::GetComponent<UCWeaponComponent>(OwnerCharacter);
+	CheckNull(Weapon);
+
+	Weapon->OnWeaponTypeChanged.AddDynamic(this, &UCAnimInstance::OnWeaponTypeChanged);
 }
 
 void UCAnimInstance::NativeUpdateAnimation(float DeltaSeconds)
@@ -31,4 +38,9 @@ void UCAnimInstance::NativeUpdateAnimation(float DeltaSeconds)
 
 	//점프 상태 체크
 	bFalling = OwnerCharacter->GetCharacterMovement()->IsFalling();
+}
+
+void UCAnimInstance::OnWeaponTypeChanged(EWeaponType InPrevType, EWeaponType InNewType)
+{
+	WeaponType = InNewType;
 }

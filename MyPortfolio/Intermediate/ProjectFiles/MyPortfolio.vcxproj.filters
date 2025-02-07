@@ -96,6 +96,12 @@
     <Filter Include="Source\MyPortfolio\Notifies">
       <UniqueIdentifier>{41D3CC83-578C-3355-9DF8-D3B7A148A967}</UniqueIdentifier>
     </Filter>
+    <ClCompile Include="..\..\Source\MyPortfolio\Notifies\CAnimNotifyState_Equip.cpp">
+      <Filter>Source\MyPortfolio\Notifies</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\MyPortfolio\Notifies\CAnimNotifyState_Equip.h">
+      <Filter>Source\MyPortfolio\Notifies</Filter>
+    </ClInclude>
     <ClCompile Include="..\..\Source\MyPortfolio\Notifies\CAnimNotify_EndState.cpp">
       <Filter>Source\MyPortfolio\Notifies</Filter>
     </ClCompile>
@@ -124,6 +130,12 @@
       <Filter>Source\MyPortfolio\Weapons</Filter>
     </ClCompile>
     <ClInclude Include="..\..\Source\MyPortfolio\Weapons\CAttachment.h">
+      <Filter>Source\MyPortfolio\Weapons</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\MyPortfolio\Weapons\CDoAction.cpp">
+      <Filter>Source\MyPortfolio\Weapons</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\MyPortfolio\Weapons\CDoAction.h">
       <Filter>Source\MyPortfolio\Weapons</Filter>
     </ClInclude>
     <ClCompile Include="..\..\Source\MyPortfolio\Weapons\CEquipment.cpp">

@@ -2,6 +2,7 @@
 #include "../Global.h"
 #include "GameFramework/Character.h"
 #include "CStateComponent.h"
+#include "../Weapons/CEquipment.h"
 #include "../Weapons/CWeaponAsset.h"
 
 UCWeaponComponent::UCWeaponComponent()
@@ -43,7 +44,7 @@ UCWeaponAsset* UCWeaponComponent::GetWeaponAsset(EWeaponType InType)
 {
 	for (UCWeaponAsset* asset : DataAssets)
 	{
-		if (Current == asset->GetWeaponType())
+		if (InType == asset->GetWeaponType())
 			return asset;
 	}
 
@@ -72,6 +73,8 @@ UCEquipment* UCWeaponComponent::GetEquipment()
 
 void UCWeaponComponent::SetUnarmedMode()
 {
+	GetEquipment()->Unequip();
+
 	ChangeType(EWeaponType::Max);
 }
 
@@ -93,20 +96,41 @@ void UCWeaponComponent::SetMode(EWeaponType InType)
 
 	else if (IsUnarmedMode() == false) 
 	{
-		// unequip
+		GetEquipment()->Unequip();
 	}
 
 	UCWeaponAsset* asset = GetWeaponAsset(InType);
 
 	if (!!asset) 
 	{
-		//asset->GetEquipment()->Equip();
+		asset->GetEquipment()->Equip();
 		ChangeType(InType);
 	}
 }
 
 void UCWeaponComponent::ChangeType(EWeaponType InType)
 {
+	EWeaponType prevType = Current;
+	Current = InType;
+
+	if (OnWeaponTypeChanged.IsBound())
+		OnWeaponTypeChanged.Broadcast(prevType, InType);
+}
+
+void UCWeaponComponent::Begin_Equip()
+{
+	UCEquipment* equipment = GetEquipment();
+
+	if (!!equipment)
+		equipment->Begin_Equip();
+}
+
+void UCWeaponComponent::End_Equip()
+{
+	UCEquipment* equipment = GetEquipment();
+
+	if (!!equipment)
+		equipment->End_Equip();
 }
 
 

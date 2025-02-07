@@ -19,6 +19,15 @@ public:
 protected:
 	virtual void BeginPlay() override;
 
+public:
+	UFUNCTION(BlueprintNativeEvent)
+	void OnBeginEquip();
+	void OnBeginEquip_Implementation() {};
+
+	UFUNCTION(BlueprintNativeEvent)
+	void OnUnequip();
+	void OnUnequip_Implementation() {};
+
 protected:
 	UFUNCTION(BlueprintCallable, Category = "Attach")
 	void AttachTo(FName InSocketName);

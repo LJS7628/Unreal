@@ -24,5 +24,12 @@ void UCWeaponAsset::BeginPlay(ACharacter* InOwner)
 	{
 		Equipment = NewObject<UCEquipment>(this, EquipmentClass);
 		Equipment->BeginPlay(InOwner, EquipmentData);
+
+		if (!!Attachment) 
+		{
+			Equipment->OnEquipmentBeginEquip.AddDynamic(Attachment, &ACAttachment::OnBeginEquip);
+			Equipment->OnEquipmentUnequip.AddDynamic(Attachment, &ACAttachment::OnUnequip);
+		}
+
 	}
 }

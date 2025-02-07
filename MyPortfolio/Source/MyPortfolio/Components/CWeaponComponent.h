@@ -45,13 +45,17 @@ private:
 	void SetMode(EWeaponType InType);
 	void ChangeType(EWeaponType InType);
 
+public:
+	void Begin_Equip();
+	void End_Equip();
+
+public:
+	FWeaponTypeChanged OnWeaponTypeChanged;
+
 private:
 	class ACharacter* OwnerCharacter;
 
 private:
 	EWeaponType Current = EWeaponType::Max;
 		
-//private:
-//	UPROPERTY()
-//	TArray<class UCWeaponData*> Datas;
 };
