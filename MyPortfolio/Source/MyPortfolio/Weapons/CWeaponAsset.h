@@ -23,6 +23,12 @@ private :
 	UPROPERTY(EditAnywhere)
 	FEquipmentData EquipmentData;
 
+	UPROPERTY(EditAnywhere)
+	TSubclassOf<class UCDoAction> DoActionClass;
+
+	UPROPERTY(EditAnywhere)
+	TArray<FDoActionData> DoActionDatas;
+
 public:
 	FORCEINLINE EWeaponType GetWeaponType() { return WeaponType; }
 

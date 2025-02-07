@@ -162,5 +162,14 @@
     <ClInclude Include="..\..\Source\MyPortfolio\Weapons\CWeaponStructures.h">
       <Filter>Source\MyPortfolio\Weapons</Filter>
     </ClInclude>
+    <Filter Include="Source\MyPortfolio\Weapons\DoActions">
+      <UniqueIdentifier>{8B9F4CCB-81A1-39A3-8DED-63C98702B77D}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\MyPortfolio\Weapons\DoActions\CDoAction_Combo.cpp">
+      <Filter>Source\MyPortfolio\Weapons\DoActions</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\MyPortfolio\Weapons\DoActions\CDoAction_Combo.h">
+      <Filter>Source\MyPortfolio\Weapons\DoActions</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
