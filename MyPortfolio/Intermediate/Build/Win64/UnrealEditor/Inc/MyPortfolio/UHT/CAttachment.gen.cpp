@@ -24,11 +24,37 @@ void EmptyLinkFunctionForGeneratedCodeCAttachment() {}
 		P_THIS->AttachTo(Z_Param_InSocketName);
 		P_NATIVE_END;
 	}
+	DEFINE_FUNCTION(ACAttachment::execOnUnequip)
+	{
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		P_THIS->OnUnequip_Implementation();
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(ACAttachment::execOnBeginEquip)
+	{
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		P_THIS->OnBeginEquip_Implementation();
+		P_NATIVE_END;
+	}
+	static FName NAME_ACAttachment_OnBeginEquip = FName(TEXT("OnBeginEquip"));
+	void ACAttachment::OnBeginEquip()
+	{
+		ProcessEvent(FindFunctionChecked(NAME_ACAttachment_OnBeginEquip),NULL);
+	}
+	static FName NAME_ACAttachment_OnUnequip = FName(TEXT("OnUnequip"));
+	void ACAttachment::OnUnequip()
+	{
+		ProcessEvent(FindFunctionChecked(NAME_ACAttachment_OnUnequip),NULL);
+	}
 	void ACAttachment::StaticRegisterNativesACAttachment()
 	{
 		UClass* Class = ACAttachment::StaticClass();
 		static const FNameNativePtrPair Funcs[] = {
 			{ "AttachTo", &ACAttachment::execAttachTo },
+			{ "OnBeginEquip", &ACAttachment::execOnBeginEquip },
+			{ "OnUnequip", &ACAttachment::execOnUnequip },
 		};
 		FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
 	}
@@ -67,6 +93,50 @@ void EmptyLinkFunctionForGeneratedCodeCAttachment() {}
 		}
 		return ReturnFunction;
 	}
+	struct Z_Construct_UFunction_ACAttachment_OnBeginEquip_Statics
+	{
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UECodeGen_Private::FFunctionParams FuncParams;
+	};
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_ACAttachment_OnBeginEquip_Statics::Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "Weapons/CAttachment.h" },
+	};
+#endif
+	const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_ACAttachment_OnBeginEquip_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ACAttachment, nullptr, "OnBeginEquip", nullptr, nullptr, nullptr, 0, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x08020C00, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_ACAttachment_OnBeginEquip_Statics::Function_MetaDataParams), Z_Construct_UFunction_ACAttachment_OnBeginEquip_Statics::Function_MetaDataParams) };
+	UFunction* Z_Construct_UFunction_ACAttachment_OnBeginEquip()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_ACAttachment_OnBeginEquip_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
+	struct Z_Construct_UFunction_ACAttachment_OnUnequip_Statics
+	{
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UECodeGen_Private::FFunctionParams FuncParams;
+	};
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_ACAttachment_OnUnequip_Statics::Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "Weapons/CAttachment.h" },
+	};
+#endif
+	const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_ACAttachment_OnUnequip_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ACAttachment, nullptr, "OnUnequip", nullptr, nullptr, nullptr, 0, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x08020C00, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_ACAttachment_OnUnequip_Statics::Function_MetaDataParams), Z_Construct_UFunction_ACAttachment_OnUnequip_Statics::Function_MetaDataParams) };
+	UFunction* Z_Construct_UFunction_ACAttachment_OnUnequip()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_ACAttachment_OnUnequip_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
 	IMPLEMENT_CLASS_NO_AUTO_REGISTRATION(ACAttachment);
 	UClass* Z_Construct_UClass_ACAttachment_NoRegister()
 	{
@@ -98,6 +168,8 @@ void EmptyLinkFunctionForGeneratedCodeCAttachment() {}
 	static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_ACAttachment_Statics::DependentSingletons) < 16);
 	const FClassFunctionLinkInfo Z_Construct_UClass_ACAttachment_Statics::FuncInfo[] = {
 		{ &Z_Construct_UFunction_ACAttachment_AttachTo, "AttachTo" }, // 1835352562
+		{ &Z_Construct_UFunction_ACAttachment_OnBeginEquip, "OnBeginEquip" }, // 3104372570
+		{ &Z_Construct_UFunction_ACAttachment_OnUnequip, "OnUnequip" }, // 1369804793
 	};
 	static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_ACAttachment_Statics::FuncInfo) < 2048);
 #if WITH_METADATA
@@ -163,9 +235,9 @@ void EmptyLinkFunctionForGeneratedCodeCAttachment() {}
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_MyPortfolio_Source_MyPortfolio_Weapons_CAttachment_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_ACAttachment, ACAttachment::StaticClass, TEXT("ACAttachment"), &Z_Registration_Info_UClass_ACAttachment, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ACAttachment), 2939983387U) },
+		{ Z_Construct_UClass_ACAttachment, ACAttachment::StaticClass, TEXT("ACAttachment"), &Z_Registration_Info_UClass_ACAttachment, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ACAttachment), 227609520U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_MyPortfolio_Source_MyPortfolio_Weapons_CAttachment_h_499769081(TEXT("/Script/MyPortfolio"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_MyPortfolio_Source_MyPortfolio_Weapons_CAttachment_h_3510812028(TEXT("/Script/MyPortfolio"),
 		Z_CompiledInDeferFile_FID_MyPortfolio_Source_MyPortfolio_Weapons_CAttachment_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_MyPortfolio_Source_MyPortfolio_Weapons_CAttachment_h_Statics::ClassInfo),
 		nullptr, 0,
 		nullptr, 0);

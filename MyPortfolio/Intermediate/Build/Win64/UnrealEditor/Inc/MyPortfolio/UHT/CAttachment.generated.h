@@ -19,10 +19,13 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #define FID_MyPortfolio_Source_MyPortfolio_Weapons_CAttachment_h_10_EDITOR_ONLY_SPARSE_DATA_PROPERTY_ACCESSORS
 #define FID_MyPortfolio_Source_MyPortfolio_Weapons_CAttachment_h_10_RPC_WRAPPERS_NO_PURE_DECLS \
  \
-	DECLARE_FUNCTION(execAttachTo);
+	DECLARE_FUNCTION(execAttachTo); \
+	DECLARE_FUNCTION(execOnUnequip); \
+	DECLARE_FUNCTION(execOnBeginEquip);
 
 
 #define FID_MyPortfolio_Source_MyPortfolio_Weapons_CAttachment_h_10_ACCESSORS
+#define FID_MyPortfolio_Source_MyPortfolio_Weapons_CAttachment_h_10_CALLBACK_WRAPPERS
 #define FID_MyPortfolio_Source_MyPortfolio_Weapons_CAttachment_h_10_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesACAttachment(); \
@@ -53,6 +56,7 @@ public: \
 	FID_MyPortfolio_Source_MyPortfolio_Weapons_CAttachment_h_10_EDITOR_ONLY_SPARSE_DATA_PROPERTY_ACCESSORS \
 	FID_MyPortfolio_Source_MyPortfolio_Weapons_CAttachment_h_10_RPC_WRAPPERS_NO_PURE_DECLS \
 	FID_MyPortfolio_Source_MyPortfolio_Weapons_CAttachment_h_10_ACCESSORS \
+	FID_MyPortfolio_Source_MyPortfolio_Weapons_CAttachment_h_10_CALLBACK_WRAPPERS \
 	FID_MyPortfolio_Source_MyPortfolio_Weapons_CAttachment_h_10_INCLASS_NO_PURE_DECLS \
 	FID_MyPortfolio_Source_MyPortfolio_Weapons_CAttachment_h_10_ENHANCED_CONSTRUCTORS \
 private: \

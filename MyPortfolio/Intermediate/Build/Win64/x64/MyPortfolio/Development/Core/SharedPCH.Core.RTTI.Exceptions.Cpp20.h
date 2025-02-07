@@ -1,3 +1,0 @@
-// PCH for Runtime/Core/Public/CoreSharedPCH.h
-#include "D:/UnrealProject/Unreal/MyPortfolio/Intermediate/Build/Win64/x64/MyPortfolio/Development/Core/SharedDefinitions.Core.RTTI.Exceptions.Cpp20.h"
-#include "Runtime/Core/Public/CoreSharedPCH.h"

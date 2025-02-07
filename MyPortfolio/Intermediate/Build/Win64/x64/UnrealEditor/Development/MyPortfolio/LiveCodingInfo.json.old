@@ -1,0 +1,41 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.MyPortfolio.cpp.obj": [
+			"CAnimNotifyState_Equip.gen.cpp.obj",
+			"CDoAction.gen.cpp.obj",
+			"CGameMode.cpp.obj",
+			"CMovementComponent.cpp.obj",
+			"CStateComponent.cpp.obj",
+			"IStatable.cpp.obj",
+			"MyPortfolio.cpp.obj",
+			"CAnimNotify_EndState.cpp.obj",
+			"CHelpers.cpp.obj",
+			"CLog.cpp.obj",
+			"CWeapon.cpp.obj",
+			"CAnimInstance.gen.cpp.obj",
+			"CAnimNotify_EndState.gen.cpp.obj",
+			"CAttachment.gen.cpp.obj",
+			"CEquipment.gen.cpp.obj",
+			"CGameMode.gen.cpp.obj",
+			"CMovementComponent.gen.cpp.obj",
+			"CPlayer.gen.cpp.obj",
+			"CStateComponent.gen.cpp.obj",
+			"CWeapon.gen.cpp.obj",
+			"CWeaponAsset.gen.cpp.obj",
+			"CWeaponComponent.gen.cpp.obj",
+			"CWeaponStructures.gen.cpp.obj",
+			"IStatable.gen.cpp.obj",
+			"MyPortfolio.init.gen.cpp.obj",
+			"CAnimInstance.cpp.obj",
+			"CPlayer.cpp.obj",
+			"CWeaponComponent.cpp.obj",
+			"CAnimNotifyState_Equip.cpp.obj",
+			"CAttachment.cpp.obj",
+			"CDoAction.cpp.obj",
+			"CEquipment.cpp.obj",
+			"CWeaponAsset.cpp.obj",
+			"CWeaponStructures.cpp.obj"
+		]
+	}
+}
