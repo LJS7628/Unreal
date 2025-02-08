@@ -18,10 +18,10 @@ void UCAnimNotifyState_Equip::NotifyBegin(USkeletalMeshComponent* MeshComp, UAni
 	UCWeaponComponent* weapon = CHelpers::GetComponent<UCWeaponComponent>(MeshComp->GetOwner());
 	CheckNull(weapon);
 
-	//UCEquipment* equipment = weapon->GetEquipment();
-	//CheckNull(equipment);
+	UCEquipment* equipment = weapon->GetEquipment();
+	CheckNull(equipment);
 
-	weapon->Begin_Equip();
+	equipment->Begin_Equip();
 }
 
 void UCAnimNotifyState_Equip::NotifyEnd(USkeletalMeshComponent* MeshComp, UAnimSequenceBase* Animation, const FAnimNotifyEventReference& EventReference)
@@ -33,8 +33,8 @@ void UCAnimNotifyState_Equip::NotifyEnd(USkeletalMeshComponent* MeshComp, UAnimS
 	UCWeaponComponent* weapon = CHelpers::GetComponent<UCWeaponComponent>(MeshComp->GetOwner());
 	CheckNull(weapon);
 
-	//UCEquipment* equipment = weapon->GetEquipment();
-	//CheckNull(equipment);
+	UCEquipment* equipment = weapon->GetEquipment();
+	CheckNull(equipment);
 
-	weapon->End_Equip();
+	equipment->End_Equip();
 }

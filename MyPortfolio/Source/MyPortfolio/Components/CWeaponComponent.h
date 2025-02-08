@@ -35,7 +35,10 @@ private:
 public:
 	class UCWeaponAsset* GetWeaponAsset(EWeaponType InType);
 	class ACAttachment* GetAttachment();
+
+public:
 	class UCEquipment* GetEquipment();
+	class UCDoAction* GetDoAction();
 
 public:
 	void SetUnarmedMode();
@@ -45,9 +48,9 @@ private:
 	void SetMode(EWeaponType InType);
 	void ChangeType(EWeaponType InType);
 
+
 public:
-	void Begin_Equip();
-	void End_Equip();
+	void DoAction();
 
 public:
 	FWeaponTypeChanged OnWeaponTypeChanged;

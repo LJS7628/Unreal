@@ -3,6 +3,7 @@
 #include "GameFramework/Character.h"
 #include "CStateComponent.h"
 #include "../Weapons/CEquipment.h"
+#include "../Weapons/CDoAction.h"
 #include "../Weapons/CWeaponAsset.h"
 
 UCWeaponComponent::UCWeaponComponent()
@@ -71,6 +72,16 @@ UCEquipment* UCWeaponComponent::GetEquipment()
 	return asset->GetEquipment();
 }
 
+UCDoAction* UCWeaponComponent::GetDoAction()
+{
+	CheckTrueResult(IsUnarmedMode(), nullptr);
+
+	UCWeaponAsset* asset = GetWeaponAsset(Current);
+	CheckNullResult(asset, nullptr);
+
+	return asset->GetDoAction();
+}
+
 void UCWeaponComponent::SetUnarmedMode()
 {
 	GetEquipment()->Unequip();
@@ -117,20 +128,12 @@ void UCWeaponComponent::ChangeType(EWeaponType InType)
 		OnWeaponTypeChanged.Broadcast(prevType, InType);
 }
 
-void UCWeaponComponent::Begin_Equip()
+void UCWeaponComponent::DoAction()
 {
-	UCEquipment* equipment = GetEquipment();
+	UCDoAction* doAction = GetDoAction();
 
-	if (!!equipment)
-		equipment->Begin_Equip();
-}
-
-void UCWeaponComponent::End_Equip()
-{
-	UCEquipment* equipment = GetEquipment();
-
-	if (!!equipment)
-		equipment->End_Equip();
+	if (!!doAction)
+		doAction->DoAction();
 }
 
 
