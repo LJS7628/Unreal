@@ -55,6 +55,7 @@ void ACPlayer::BeginPlay()
 	//State Delegate 와 함수 연결
 	State->OnStateTypeChanged.AddDynamic(this, &ACPlayer::OnStateTypeChanged);
 
+	//ControlRotation 사용 안함
 	Movement->DisenableControlRotation();
 }
 
@@ -78,8 +79,10 @@ void ACPlayer::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
 	PlayerInputComponent->BindAction("Jumping", EInputEvent::IE_Pressed, this, &ACPlayer::OnJump);
 	PlayerInputComponent->BindAction("Evade", EInputEvent::IE_Pressed, this, &ACPlayer::OnEvade);
 
+	//공격
 	PlayerInputComponent->BindAction("Action", EInputEvent::IE_Pressed, Weapon, &UCWeaponComponent::DoAction);
 
+	//검 모드 실행
 	PlayerInputComponent->BindAction("Sword", EInputEvent::IE_Pressed, Weapon, &UCWeaponComponent::SetSwordMode);
 }
 
@@ -115,7 +118,7 @@ void ACPlayer::OnEvade()
 	CheckFalse(Movement->CanMove());
 	//전방으로 움직이지 않을 때 실행 가능
 	CheckTrue(InputComponent->GetAxisValue("MoveForward") >= 0.0f);
-
+	//회피 모드 실행
 	State->SetEvadeMode();
 
 }

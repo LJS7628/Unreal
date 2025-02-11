@@ -2,7 +2,7 @@
 
 #include "CoreMinimal.h"
 #include "Animation/AnimInstance.h"
-#include "../Weapons/CWeaponStructures.h"
+#include "../Weapons/CWeaponStructures.h" 
 #include "CAnimInstance.generated.h"
 
 UCLASS()
@@ -25,7 +25,7 @@ protected:
 
 protected:
 	UPROPERTY(BlueprintReadOnly, EditAnywhere, Category = "Weapon")
-	EWeaponType WeaponType = EWeaponType::Max;
+	EWeaponType WeaponType = EWeaponType::Max; //NULL 방지용 초기화
 
 public:
 	void NativeBeginPlay() override;
@@ -33,6 +33,7 @@ public:
 
 private:
 	UFUNCTION()
+	//타입 변화를 알려줌
 	void OnWeaponTypeChanged(EWeaponType InPrevType, EWeaponType InNewType);
 
 private:
@@ -41,6 +42,6 @@ private:
 private:
 	class UCWeaponComponent* Weapon;
 
-	FRotator PrevRotation; //
+	FRotator PrevRotation; 
 	
 };

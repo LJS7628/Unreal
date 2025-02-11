@@ -1,7 +1,7 @@
 #include "../Components/CMovementComponent.h"
 #include "../Global.h"
-#include "GameFramework/Character.h"
-#include "GameFramework/PlayerController.h"
+#include "GameFramework/Character.h" //캐릭터 
+#include "GameFramework/PlayerController.h" //플레이어 컨트롤러
 #include "GameFramework/CharacterMovementComponent.h" //캐릭터 이동
 
 UCMovementComponent::UCMovementComponent()
@@ -98,6 +98,7 @@ void UCMovementComponent::Stop()
 	bCanMove = false;
 }
 
+//컨트롤러 회전 사용
 void UCMovementComponent::EnableControlRotation()
 {
 	
@@ -105,12 +106,14 @@ void UCMovementComponent::EnableControlRotation()
 	OwnerCharacter->GetCharacterMovement()->bOrientRotationToMovement = false;
 }
 
+//컨트롤러 회전 미사용
 void UCMovementComponent::DisenableControlRotation()
 {
 	OwnerCharacter->bUseControllerRotationYaw =false; // 컨트롤러 Yaw회전 사용 X
 	OwnerCharacter->GetCharacterMovement()->bOrientRotationToMovement = true; //이동방향에 맞춰서 회전
 }
 
+// 회피
 void UCMovementComponent::BackStep()
 {
 	EnableControlRotation();

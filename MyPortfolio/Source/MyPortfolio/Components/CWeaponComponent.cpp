@@ -1,10 +1,10 @@
 #include "../Components/CWeaponComponent.h"
 #include "../Global.h"
-#include "GameFramework/Character.h"
-#include "CStateComponent.h"
-#include "../Weapons/CEquipment.h"
-#include "../Weapons/CDoAction.h"
-#include "../Weapons/CWeaponAsset.h"
+#include "GameFramework/Character.h" // 캐릭터
+#include "CStateComponent.h" //상태 컴포넌트
+#include "../Weapons/CEquipment.h" //장착
+#include "../Weapons/CDoAction.h" // 액션 헤더
+#include "../Weapons/CWeaponAsset.h" //웨폰 에셋
 
 UCWeaponComponent::UCWeaponComponent()
 {
@@ -36,11 +36,13 @@ void UCWeaponComponent::TickComponent(float DeltaTime, ELevelTick TickType, FAct
 
 }
 
+// Idle모드 체크
 bool UCWeaponComponent::IsIdleMode()
 {
 	return CHelpers::GetComponent<UCStateComponent>(OwnerCharacter)->IsIdleMode();
 }
 
+//무기 에셋 가져오기
 UCWeaponAsset* UCWeaponComponent::GetWeaponAsset(EWeaponType InType)
 {
 	for (UCWeaponAsset* asset : DataAssets)
@@ -52,6 +54,7 @@ UCWeaponAsset* UCWeaponComponent::GetWeaponAsset(EWeaponType InType)
 	return nullptr;
 }
 
+// 무기 부착
 ACAttachment* UCWeaponComponent::GetAttachment()
 {
 	CheckTrueResult(IsUnarmedMode(), nullptr);
@@ -62,6 +65,7 @@ ACAttachment* UCWeaponComponent::GetAttachment()
 	return asset->GetAttachment();
 }
 
+// 장착
 UCEquipment* UCWeaponComponent::GetEquipment()
 {
 	CheckTrueResult(IsUnarmedMode(), nullptr);
@@ -72,6 +76,7 @@ UCEquipment* UCWeaponComponent::GetEquipment()
 	return asset->GetEquipment();
 }
 
+//에셋에 따른 DoAction 실행
 UCDoAction* UCWeaponComponent::GetDoAction()
 {
 	CheckTrueResult(IsUnarmedMode(), nullptr);
@@ -82,6 +87,7 @@ UCDoAction* UCWeaponComponent::GetDoAction()
 	return asset->GetDoAction();
 }
 
+// Unarmed 모드
 void UCWeaponComponent::SetUnarmedMode()
 {
 	GetEquipment()->Unequip();
@@ -89,6 +95,7 @@ void UCWeaponComponent::SetUnarmedMode()
 	ChangeType(EWeaponType::Max);
 }
 
+// Sword 모드
 void UCWeaponComponent::SetSwordMode()
 {
 	CheckFalse(IsIdleMode());
@@ -96,8 +103,10 @@ void UCWeaponComponent::SetSwordMode()
 	SetMode(EWeaponType::Sword);
 }
 
+// 모드 설정
 void UCWeaponComponent::SetMode(EWeaponType InType)
 {
+	//바꿀 타입이 동일하면 해제
 	if (Current == InType) 
 	{
 		SetUnarmedMode();
@@ -105,6 +114,7 @@ void UCWeaponComponent::SetMode(EWeaponType InType)
 		return;
 	}
 
+	// 장착 무기 해제
 	else if (IsUnarmedMode() == false) 
 	{
 		GetEquipment()->Unequip();
@@ -114,11 +124,12 @@ void UCWeaponComponent::SetMode(EWeaponType InType)
 
 	if (!!asset) 
 	{
-		asset->GetEquipment()->Equip();
-		ChangeType(InType);
+		asset->GetEquipment()->Equip(); //무기 장착
+		ChangeType(InType); // 상태 변화
 	}
 }
 
+//상태 변화
 void UCWeaponComponent::ChangeType(EWeaponType InType)
 {
 	EWeaponType prevType = Current;
@@ -128,6 +139,7 @@ void UCWeaponComponent::ChangeType(EWeaponType InType)
 		OnWeaponTypeChanged.Broadcast(prevType, InType);
 }
 
+//액션 시작
 void UCWeaponComponent::DoAction()
 {
 	UCDoAction* doAction = GetDoAction();

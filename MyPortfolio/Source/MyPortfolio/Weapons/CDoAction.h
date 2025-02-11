@@ -11,6 +11,10 @@ class MYPORTFOLIO_API UCDoAction : public UObject
 {
 	GENERATED_BODY()
 	
+private:
+	friend class UCAnimNotify_BeginAction;
+	friend class UCAnimNotify_EndAction;
+
 public:
 	UCDoAction();
 
@@ -18,6 +22,8 @@ public:
 
 public:
 	virtual void DoAction();
+
+protected:
 	virtual void Begin_DoAction();
 	virtual void End_DoAction();
 

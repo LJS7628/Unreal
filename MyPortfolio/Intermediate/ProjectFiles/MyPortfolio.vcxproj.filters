@@ -57,6 +57,12 @@
     <ClInclude Include="..\..\Source\MyPortfolio\Characters\CAnimInstance.h">
       <Filter>Source\MyPortfolio\Characters</Filter>
     </ClInclude>
+    <ClCompile Include="..\..\Source\MyPortfolio\Characters\CEnemy.cpp">
+      <Filter>Source\MyPortfolio\Characters</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\MyPortfolio\Characters\CEnemy.h">
+      <Filter>Source\MyPortfolio\Characters</Filter>
+    </ClInclude>
     <ClCompile Include="..\..\Source\MyPortfolio\Characters\CPlayer.cpp">
       <Filter>Source\MyPortfolio\Characters</Filter>
     </ClCompile>
@@ -96,10 +102,28 @@
     <Filter Include="Source\MyPortfolio\Notifies">
       <UniqueIdentifier>{41D3CC83-578C-3355-9DF8-D3B7A148A967}</UniqueIdentifier>
     </Filter>
+    <ClCompile Include="..\..\Source\MyPortfolio\Notifies\CAnimNotifyState_Combo.cpp">
+      <Filter>Source\MyPortfolio\Notifies</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\MyPortfolio\Notifies\CAnimNotifyState_Combo.h">
+      <Filter>Source\MyPortfolio\Notifies</Filter>
+    </ClInclude>
     <ClCompile Include="..\..\Source\MyPortfolio\Notifies\CAnimNotifyState_Equip.cpp">
       <Filter>Source\MyPortfolio\Notifies</Filter>
     </ClCompile>
     <ClInclude Include="..\..\Source\MyPortfolio\Notifies\CAnimNotifyState_Equip.h">
+      <Filter>Source\MyPortfolio\Notifies</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\MyPortfolio\Notifies\CAnimNotify_BeginAction.cpp">
+      <Filter>Source\MyPortfolio\Notifies</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\MyPortfolio\Notifies\CAnimNotify_BeginAction.h">
+      <Filter>Source\MyPortfolio\Notifies</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\MyPortfolio\Notifies\CAnimNotify_EndAction.cpp">
+      <Filter>Source\MyPortfolio\Notifies</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\MyPortfolio\Notifies\CAnimNotify_EndAction.h">
       <Filter>Source\MyPortfolio\Notifies</Filter>
     </ClInclude>
     <ClCompile Include="..\..\Source\MyPortfolio\Notifies\CAnimNotify_EndState.cpp">

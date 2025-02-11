@@ -46,7 +46,13 @@ void EmptyLinkFunctionForGeneratedCodeCWeaponComponent() {}
 	};
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UDelegateFunction_MyPortfolio_WeaponTypeChanged__DelegateSignature_Statics::Function_MetaDataParams[] = {
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "//\xc5\xb8\xef\xbf\xbd\xef\xbf\xbd \xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xe6\xbf\xa1 \xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd \xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xc6\xae\n" },
+#endif
 		{ "ModuleRelativePath", "Components/CWeaponComponent.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "\xc5\xb8\xef\xbf\xbd\xef\xbf\xbd \xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xe6\xbf\xa1 \xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd \xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xc6\xae" },
+#endif
 	};
 #endif
 	const UECodeGen_Private::FFunctionParams Z_Construct_UDelegateFunction_MyPortfolio_WeaponTypeChanged__DelegateSignature_Statics::FuncParams = { (UObject*(*)())Z_Construct_UPackage__Script_MyPortfolio, nullptr, "WeaponTypeChanged__DelegateSignature", nullptr, nullptr, Z_Construct_UDelegateFunction_MyPortfolio_WeaponTypeChanged__DelegateSignature_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UDelegateFunction_MyPortfolio_WeaponTypeChanged__DelegateSignature_Statics::PropPointers), sizeof(Z_Construct_UDelegateFunction_MyPortfolio_WeaponTypeChanged__DelegateSignature_Statics::_Script_MyPortfolio_eventWeaponTypeChanged_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00130000, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UDelegateFunction_MyPortfolio_WeaponTypeChanged__DelegateSignature_Statics::Function_MetaDataParams), Z_Construct_UDelegateFunction_MyPortfolio_WeaponTypeChanged__DelegateSignature_Statics::Function_MetaDataParams) };
@@ -111,7 +117,13 @@ void FWeaponTypeChanged_DelegateWrapper(const FMulticastScriptDelegate& WeaponTy
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UCWeaponComponent_Statics::NewProp_DataAssets_MetaData[] = {
 		{ "Category", "DataAsset" },
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "//\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd \xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\n" },
+#endif
 		{ "ModuleRelativePath", "Components/CWeaponComponent.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd \xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd" },
+#endif
 	};
 #endif
 	const UECodeGen_Private::FArrayPropertyParams Z_Construct_UClass_UCWeaponComponent_Statics::NewProp_DataAssets = { "DataAssets", nullptr, (EPropertyFlags)0x0040000000000001, UECodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UCWeaponComponent, DataAssets), EArrayPropertyFlags::None, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_UCWeaponComponent_Statics::NewProp_DataAssets_MetaData), Z_Construct_UClass_UCWeaponComponent_Statics::NewProp_DataAssets_MetaData) };
@@ -157,9 +169,9 @@ void FWeaponTypeChanged_DelegateWrapper(const FMulticastScriptDelegate& WeaponTy
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_MyPortfolio_Source_MyPortfolio_Components_CWeaponComponent_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_UCWeaponComponent, UCWeaponComponent::StaticClass, TEXT("UCWeaponComponent"), &Z_Registration_Info_UClass_UCWeaponComponent, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UCWeaponComponent), 1981869262U) },
+		{ Z_Construct_UClass_UCWeaponComponent, UCWeaponComponent::StaticClass, TEXT("UCWeaponComponent"), &Z_Registration_Info_UClass_UCWeaponComponent, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UCWeaponComponent), 829223774U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_MyPortfolio_Source_MyPortfolio_Components_CWeaponComponent_h_1534106203(TEXT("/Script/MyPortfolio"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_MyPortfolio_Source_MyPortfolio_Components_CWeaponComponent_h_4016475983(TEXT("/Script/MyPortfolio"),
 		Z_CompiledInDeferFile_FID_MyPortfolio_Source_MyPortfolio_Components_CWeaponComponent_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_MyPortfolio_Source_MyPortfolio_Components_CWeaponComponent_h_Statics::ClassInfo),
 		nullptr, 0,
 		nullptr, 0);

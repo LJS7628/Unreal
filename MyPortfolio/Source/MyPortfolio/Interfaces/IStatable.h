@@ -15,7 +15,7 @@ class MYPORTFOLIO_API IIStatable
 {
 	GENERATED_BODY()
 
-	
+//회피 완료 가상 함수	
 public:
 	virtual void End_Backstep() {};
 };

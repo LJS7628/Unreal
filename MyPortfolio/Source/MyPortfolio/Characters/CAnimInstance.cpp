@@ -4,8 +4,8 @@
 #include "GameFramework/Character.h"
 #include "GameFramework/CharacterMovementComponent.h"  //캐릭터 이동 관리 Component
 
-#include "../Characters/CPlayer.h"
-#include "../Components/CWeaponComponent.h"
+#include "../Characters/CPlayer.h" //플레이어 
+#include "../Components/CWeaponComponent.h" //웨폰
 
 void UCAnimInstance::NativeBeginPlay()
 {
@@ -17,6 +17,7 @@ void UCAnimInstance::NativeBeginPlay()
 	Weapon = CHelpers::GetComponent<UCWeaponComponent>(OwnerCharacter);
 	CheckNull(Weapon);
 
+	//상태변화를 델리게이트에 연결
 	Weapon->OnWeaponTypeChanged.AddDynamic(this, &UCAnimInstance::OnWeaponTypeChanged);
 }
 

@@ -12,36 +12,43 @@ void UCStateComponent::BeginPlay()
 
 }
 
+// Idle 모드
 void UCStateComponent::SetIdleMode()
 {
 	ChangeType(EStateType::Idle);
 }
 
+// 회피 모드
 void UCStateComponent::SetEvadeMode()
 {
 	ChangeType(EStateType::Evade);
 }
 
+// 장착 모드
 void UCStateComponent::SetEquipMode()
 {
 	ChangeType(EStateType::Equip);
 }
 
+// 피격 모드
 void UCStateComponent::SetDamagedMode()
 {
 	ChangeType(EStateType::Damaged);
 }
 
+// 공격 모드
 void UCStateComponent::SetActionMode()
 {
 	ChangeType(EStateType::Action);
 }
 
+// 사망 모드
 void UCStateComponent::SetDeadMode()
 {
 	ChangeType(EStateType::Dead);
 }
 
+// 타입 변경 알림
 void UCStateComponent::ChangeType(EStateType InType)
 {
 	EStateType prevType = currentType; //이전 상태 저장

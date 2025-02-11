@@ -8,7 +8,7 @@
 UCLASS()
 class MYPORTFOLIO_API ACPlayer 
 	: public ACharacter
-	, public IIStatable
+	, public IIStatable  //상태 인터페이스 상속
 
 {
 	GENERATED_BODY()
@@ -32,12 +32,15 @@ private:
 	UPROPERTY(VisibleAnywhere)
 	class UCMovementComponent* Movement;
 
+// 점프,회피
 private:
 	void OnJump();
 	void OnEvade();
 
+// 카메라 확대
 private:
 	void OnZoom(float InAxisValue);
+
 
 public:
 	ACPlayer();
@@ -54,6 +57,7 @@ private:
 	void OnStateTypeChanged(EStateType InPrevType, EStateType InNewType);
 
 public:
+	//회피 종료 
 	void  End_Backstep() override;
 
 };

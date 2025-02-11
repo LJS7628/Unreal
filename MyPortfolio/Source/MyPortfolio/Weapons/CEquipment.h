@@ -13,6 +13,9 @@ class MYPORTFOLIO_API UCEquipment : public UObject
 {
 	GENERATED_BODY()
 
+private:
+	friend class UCAnimNotifyState_Equip;
+
 public:
 	void BeginPlay(class ACharacter* InOwner, const FEquipmentData& InData);
 
@@ -21,6 +24,7 @@ public:
 	void Equip();
 	void Equip_Implementation();
 
+protected:
 	UFUNCTION(BlueprintNativeEvent)
 	void Begin_Equip();
 	void Begin_Equip_Implementation();
