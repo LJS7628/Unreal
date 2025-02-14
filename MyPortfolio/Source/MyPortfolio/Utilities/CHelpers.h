@@ -1,6 +1,10 @@
 #pragma once
 
 #include "CoreMinimal.h"
+#include "Particles/ParticleSystemComponent.h"
+#include "Kismet/GameplayStatics.h"
+#include "NiagaraSystem.h"
+#include "NiagaraFunctionLibrary.h"
 
 #define CheckTrue(x) { if(x == true) return; } //True check용
 #define CheckTrueResult(x, y) { if(x == true) return y; } //반환용
@@ -117,5 +121,32 @@ public:
 		}
 
 		return nullptr;
+	}
+
+	static void PlayEffect(UWorld* InWorld, UFXSystemAsset* InAsset, const FTransform& InTransform, USkeletalMeshComponent* InMesh = nullptr, FName InSocketName = NAME_None)
+	{
+		UParticleSystem* particle = Cast<UParticleSystem>(InAsset);
+		UNiagaraSystem* niagara = Cast<UNiagaraSystem>(InAsset);
+
+		FVector location = InTransform.GetLocation();
+		FRotator rotation = FRotator(InTransform.GetRotation());
+		FVector scale = InTransform.GetScale3D();
+
+		if (!!InMesh)
+		{
+			return;
+		}
+
+		if (!!particle) 
+		{
+			UGameplayStatics::SpawnEmitterAtLocation(InWorld,particle,InTransform);
+
+			return;
+		}
+
+		if (!!niagara) 
+		{
+			return;
+		}
 	}
 };

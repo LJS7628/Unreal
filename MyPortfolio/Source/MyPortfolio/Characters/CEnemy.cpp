@@ -1,19 +1,21 @@
 #include "../Characters/CEnemy.h"
 #include "../Global.h"
-#include "../Characters/CAnimInstance.h"
+
+
 #include "GameFramework/CharacterMovementComponent.h"
 #include "Components/CapsuleComponent.h"
 
-
-//#include "Weapons/CWeaponStructures.h"
+#include "../Characters/CAnimInstance.h"
+#include "../Weapons/CWeaponStructures.h"
 #include "../Components/CMovementComponent.h"
 #include "../Components/CStateComponent.h"
-//#include "Components/CHealthPointComponent.h"
+#include "../Components/CHealthPointComponent.h"
 
 ACEnemy::ACEnemy()
 {
 	CHelpers::CreateActorComponent<UCMovementComponent>(this, &Movement, "Movement");
 	CHelpers::CreateActorComponent<UCStateComponent>(this, &State, "State");
+	CHelpers::CreateActorComponent<UCHealthPointComponent>(this, &HealthPoint, "HealthPoint");
 
 	GetMesh()->SetRelativeLocation(FVector(0, 0, -90));
 	GetMesh()->SetRelativeRotation(FRotator(0, -90, 0));
@@ -33,5 +35,71 @@ void ACEnemy::BeginPlay()
 {
 	Super::BeginPlay();
 	
+	Movement->OnWalk();
+
+	State->OnStateTypeChanged.AddDynamic(this, &ACEnemy::OnStateTypeChanged);
 }
+
+float ACEnemy::TakeDamage(float DamageAmount, FDamageEvent const& DamageEvent, AController* EventInstigator, AActor* DamageCauser)
+{
+	DamageAmount = Super::TakeDamage(DamageAmount, DamageEvent, EventInstigator, DamageCauser);
+
+	DamageData.Power = DamageAmount;
+	DamageData.Attacker = Cast<ACharacter>(EventInstigator->GetPawn());
+	DamageData.Causer = DamageCauser;
+
+	DamageData.Event = (FActionDamageEvent*)(&DamageEvent);
+
+	State->SetDamagedMode();
+
+	return DamageAmount;
+}
+
+void ACEnemy::OnStateTypeChanged(EStateType InPrevType, EStateType InNewType)
+{
+	switch (InNewType)
+	{
+		case EStateType::Damaged: Damaged(); break;
+		//case EStateType::Dead: Dead(); break;
+	}
+
+}
+
+void ACEnemy::Damaged()
+{
+	//Apply Damage
+	{
+		HealthPoint->Damage(DamageData.Power);
+		DamageData.Power = 0.0f;
+	}
+
+
+	if (!!DamageData.Event && !!DamageData.Event->HitData)
+	{
+		FHitData* hitData = DamageData.Event->HitData;
+
+		hitData->PlayHitMotion(this);
+		hitData->PlayHitStop(this);
+
+		if (HealthPoint->IsDead() == false)
+		{
+			FVector start = GetActorLocation();
+			FVector target = DamageData.Attacker->GetActorLocation();
+			FVector direction = target - start;
+			direction.Normalize();
+
+			if (hitData->Launch > 0.0f)
+				LaunchCharacter(-direction * hitData->Launch, false, false);
+
+			SetActorRotation(UKismetMathLibrary::FindLookAtRotation(start, target));
+		}
+	}
+
+
+	DamageData.Attacker = nullptr;
+	DamageData.Causer = nullptr;
+	DamageData.Event = nullptr;
+}
+
+
 

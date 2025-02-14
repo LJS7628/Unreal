@@ -37,6 +37,12 @@ void UCWeaponAsset::BeginPlay(ACharacter* InOwner)
 	if (!!DoActionClass) 
 	{
 		DoAction = NewObject<UCDoAction>(this, DoActionClass);
-		DoAction->BeginPlay(InOwner, DoActionDatas);
+		DoAction->BeginPlay(InOwner, DoActionDatas,HitDatas);
+
+		if (!!Attachment) 
+		{
+			Attachment->OnAttachmentBeginOverlap.AddDynamic(DoAction, &UCDoAction::OnAttachmentBeginOverlap);
+			Attachment->OnAttachmentEndOverlap.AddDynamic(DoAction, &UCDoAction::OnAttachmentEndOverlap);
+		}
 	}
 }

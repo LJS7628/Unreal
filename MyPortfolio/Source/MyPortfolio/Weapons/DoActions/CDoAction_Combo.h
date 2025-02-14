@@ -19,6 +19,10 @@ public:
 	void Begin_DoAction() override;
 	void End_DoAction() override;
 
+
+public:
+	void OnAttachmentBeginOverlap(class ACharacter* InAttacker, AActor* InAttackCauser, class ACharacter* InOther) override;
+	
 private:
 	int32 Index;
 

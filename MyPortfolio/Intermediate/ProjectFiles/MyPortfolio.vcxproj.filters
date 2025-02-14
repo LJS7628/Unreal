@@ -72,6 +72,12 @@
     <Filter Include="Source\MyPortfolio\Components">
       <UniqueIdentifier>{04CEF9F2-E057-35EF-B02C-2103B7367564}</UniqueIdentifier>
     </Filter>
+    <ClCompile Include="..\..\Source\MyPortfolio\Components\CHealthPointComponent.cpp">
+      <Filter>Source\MyPortfolio\Components</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\MyPortfolio\Components\CHealthPointComponent.h">
+      <Filter>Source\MyPortfolio\Components</Filter>
+    </ClInclude>
     <ClCompile Include="..\..\Source\MyPortfolio\Components\CMovementComponent.cpp">
       <Filter>Source\MyPortfolio\Components</Filter>
     </ClCompile>
@@ -102,6 +108,12 @@
     <Filter Include="Source\MyPortfolio\Notifies">
       <UniqueIdentifier>{41D3CC83-578C-3355-9DF8-D3B7A148A967}</UniqueIdentifier>
     </Filter>
+    <ClCompile Include="..\..\Source\MyPortfolio\Notifies\CAnimNotifyState_Collision.cpp">
+      <Filter>Source\MyPortfolio\Notifies</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\MyPortfolio\Notifies\CAnimNotifyState_Collision.h">
+      <Filter>Source\MyPortfolio\Notifies</Filter>
+    </ClInclude>
     <ClCompile Include="..\..\Source\MyPortfolio\Notifies\CAnimNotifyState_Combo.cpp">
       <Filter>Source\MyPortfolio\Notifies</Filter>
     </ClCompile>

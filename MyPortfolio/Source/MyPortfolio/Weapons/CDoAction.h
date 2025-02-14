@@ -18,7 +18,7 @@ private:
 public:
 	UCDoAction();
 
-	void BeginPlay(class ACharacter* InOwner,const TArray<FDoActionData>& InDoActionDatas);
+	void BeginPlay(class ACharacter* InOwner,const TArray<FDoActionData>& InDoActionDatas, const TArray<FHitData>& InHitDatas);
 
 public:
 	virtual void DoAction();
@@ -26,6 +26,13 @@ public:
 protected:
 	virtual void Begin_DoAction();
 	virtual void End_DoAction();
+
+public:
+	UFUNCTION()
+	virtual void OnAttachmentBeginOverlap(class ACharacter* InAttacker, AActor* InAttackCauser, class ACharacter* InOther) {}
+
+	UFUNCTION()
+	virtual void OnAttachmentEndOverlap(class ACharacter* InAttacker, class ACharacter* InOther) {}
 
 protected:
 	class ACharacter* OwnerCharacter;
@@ -35,4 +42,5 @@ protected:
 	class UCStateComponent* State;
 
 	TArray<FDoActionData> DoActionDatas;
+	TArray<FHitData> HitDatas;
 };

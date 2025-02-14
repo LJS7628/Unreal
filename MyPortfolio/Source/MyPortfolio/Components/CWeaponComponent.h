@@ -35,14 +35,14 @@ private:
 	//기본 상태 체크
 	bool IsIdleMode();
 
-public:
-	// 무기 에셋 가져오기, 무기 부착하기
+private:
+	// 무기 에셋 가져오기
 	class UCWeaponAsset* GetWeaponAsset(EWeaponType InType);
-	class ACAttachment* GetAttachment();
 
 public:
-	//부착된 무기 장착, 공격
+	//무기 부착, 장착, 공격
 	class UCEquipment* GetEquipment();
+	class ACAttachment* GetAttachment();
 	class UCDoAction* GetDoAction();
 
 public:

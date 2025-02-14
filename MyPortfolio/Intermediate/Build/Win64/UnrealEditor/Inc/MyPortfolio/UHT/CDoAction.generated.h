@@ -9,6 +9,8 @@
 #include "UObject/ScriptMacros.h"
 
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
+class AActor;
+class ACharacter;
 #ifdef MYPORTFOLIO_CDoAction_generated_h
 #error "CDoAction.generated.h already included, missing '#pragma once' in CDoAction.h"
 #endif
@@ -17,7 +19,12 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #define FID_MyPortfolio_Source_MyPortfolio_Weapons_CDoAction_h_12_SPARSE_DATA
 #define FID_MyPortfolio_Source_MyPortfolio_Weapons_CDoAction_h_12_SPARSE_DATA_PROPERTY_ACCESSORS
 #define FID_MyPortfolio_Source_MyPortfolio_Weapons_CDoAction_h_12_EDITOR_ONLY_SPARSE_DATA_PROPERTY_ACCESSORS
-#define FID_MyPortfolio_Source_MyPortfolio_Weapons_CDoAction_h_12_RPC_WRAPPERS_NO_PURE_DECLS
+#define FID_MyPortfolio_Source_MyPortfolio_Weapons_CDoAction_h_12_RPC_WRAPPERS_NO_PURE_DECLS \
+ \
+	DECLARE_FUNCTION(execOnAttachmentEndOverlap); \
+	DECLARE_FUNCTION(execOnAttachmentBeginOverlap);
+
+
 #define FID_MyPortfolio_Source_MyPortfolio_Weapons_CDoAction_h_12_ACCESSORS
 #define FID_MyPortfolio_Source_MyPortfolio_Weapons_CDoAction_h_12_INCLASS_NO_PURE_DECLS \
 private: \

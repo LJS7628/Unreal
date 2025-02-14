@@ -9,6 +9,7 @@
 #include "UObject/ScriptMacros.h"
 
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
+enum class EStateType : uint8;
 #ifdef MYPORTFOLIO_CEnemy_generated_h
 #error "CEnemy.generated.h already included, missing '#pragma once' in CEnemy.h"
 #endif
@@ -17,7 +18,11 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #define FID_MyPortfolio_Source_MyPortfolio_Characters_CEnemy_h_11_SPARSE_DATA
 #define FID_MyPortfolio_Source_MyPortfolio_Characters_CEnemy_h_11_SPARSE_DATA_PROPERTY_ACCESSORS
 #define FID_MyPortfolio_Source_MyPortfolio_Characters_CEnemy_h_11_EDITOR_ONLY_SPARSE_DATA_PROPERTY_ACCESSORS
-#define FID_MyPortfolio_Source_MyPortfolio_Characters_CEnemy_h_11_RPC_WRAPPERS_NO_PURE_DECLS
+#define FID_MyPortfolio_Source_MyPortfolio_Characters_CEnemy_h_11_RPC_WRAPPERS_NO_PURE_DECLS \
+ \
+	DECLARE_FUNCTION(execOnStateTypeChanged);
+
+
 #define FID_MyPortfolio_Source_MyPortfolio_Characters_CEnemy_h_11_ACCESSORS
 #define FID_MyPortfolio_Source_MyPortfolio_Characters_CEnemy_h_11_INCLASS_NO_PURE_DECLS \
 private: \
