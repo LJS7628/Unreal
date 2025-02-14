@@ -13,7 +13,7 @@ class MYPORTFOLIO_API UCHealthPointComponent : public UActorComponent
 
 private:
 	UPROPERTY(EditAnywhere, Category = "Health")
-	float MaxHealth = 100;
+	float MaxHealth = 500;
 
 public:
 	FORCEINLINE bool IsDead() { return Health <= 0.0f; }

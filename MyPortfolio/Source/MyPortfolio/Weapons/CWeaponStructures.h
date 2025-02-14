@@ -93,6 +93,8 @@ public:
 	void SendDamage(class ACharacter* InAttacker, AActor* InAttackCauser, class ACharacter* InOther);
 	void PlayHitMotion(class ACharacter* InCharacter);
 	void PlayHitStop(class ACharacter* InCharacter);
+	void PlayEffect(class ACharacter* InCharacter);
+	void PlaySound(class ACharacter* InCharacter);
 
 };
 

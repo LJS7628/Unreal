@@ -11,6 +11,13 @@ class MYPORTFOLIO_API ACEnemy : public ACharacter
 	GENERATED_BODY()
 
 private:
+	UPROPERTY(EditAnywhere, Category = "Montages")
+	class UAnimMontage* DeadMontage;
+
+	UPROPERTY(EditAnywhere, Category = "Montages")
+	float DeadMontage_PlayRate = 1.0f;
+
+private:
 	UPROPERTY(VisibleAnywhere)
 	class UCMovementComponent* Movement;
 
@@ -37,9 +44,8 @@ private:
 
 private:
 	void Damaged();
-
-private:
 	void Dead();
+	
 
 private:
 	struct FDamageData 

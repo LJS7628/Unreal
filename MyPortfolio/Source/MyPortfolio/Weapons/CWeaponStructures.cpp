@@ -76,3 +76,28 @@ void FHitData::PlayHitStop(ACharacter* InCharacter)
 	FTimerHandle timerHandle;
 	InCharacter->GetWorld()->GetTimerManager().SetTimer(timerHandle, timerDelegate, StopTime, false);
 }
+
+void FHitData::PlayEffect(ACharacter* InCharacter)
+{
+	CheckNull(InCharacter);
+	CheckNull(Effect);
+
+	FVector location = InCharacter->GetActorLocation();
+	FRotator rotation = InCharacter->GetActorRotation();
+
+	location += rotation.RotateVector(EffectLocation);
+
+	FTransform transform;
+	transform.SetLocation(location);
+	transform.SetScale3D(EffectScale);
+
+	CHelpers::PlayEffect(InCharacter->GetWorld(),Effect,transform);
+}
+
+void FHitData::PlaySound(ACharacter* InCharacter)
+{
+	CheckNull(InCharacter);
+	CheckNull(Sound);
+
+	UGameplayStatics::SpawnSoundAtLocation(InCharacter->GetWorld(), Sound, InCharacter->GetActorLocation());
+}

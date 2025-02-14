@@ -123,7 +123,7 @@ public:
 		return nullptr;
 	}
 
-	static void PlayEffect(UWorld* InWorld, UFXSystemAsset* InAsset, const FTransform& InTransform, USkeletalMeshComponent* InMesh = nullptr, FName InSocketName = NAME_None)
+	static void PlayEffect(UWorld* InWorld, UFXSystemAsset* InAsset, const FTransform& InTransform, USceneComponent* InAttach = nullptr, FName InSocketName = NAME_None)
 	{
 		UParticleSystem* particle = Cast<UParticleSystem>(InAsset);
 		UNiagaraSystem* niagara = Cast<UNiagaraSystem>(InAsset);
@@ -132,21 +132,32 @@ public:
 		FRotator rotation = FRotator(InTransform.GetRotation());
 		FVector scale = InTransform.GetScale3D();
 
-		if (!!InMesh)
+
+		if (!!InAttach)
 		{
+			if (!!particle)
+			{
+				UGameplayStatics::SpawnEmitterAttached(particle, InAttach, InSocketName, location, rotation, scale);
+
+				return;
+			}
+
+			if (!!niagara)
+			{
+				UNiagaraFunctionLibrary::SpawnSystemAttached(niagara, InAttach, InSocketName, location, rotation, scale, EAttachLocation::KeepRelativeOffset, true, ENCPoolMethod::None);
+
+				return;
+			}
+		}
+
+		if (!!particle)
+		{
+			UGameplayStatics::SpawnEmitterAtLocation(InWorld, particle, InTransform);
+
 			return;
 		}
 
-		if (!!particle) 
-		{
-			UGameplayStatics::SpawnEmitterAtLocation(InWorld,particle,InTransform);
-
-			return;
-		}
-
-		if (!!niagara) 
-		{
-			return;
-		}
+		if (!!niagara)
+			UNiagaraFunctionLibrary::SpawnSystemAtLocation(InWorld, niagara, location, rotation, scale);
 	}
 };

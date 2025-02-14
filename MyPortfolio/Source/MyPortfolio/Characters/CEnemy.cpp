@@ -60,7 +60,7 @@ void ACEnemy::OnStateTypeChanged(EStateType InPrevType, EStateType InNewType)
 	switch (InNewType)
 	{
 		case EStateType::Damaged: Damaged(); break;
-		//case EStateType::Dead: Dead(); break;
+		case EStateType::Dead: Dead(); break;
 	}
 
 }
@@ -80,6 +80,8 @@ void ACEnemy::Damaged()
 
 		hitData->PlayHitMotion(this);
 		hitData->PlayHitStop(this);
+		hitData->PlayEffect(this);
+		hitData->PlaySound(this);
 
 		if (HealthPoint->IsDead() == false)
 		{
@@ -95,10 +97,24 @@ void ACEnemy::Damaged()
 		}
 	}
 
+	if (HealthPoint->IsDead() == true) 
+	{
+		State->SetDeadMode();
+
+		return;
+	}
+
 
 	DamageData.Attacker = nullptr;
 	DamageData.Causer = nullptr;
 	DamageData.Event = nullptr;
+}
+
+void ACEnemy::Dead()
+{
+	GetCapsuleComponent()->SetCollisionEnabled(ECollisionEnabled::NoCollision);
+
+	PlayAnimMontage(DeadMontage, DeadMontage_PlayRate);
 }
 
 
