@@ -26,7 +26,6 @@
 			"CGameMode.cpp.obj",
 			"CAnimInstance.cpp.obj",
 			"CPlayer.cpp.obj",
-			"CHealthPointComponent.cpp.obj",
 			"CMovementComponent.cpp.obj",
 			"CStateComponent.cpp.obj",
 			"CWeaponComponent.cpp.obj",
@@ -48,6 +47,7 @@
 			"CEnemy.gen.cpp.obj",
 			"MyPortfolio.init.gen.cpp.obj",
 			"CEnemy.cpp.obj",
+			"CHealthPointComponent.cpp.obj",
 			"CHelpers.cpp.obj",
 			"CWeaponStructures.cpp.obj"
 		]

@@ -23,7 +23,6 @@
 #include "D:/UnrealProject/Unreal/MyPortfolio/Source/MyPortfolio/CGameMode.cpp"
 #include "D:/UnrealProject/Unreal/MyPortfolio/Source/MyPortfolio/Characters/CAnimInstance.cpp"
 #include "D:/UnrealProject/Unreal/MyPortfolio/Source/MyPortfolio/Characters/CPlayer.cpp"
-#include "D:/UnrealProject/Unreal/MyPortfolio/Source/MyPortfolio/Components/CHealthPointComponent.cpp"
 #include "D:/UnrealProject/Unreal/MyPortfolio/Source/MyPortfolio/Components/CMovementComponent.cpp"
 #include "D:/UnrealProject/Unreal/MyPortfolio/Source/MyPortfolio/Components/CStateComponent.cpp"
 #include "D:/UnrealProject/Unreal/MyPortfolio/Source/MyPortfolio/Components/CWeaponComponent.cpp"

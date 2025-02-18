@@ -18,4 +18,5 @@ class MYPORTFOLIO_API IIStatable
 //회피 완료 가상 함수	
 public:
 	virtual void End_Backstep() {};
+	virtual void End_Dead() {};
 };

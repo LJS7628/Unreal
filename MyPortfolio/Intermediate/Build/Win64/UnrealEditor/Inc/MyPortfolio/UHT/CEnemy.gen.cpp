@@ -16,6 +16,7 @@ void EmptyLinkFunctionForGeneratedCodeCEnemy() {}
 	MYPORTFOLIO_API UClass* Z_Construct_UClass_UCHealthPointComponent_NoRegister();
 	MYPORTFOLIO_API UClass* Z_Construct_UClass_UCMovementComponent_NoRegister();
 	MYPORTFOLIO_API UClass* Z_Construct_UClass_UCStateComponent_NoRegister();
+	MYPORTFOLIO_API UClass* Z_Construct_UClass_UIStatable_NoRegister();
 	MYPORTFOLIO_API UEnum* Z_Construct_UEnum_MyPortfolio_EStateType();
 	UPackage* Z_Construct_UPackage__Script_MyPortfolio();
 // End Cross Module References
@@ -113,6 +114,7 @@ void EmptyLinkFunctionForGeneratedCodeCEnemy() {}
 #endif
 		static const UECodeGen_Private::FObjectPropertyParams NewProp_HealthPoint;
 		static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+		static const UECodeGen_Private::FImplementedInterfaceParams InterfaceParams[];
 		static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
 		static const UECodeGen_Private::FClassParams ClassParams;
 	};
@@ -177,6 +179,10 @@ void EmptyLinkFunctionForGeneratedCodeCEnemy() {}
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACEnemy_Statics::NewProp_State,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACEnemy_Statics::NewProp_HealthPoint,
 	};
+		const UECodeGen_Private::FImplementedInterfaceParams Z_Construct_UClass_ACEnemy_Statics::InterfaceParams[] = {
+			{ Z_Construct_UClass_UIStatable_NoRegister, (int32)VTABLE_OFFSET(ACEnemy, IIStatable), false },  // 3651956757
+		};
+	static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_ACEnemy_Statics::InterfaceParams) < 64);
 	const FCppClassTypeInfoStatic Z_Construct_UClass_ACEnemy_Statics::StaticCppClassTypeInfo = {
 		TCppClassTypeTraits<ACEnemy>::IsAbstract,
 	};
@@ -187,11 +193,11 @@ void EmptyLinkFunctionForGeneratedCodeCEnemy() {}
 		DependentSingletons,
 		FuncInfo,
 		Z_Construct_UClass_ACEnemy_Statics::PropPointers,
-		nullptr,
+		InterfaceParams,
 		UE_ARRAY_COUNT(DependentSingletons),
 		UE_ARRAY_COUNT(FuncInfo),
 		UE_ARRAY_COUNT(Z_Construct_UClass_ACEnemy_Statics::PropPointers),
-		0,
+		UE_ARRAY_COUNT(InterfaceParams),
 		0x009000A4u,
 		METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_ACEnemy_Statics::Class_MetaDataParams), Z_Construct_UClass_ACEnemy_Statics::Class_MetaDataParams)
 	};
@@ -215,9 +221,9 @@ void EmptyLinkFunctionForGeneratedCodeCEnemy() {}
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_MyPortfolio_Source_MyPortfolio_Characters_CEnemy_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_ACEnemy, ACEnemy::StaticClass, TEXT("ACEnemy"), &Z_Registration_Info_UClass_ACEnemy, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ACEnemy), 537552880U) },
+		{ Z_Construct_UClass_ACEnemy, ACEnemy::StaticClass, TEXT("ACEnemy"), &Z_Registration_Info_UClass_ACEnemy, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ACEnemy), 1369032159U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_MyPortfolio_Source_MyPortfolio_Characters_CEnemy_h_3360288167(TEXT("/Script/MyPortfolio"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_MyPortfolio_Source_MyPortfolio_Characters_CEnemy_h_117230269(TEXT("/Script/MyPortfolio"),
 		Z_CompiledInDeferFile_FID_MyPortfolio_Source_MyPortfolio_Characters_CEnemy_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_MyPortfolio_Source_MyPortfolio_Characters_CEnemy_h_Statics::ClassInfo),
 		nullptr, 0,
 		nullptr, 0);

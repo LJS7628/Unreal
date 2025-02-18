@@ -15,25 +15,26 @@ enum class EStateType : uint8;
 #endif
 #define MYPORTFOLIO_CEnemy_generated_h
 
-#define FID_MyPortfolio_Source_MyPortfolio_Characters_CEnemy_h_11_SPARSE_DATA
-#define FID_MyPortfolio_Source_MyPortfolio_Characters_CEnemy_h_11_SPARSE_DATA_PROPERTY_ACCESSORS
-#define FID_MyPortfolio_Source_MyPortfolio_Characters_CEnemy_h_11_EDITOR_ONLY_SPARSE_DATA_PROPERTY_ACCESSORS
-#define FID_MyPortfolio_Source_MyPortfolio_Characters_CEnemy_h_11_RPC_WRAPPERS_NO_PURE_DECLS \
+#define FID_MyPortfolio_Source_MyPortfolio_Characters_CEnemy_h_13_SPARSE_DATA
+#define FID_MyPortfolio_Source_MyPortfolio_Characters_CEnemy_h_13_SPARSE_DATA_PROPERTY_ACCESSORS
+#define FID_MyPortfolio_Source_MyPortfolio_Characters_CEnemy_h_13_EDITOR_ONLY_SPARSE_DATA_PROPERTY_ACCESSORS
+#define FID_MyPortfolio_Source_MyPortfolio_Characters_CEnemy_h_13_RPC_WRAPPERS_NO_PURE_DECLS \
  \
 	DECLARE_FUNCTION(execOnStateTypeChanged);
 
 
-#define FID_MyPortfolio_Source_MyPortfolio_Characters_CEnemy_h_11_ACCESSORS
-#define FID_MyPortfolio_Source_MyPortfolio_Characters_CEnemy_h_11_INCLASS_NO_PURE_DECLS \
+#define FID_MyPortfolio_Source_MyPortfolio_Characters_CEnemy_h_13_ACCESSORS
+#define FID_MyPortfolio_Source_MyPortfolio_Characters_CEnemy_h_13_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesACEnemy(); \
 	friend struct Z_Construct_UClass_ACEnemy_Statics; \
 public: \
 	DECLARE_CLASS(ACEnemy, ACharacter, COMPILED_IN_FLAGS(0 | CLASS_Config), CASTCLASS_None, TEXT("/Script/MyPortfolio"), NO_API) \
-	DECLARE_SERIALIZER(ACEnemy)
+	DECLARE_SERIALIZER(ACEnemy) \
+	virtual UObject* _getUObject() const override { return const_cast<ACEnemy*>(this); }
 
 
-#define FID_MyPortfolio_Source_MyPortfolio_Characters_CEnemy_h_11_ENHANCED_CONSTRUCTORS \
+#define FID_MyPortfolio_Source_MyPortfolio_Characters_CEnemy_h_13_ENHANCED_CONSTRUCTORS \
 private: \
 	/** Private move- and copy-constructors, should never be used */ \
 	NO_API ACEnemy(ACEnemy&&); \
@@ -46,16 +47,16 @@ public: \
 
 
 #define FID_MyPortfolio_Source_MyPortfolio_Characters_CEnemy_h_8_PROLOG
-#define FID_MyPortfolio_Source_MyPortfolio_Characters_CEnemy_h_11_GENERATED_BODY \
+#define FID_MyPortfolio_Source_MyPortfolio_Characters_CEnemy_h_13_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_MyPortfolio_Source_MyPortfolio_Characters_CEnemy_h_11_SPARSE_DATA \
-	FID_MyPortfolio_Source_MyPortfolio_Characters_CEnemy_h_11_SPARSE_DATA_PROPERTY_ACCESSORS \
-	FID_MyPortfolio_Source_MyPortfolio_Characters_CEnemy_h_11_EDITOR_ONLY_SPARSE_DATA_PROPERTY_ACCESSORS \
-	FID_MyPortfolio_Source_MyPortfolio_Characters_CEnemy_h_11_RPC_WRAPPERS_NO_PURE_DECLS \
-	FID_MyPortfolio_Source_MyPortfolio_Characters_CEnemy_h_11_ACCESSORS \
-	FID_MyPortfolio_Source_MyPortfolio_Characters_CEnemy_h_11_INCLASS_NO_PURE_DECLS \
-	FID_MyPortfolio_Source_MyPortfolio_Characters_CEnemy_h_11_ENHANCED_CONSTRUCTORS \
+	FID_MyPortfolio_Source_MyPortfolio_Characters_CEnemy_h_13_SPARSE_DATA \
+	FID_MyPortfolio_Source_MyPortfolio_Characters_CEnemy_h_13_SPARSE_DATA_PROPERTY_ACCESSORS \
+	FID_MyPortfolio_Source_MyPortfolio_Characters_CEnemy_h_13_EDITOR_ONLY_SPARSE_DATA_PROPERTY_ACCESSORS \
+	FID_MyPortfolio_Source_MyPortfolio_Characters_CEnemy_h_13_RPC_WRAPPERS_NO_PURE_DECLS \
+	FID_MyPortfolio_Source_MyPortfolio_Characters_CEnemy_h_13_ACCESSORS \
+	FID_MyPortfolio_Source_MyPortfolio_Characters_CEnemy_h_13_INCLASS_NO_PURE_DECLS \
+	FID_MyPortfolio_Source_MyPortfolio_Characters_CEnemy_h_13_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 

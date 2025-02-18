@@ -117,5 +117,10 @@ void ACEnemy::Dead()
 	PlayAnimMontage(DeadMontage, DeadMontage_PlayRate);
 }
 
+void ACEnemy::End_Dead()
+{
+	Destroy();
+}
+
 
 

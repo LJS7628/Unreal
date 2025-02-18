@@ -6,7 +6,9 @@
 #include "CEnemy.generated.h"
 
 UCLASS()
-class MYPORTFOLIO_API ACEnemy : public ACharacter
+class MYPORTFOLIO_API ACEnemy : 
+	public ACharacter
+	,public IIStatable
 {
 	GENERATED_BODY()
 
@@ -46,6 +48,8 @@ private:
 	void Damaged();
 	void Dead();
 	
+public:
+	void End_Dead() override;
 
 private:
 	struct FDamageData 
