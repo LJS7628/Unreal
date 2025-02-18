@@ -28,11 +28,9 @@
 			"CGameMode.cpp.obj",
 			"CAnimInstance.cpp.obj",
 			"CEnemy.cpp.obj",
-			"CPlayer.cpp.obj",
 			"CHealthPointComponent.cpp.obj",
 			"CMovementComponent.cpp.obj",
 			"CStateComponent.cpp.obj",
-			"CWeaponComponent.cpp.obj",
 			"IStatable.cpp.obj",
 			"MyPortfolio.cpp.obj",
 			"CAnimNotifyState_Collision.cpp.obj",
@@ -45,11 +43,13 @@
 			"CLog.cpp.obj",
 			"CAttachment.cpp.obj",
 			"CDoAction.cpp.obj",
-			"CEquipment.cpp.obj",
 			"CWeapon.cpp.obj",
 			"CWeaponAsset.cpp.obj",
 			"CWeaponStructures.cpp.obj",
-			"CDoAction_Combo.cpp.obj"
+			"CDoAction_Combo.cpp.obj",
+			"CPlayer.cpp.obj",
+			"CWeaponComponent.cpp.obj",
+			"CEquipment.cpp.obj"
 		]
 	}
 }

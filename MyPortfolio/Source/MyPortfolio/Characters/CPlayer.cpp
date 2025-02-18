@@ -84,6 +84,7 @@ void ACPlayer::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
 
 	//검 모드 실행
 	PlayerInputComponent->BindAction("Sword", EInputEvent::IE_Pressed, Weapon, &UCWeaponComponent::SetSwordMode);
+	PlayerInputComponent->BindAction("Axe", EInputEvent::IE_Pressed, Weapon, &UCWeaponComponent::SetAxeMode);
 }
 
 void ACPlayer::OnStateTypeChanged(EStateType InPrevType, EStateType InNewType)

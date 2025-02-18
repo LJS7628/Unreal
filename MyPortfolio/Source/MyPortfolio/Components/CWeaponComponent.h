@@ -49,6 +49,7 @@ public:
 	//무기 해제, 검 모드 
 	void SetUnarmedMode();
 	void SetSwordMode();
+	void SetAxeMode();
 
 private:
 	//모드 세팅, 타입 변경 알림

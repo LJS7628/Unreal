@@ -26,7 +26,12 @@ void UCEquipment::Equip_Implementation()
 	if (!!Data.Montage)
 	{
 		OwnerCharacter->PlayAnimMontage(Data.Montage, Data.PlayRate);
+
+		return;
 	}
+
+	Begin_Equip();
+	End_Equip();
 }
 
 void UCEquipment::Begin_Equip_Implementation()

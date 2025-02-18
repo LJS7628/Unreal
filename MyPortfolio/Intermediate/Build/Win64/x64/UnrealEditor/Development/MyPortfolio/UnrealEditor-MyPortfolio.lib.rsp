@@ -8,5 +8,8 @@
 /NODEFAULTLIB
 "D:\UnrealProject\Unreal\MyPortfolio\Intermediate\Build\Win64\x64\MyPortfolioEditor\Development\Engine\SharedPCH.Engine.Cpp20.h.obj"
 "D:\UnrealProject\Unreal\MyPortfolio\Intermediate\Build\Win64\x64\UnrealEditor\Development\MyPortfolio\Module.MyPortfolio.cpp.obj"
+"D:\UnrealProject\Unreal\MyPortfolio\Intermediate\Build\Win64\x64\UnrealEditor\Development\MyPortfolio\CPlayer.cpp.obj"
+"D:\UnrealProject\Unreal\MyPortfolio\Intermediate\Build\Win64\x64\UnrealEditor\Development\MyPortfolio\CWeaponComponent.cpp.obj"
+"D:\UnrealProject\Unreal\MyPortfolio\Intermediate\Build\Win64\x64\UnrealEditor\Development\MyPortfolio\CEquipment.cpp.obj"
 "D:\UnrealProject\Unreal\MyPortfolio\Intermediate\Build\Win64\x64\UnrealEditor\Development\MyPortfolio\Default.rc2.res"
 /OUT:"D:\UnrealProject\Unreal\MyPortfolio\Intermediate\Build\Win64\x64\UnrealEditor\Development\MyPortfolio\UnrealEditor-MyPortfolio.lib"
