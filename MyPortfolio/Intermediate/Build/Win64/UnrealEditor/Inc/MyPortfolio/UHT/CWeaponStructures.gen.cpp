@@ -9,9 +9,11 @@
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
 void EmptyLinkFunctionForGeneratedCodeCWeaponStructures() {}
 // Cross Module References
+	COREUOBJECT_API UClass* Z_Construct_UClass_UClass();
 	COREUOBJECT_API UClass* Z_Construct_UClass_UObject();
 	COREUOBJECT_API UScriptStruct* Z_Construct_UScriptStruct_FVector();
 	ENGINE_API UClass* Z_Construct_UClass_UAnimMontage_NoRegister();
+	ENGINE_API UClass* Z_Construct_UClass_UCameraShakeBase_NoRegister();
 	ENGINE_API UClass* Z_Construct_UClass_UFXSystemAsset_NoRegister();
 	ENGINE_API UClass* Z_Construct_UClass_USoundWave_NoRegister();
 	ENGINE_API UScriptStruct* Z_Construct_UScriptStruct_FDamageEvent();
@@ -366,6 +368,10 @@ template<> MYPORTFOLIO_API UScriptStruct* StaticStruct<FHitData>()
 		static const UECodeGen_Private::FMetaDataPairParam NewProp_EffectScale_MetaData[];
 #endif
 		static const UECodeGen_Private::FStructPropertyParams NewProp_EffectScale;
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam NewProp_CameraShake_MetaData[];
+#endif
+		static const UECodeGen_Private::FClassPropertyParams NewProp_CameraShake;
 		static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 		static const UECodeGen_Private::FStructParams ReturnStructParams;
 	};
@@ -441,6 +447,13 @@ template<> MYPORTFOLIO_API UScriptStruct* StaticStruct<FHitData>()
 	};
 #endif
 	const UECodeGen_Private::FStructPropertyParams Z_Construct_UScriptStruct_FHitData_Statics::NewProp_EffectScale = { "EffectScale", nullptr, (EPropertyFlags)0x0010000000000001, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(FHitData, EffectScale), Z_Construct_UScriptStruct_FVector, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FHitData_Statics::NewProp_EffectScale_MetaData), Z_Construct_UScriptStruct_FHitData_Statics::NewProp_EffectScale_MetaData) };
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FHitData_Statics::NewProp_CameraShake_MetaData[] = {
+		{ "Category", "HitData" },
+		{ "ModuleRelativePath", "Weapons/CWeaponStructures.h" },
+	};
+#endif
+	const UECodeGen_Private::FClassPropertyParams Z_Construct_UScriptStruct_FHitData_Statics::NewProp_CameraShake = { "CameraShake", nullptr, (EPropertyFlags)0x0014000000000001, UECodeGen_Private::EPropertyGenFlags::Class, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(FHitData, CameraShake), Z_Construct_UClass_UClass, Z_Construct_UClass_UCameraShakeBase_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FHitData_Statics::NewProp_CameraShake_MetaData), Z_Construct_UScriptStruct_FHitData_Statics::NewProp_CameraShake_MetaData) };
 	const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UScriptStruct_FHitData_Statics::PropPointers[] = {
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FHitData_Statics::NewProp_Montage,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FHitData_Statics::NewProp_PlayRate,
@@ -451,6 +464,7 @@ template<> MYPORTFOLIO_API UScriptStruct* StaticStruct<FHitData>()
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FHitData_Statics::NewProp_Effect,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FHitData_Statics::NewProp_EffectLocation,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FHitData_Statics::NewProp_EffectScale,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FHitData_Statics::NewProp_CameraShake,
 	};
 	const UECodeGen_Private::FStructParams Z_Construct_UScriptStruct_FHitData_Statics::ReturnStructParams = {
 		(UObject* (*)())Z_Construct_UPackage__Script_MyPortfolio,
@@ -601,13 +615,13 @@ template<> MYPORTFOLIO_API UScriptStruct* StaticStruct<FActionDamageEvent>()
 	const FStructRegisterCompiledInInfo Z_CompiledInDeferFile_FID_MyPortfolio_Source_MyPortfolio_Weapons_CWeaponStructures_h_Statics::ScriptStructInfo[] = {
 		{ FEquipmentData::StaticStruct, Z_Construct_UScriptStruct_FEquipmentData_Statics::NewStructOps, TEXT("EquipmentData"), &Z_Registration_Info_UScriptStruct_EquipmentData, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FEquipmentData), 314561670U) },
 		{ FDoActionData::StaticStruct, Z_Construct_UScriptStruct_FDoActionData_Statics::NewStructOps, TEXT("DoActionData"), &Z_Registration_Info_UScriptStruct_DoActionData, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FDoActionData), 2981462078U) },
-		{ FHitData::StaticStruct, Z_Construct_UScriptStruct_FHitData_Statics::NewStructOps, TEXT("HitData"), &Z_Registration_Info_UScriptStruct_HitData, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FHitData), 1773975387U) },
+		{ FHitData::StaticStruct, Z_Construct_UScriptStruct_FHitData_Statics::NewStructOps, TEXT("HitData"), &Z_Registration_Info_UScriptStruct_HitData, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FHitData), 642212284U) },
 		{ FActionDamageEvent::StaticStruct, Z_Construct_UScriptStruct_FActionDamageEvent_Statics::NewStructOps, TEXT("ActionDamageEvent"), &Z_Registration_Info_UScriptStruct_ActionDamageEvent, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FActionDamageEvent), 1741520637U) },
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_MyPortfolio_Source_MyPortfolio_Weapons_CWeaponStructures_h_Statics::ClassInfo[] = {
 		{ Z_Construct_UClass_UCWeaponStructures, UCWeaponStructures::StaticClass, TEXT("UCWeaponStructures"), &Z_Registration_Info_UClass_UCWeaponStructures, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UCWeaponStructures), 4214432673U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_MyPortfolio_Source_MyPortfolio_Weapons_CWeaponStructures_h_1822778983(TEXT("/Script/MyPortfolio"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_MyPortfolio_Source_MyPortfolio_Weapons_CWeaponStructures_h_1771327866(TEXT("/Script/MyPortfolio"),
 		Z_CompiledInDeferFile_FID_MyPortfolio_Source_MyPortfolio_Weapons_CWeaponStructures_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_MyPortfolio_Source_MyPortfolio_Weapons_CWeaponStructures_h_Statics::ClassInfo),
 		Z_CompiledInDeferFile_FID_MyPortfolio_Source_MyPortfolio_Weapons_CWeaponStructures_h_Statics::ScriptStructInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_MyPortfolio_Source_MyPortfolio_Weapons_CWeaponStructures_h_Statics::ScriptStructInfo),
 		Z_CompiledInDeferFile_FID_MyPortfolio_Source_MyPortfolio_Weapons_CWeaponStructures_h_Statics::EnumInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_MyPortfolio_Source_MyPortfolio_Weapons_CWeaponStructures_h_Statics::EnumInfo));

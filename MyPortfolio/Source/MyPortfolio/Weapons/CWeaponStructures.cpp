@@ -4,12 +4,17 @@
 #include "GameFramework/Character.h"
 #include "../Components/CMovementComponent.h"
 
+#include "Camera/CameraShakeBase.h" //Camera Shake
+
 void FDoActionData::DoAction(ACharacter* InOwner)
 {
 	UCMovementComponent* movement = CHelpers::GetComponent<UCMovementComponent>(InOwner);
 
 	if (!!movement)
 	{
+		if (bFixedCamera)
+			movement->EnableFixedCamera();
+
 		if (bCanMove == false)
 			movement->Stop();
 	}
@@ -100,4 +105,16 @@ void FHitData::PlaySound(ACharacter* InCharacter)
 	CheckNull(Sound);
 
 	UGameplayStatics::SpawnSoundAtLocation(InCharacter->GetWorld(), Sound, InCharacter->GetActorLocation());
+}
+
+void FHitData::PlayCameraShake(ACharacter* InCharacter)
+{
+	CheckNull(InCharacter);
+	CheckNull(CameraShake);
+
+	APlayerCameraManager* cameraManager = UGameplayStatics::GetPlayerCameraManager(InCharacter->GetWorld(), 0);
+	CheckNull(cameraManager);
+
+	cameraManager->StartCameraShake(CameraShake);
+
 }

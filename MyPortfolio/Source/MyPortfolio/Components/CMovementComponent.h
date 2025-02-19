@@ -72,6 +72,12 @@ public:
 //bCanMove Check ¿ë
 	FORCEINLINE bool CanMove() { return bCanMove; }
 
+public:
+	FORCEINLINE bool GetFixedCamera() { return bFixedCamera; }
+	FORCEINLINE void EnableFixedCamera() { bFixedCamera=true; }
+	FORCEINLINE void DisableFixedCamera() { bFixedCamera = false; }
+
+
 //bCanMove ¼³Á¤
 public:
 	void Move();

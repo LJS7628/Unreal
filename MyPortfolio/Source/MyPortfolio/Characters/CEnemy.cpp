@@ -82,6 +82,7 @@ void ACEnemy::Damaged()
 		hitData->PlayHitStop(this);
 		hitData->PlayEffect(this);
 		hitData->PlaySound(this);
+		hitData->PlayCameraShake(this);
 
 		if (HealthPoint->IsDead() == false)
 		{

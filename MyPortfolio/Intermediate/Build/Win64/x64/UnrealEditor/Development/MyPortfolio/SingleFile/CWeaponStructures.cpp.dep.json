@@ -959,7 +959,9 @@
             "c:\\program files\\epic games\\ue_5.3\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\rootmotionsource.generated.h",
             "c:\\program files\\epic games\\ue_5.3\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\character.generated.h",
             "d:\\unrealproject\\unreal\\myportfolio\\source\\myportfolio\\components\\cmovementcomponent.h",
-            "d:\\unrealproject\\unreal\\myportfolio\\intermediate\\build\\win64\\unrealeditor\\inc\\myportfolio\\uht\\cmovementcomponent.generated.h"
+            "d:\\unrealproject\\unreal\\myportfolio\\intermediate\\build\\win64\\unrealeditor\\inc\\myportfolio\\uht\\cmovementcomponent.generated.h",
+            "c:\\program files\\epic games\\ue_5.3\\engine\\source\\runtime\\engine\\classes\\camera\\camerashakebase.h",
+            "c:\\program files\\epic games\\ue_5.3\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\camerashakebase.generated.h"
         ],
         "ImportedModules": [],
         "ImportedHeaderUnits": []

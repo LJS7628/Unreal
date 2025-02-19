@@ -132,6 +132,12 @@
     <ClInclude Include="..\..\Source\MyPortfolio\Notifies\CAnimNotify_BeginAction.h">
       <Filter>Source\MyPortfolio\Notifies</Filter>
     </ClInclude>
+    <ClCompile Include="..\..\Source\MyPortfolio\Notifies\CAnimNotify_CameraShake.cpp">
+      <Filter>Source\MyPortfolio\Notifies</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\MyPortfolio\Notifies\CAnimNotify_CameraShake.h">
+      <Filter>Source\MyPortfolio\Notifies</Filter>
+    </ClInclude>
     <ClCompile Include="..\..\Source\MyPortfolio\Notifies\CAnimNotify_EndAction.cpp">
       <Filter>Source\MyPortfolio\Notifies</Filter>
     </ClCompile>

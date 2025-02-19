@@ -39,4 +39,5 @@ void UCDoAction::End_DoAction()
 	State->SetIdleMode();
 
 	Movement->Move();
+	Movement->DisableFixedCamera();
 }

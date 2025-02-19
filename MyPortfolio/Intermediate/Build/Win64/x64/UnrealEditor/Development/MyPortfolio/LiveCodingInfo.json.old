@@ -20,17 +20,14 @@
 			"CPlayer.gen.cpp.obj",
 			"CStateComponent.gen.cpp.obj",
 			"CWeapon.gen.cpp.obj",
-			"CWeaponAsset.gen.cpp.obj",
 			"CWeaponComponent.gen.cpp.obj",
-			"CWeaponStructures.gen.cpp.obj",
 			"IStatable.gen.cpp.obj",
-			"MyPortfolio.init.gen.cpp.obj",
 			"CGameMode.cpp.obj",
 			"CAnimInstance.cpp.obj",
-			"CEnemy.cpp.obj",
+			"CPlayer.cpp.obj",
 			"CHealthPointComponent.cpp.obj",
-			"CMovementComponent.cpp.obj",
 			"CStateComponent.cpp.obj",
+			"CWeaponComponent.cpp.obj",
 			"IStatable.cpp.obj",
 			"MyPortfolio.cpp.obj",
 			"CAnimNotifyState_Collision.cpp.obj",
@@ -46,10 +43,15 @@
 			"CEquipment.cpp.obj",
 			"CWeapon.cpp.obj",
 			"CWeaponAsset.cpp.obj",
-			"CWeaponStructures.cpp.obj",
 			"CDoAction_Combo.cpp.obj",
-			"CPlayer.cpp.obj",
-			"CWeaponComponent.cpp.obj"
+			"CAnimNotify_CameraShake.gen.cpp.obj",
+			"CWeaponAsset.gen.cpp.obj",
+			"CWeaponStructures.gen.cpp.obj",
+			"MyPortfolio.init.gen.cpp.obj",
+			"CEnemy.cpp.obj",
+			"CMovementComponent.cpp.obj",
+			"CAnimNotify_CameraShake.cpp.obj",
+			"CWeaponStructures.cpp.obj"
 		]
 	}
 }
