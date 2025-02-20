@@ -39,7 +39,6 @@
 			"CHelpers.cpp.obj",
 			"CLog.cpp.obj",
 			"CAttachment.cpp.obj",
-			"CDoAction.cpp.obj",
 			"CEquipment.cpp.obj",
 			"CWeapon.cpp.obj",
 			"CWeaponAsset.cpp.obj",
@@ -51,6 +50,7 @@
 			"CEnemy.cpp.obj",
 			"CMovementComponent.cpp.obj",
 			"CAnimNotify_CameraShake.cpp.obj",
+			"CDoAction.cpp.obj",
 			"CWeaponStructures.cpp.obj"
 		]
 	}
