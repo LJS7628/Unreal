@@ -2,6 +2,7 @@
 	"RemapUnityFiles": 
 	{
 		"Module.MyPortfolio.cpp.obj": [
+			"CAnimInstance.gen.cpp.obj",
 			"CAnimNotifyState_Collision.gen.cpp.obj",
 			"CAnimNotifyState_Combo.gen.cpp.obj",
 			"CAnimNotifyState_Equip.gen.cpp.obj",
@@ -9,6 +10,7 @@
 			"CAnimNotify_CameraShake.gen.cpp.obj",
 			"CAnimNotify_EndAction.gen.cpp.obj",
 			"CAnimNotify_EndState.gen.cpp.obj",
+			"CAttachment.gen.cpp.obj",
 			"CDoAction.gen.cpp.obj",
 			"CDoAction_Combo.gen.cpp.obj",
 			"CEnemy.gen.cpp.obj",
@@ -19,13 +21,19 @@
 			"CPlayer.gen.cpp.obj",
 			"CStateComponent.gen.cpp.obj",
 			"CWeapon.gen.cpp.obj",
+			"CWeaponAsset.gen.cpp.obj",
+			"CWeaponComponent.gen.cpp.obj",
+			"CWeaponStructures.gen.cpp.obj",
 			"IStatable.gen.cpp.obj",
+			"MyPortfolio.init.gen.cpp.obj",
 			"CGameMode.cpp.obj",
 			"CAnimInstance.cpp.obj",
 			"CEnemy.cpp.obj",
+			"CPlayer.cpp.obj",
 			"CHealthPointComponent.cpp.obj",
 			"CMovementComponent.cpp.obj",
 			"CStateComponent.cpp.obj",
+			"CWeaponComponent.cpp.obj",
 			"IStatable.cpp.obj",
 			"MyPortfolio.cpp.obj",
 			"CAnimNotifyState_Collision.cpp.obj",
@@ -41,16 +49,8 @@
 			"CEquipment.cpp.obj",
 			"CWeapon.cpp.obj",
 			"CWeaponAsset.cpp.obj",
-			"CAnimInstance.gen.cpp.obj",
-			"CAttachment.gen.cpp.obj",
-			"CWeaponAsset.gen.cpp.obj",
-			"CWeaponComponent.gen.cpp.obj",
-			"CWeaponStructures.gen.cpp.obj",
-			"MyPortfolio.init.gen.cpp.obj",
-			"CPlayer.cpp.obj",
-			"CWeaponComponent.cpp.obj",
-			"CAttachment.cpp.obj",
 			"CWeaponStructures.cpp.obj",
+			"CAttachment.cpp.obj",
 			"CDoAction_Combo.cpp.obj"
 		]
 	}

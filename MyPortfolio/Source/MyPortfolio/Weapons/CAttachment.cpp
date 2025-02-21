@@ -56,8 +56,6 @@ void ACAttachment::OnComponentBeginOverlap(UPrimitiveComponent* OverlappedCompon
 {
 	CheckTrue(OwnerCharacter == OtherActor);
 
-	CLog::Log("Begin : " + OtherActor->GetName());
-
 	if (OnAttachmentBeginOverlap.IsBound())
 		OnAttachmentBeginOverlap.Broadcast(OwnerCharacter, this, Cast<ACharacter>(OtherActor));
 }
@@ -65,8 +63,6 @@ void ACAttachment::OnComponentBeginOverlap(UPrimitiveComponent* OverlappedCompon
 void ACAttachment::OnComponentEndOverlap(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex)
 {
 	CheckTrue(OwnerCharacter == OtherActor);
-
-	CLog::Log("End : " + OtherActor->GetName());
 
 	if (OnAttachmentEndOverlap.IsBound())
 		OnAttachmentEndOverlap.Broadcast(OwnerCharacter, Cast<ACharacter>(OtherActor));
