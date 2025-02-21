@@ -48,6 +48,7 @@ void EmptyLinkFunctionForGeneratedCodeCWeaponStructures() {}
 		static const UECodeGen_Private::FEnumParams EnumParams;
 	};
 	const UECodeGen_Private::FEnumeratorParam Z_Construct_UEnum_MyPortfolio_EWeaponType_Statics::Enumerators[] = {
+		{ "EWeaponType::Fist", (int64)EWeaponType::Fist },
 		{ "EWeaponType::Sword", (int64)EWeaponType::Sword },
 		{ "EWeaponType::Axe", (int64)EWeaponType::Axe },
 		{ "EWeaponType::Max", (int64)EWeaponType::Max },
@@ -59,6 +60,7 @@ void EmptyLinkFunctionForGeneratedCodeCWeaponStructures() {}
 #if !UE_BUILD_SHIPPING
 		{ "Comment", "//Enum\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd \xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd \xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\n" },
 #endif
+		{ "Fist.Name", "EWeaponType::Fist" },
 		{ "Max.Name", "EWeaponType::Max" },
 		{ "ModuleRelativePath", "Weapons/CWeaponStructures.h" },
 		{ "Sword.Name", "EWeaponType::Sword" },
@@ -610,7 +612,7 @@ template<> MYPORTFOLIO_API UScriptStruct* StaticStruct<FActionDamageEvent>()
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
 	const FEnumRegisterCompiledInInfo Z_CompiledInDeferFile_FID_MyPortfolio_Source_MyPortfolio_Weapons_CWeaponStructures_h_Statics::EnumInfo[] = {
-		{ EWeaponType_StaticEnum, TEXT("EWeaponType"), &Z_Registration_Info_UEnum_EWeaponType, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 3427506738U) },
+		{ EWeaponType_StaticEnum, TEXT("EWeaponType"), &Z_Registration_Info_UEnum_EWeaponType, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 3021230382U) },
 	};
 	const FStructRegisterCompiledInInfo Z_CompiledInDeferFile_FID_MyPortfolio_Source_MyPortfolio_Weapons_CWeaponStructures_h_Statics::ScriptStructInfo[] = {
 		{ FEquipmentData::StaticStruct, Z_Construct_UScriptStruct_FEquipmentData_Statics::NewStructOps, TEXT("EquipmentData"), &Z_Registration_Info_UScriptStruct_EquipmentData, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FEquipmentData), 314561670U) },
@@ -621,7 +623,7 @@ template<> MYPORTFOLIO_API UScriptStruct* StaticStruct<FActionDamageEvent>()
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_MyPortfolio_Source_MyPortfolio_Weapons_CWeaponStructures_h_Statics::ClassInfo[] = {
 		{ Z_Construct_UClass_UCWeaponStructures, UCWeaponStructures::StaticClass, TEXT("UCWeaponStructures"), &Z_Registration_Info_UClass_UCWeaponStructures, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UCWeaponStructures), 4214432673U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_MyPortfolio_Source_MyPortfolio_Weapons_CWeaponStructures_h_1771327866(TEXT("/Script/MyPortfolio"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_MyPortfolio_Source_MyPortfolio_Weapons_CWeaponStructures_h_3034765053(TEXT("/Script/MyPortfolio"),
 		Z_CompiledInDeferFile_FID_MyPortfolio_Source_MyPortfolio_Weapons_CWeaponStructures_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_MyPortfolio_Source_MyPortfolio_Weapons_CWeaponStructures_h_Statics::ClassInfo),
 		Z_CompiledInDeferFile_FID_MyPortfolio_Source_MyPortfolio_Weapons_CWeaponStructures_h_Statics::ScriptStructInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_MyPortfolio_Source_MyPortfolio_Weapons_CWeaponStructures_h_Statics::ScriptStructInfo),
 		Z_CompiledInDeferFile_FID_MyPortfolio_Source_MyPortfolio_Weapons_CWeaponStructures_h_Statics::EnumInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_MyPortfolio_Source_MyPortfolio_Weapons_CWeaponStructures_h_Statics::EnumInfo));

@@ -93,6 +93,7 @@ template<> MYPORTFOLIO_API UClass* StaticClass<class UCWeaponStructures>();
 
 
 #define FOREACH_ENUM_EWEAPONTYPE(op) \
+	op(EWeaponType::Fist) \
 	op(EWeaponType::Sword) \
 	op(EWeaponType::Axe) \
 	op(EWeaponType::Max) 

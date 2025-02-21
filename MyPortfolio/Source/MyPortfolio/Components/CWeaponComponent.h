@@ -48,6 +48,7 @@ public:
 public:
 	//무기 해제, 검 모드 
 	void SetUnarmedMode();
+	void SetFistMode();
 	void SetSwordMode();
 	void SetAxeMode();
 

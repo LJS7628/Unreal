@@ -95,6 +95,14 @@ void UCWeaponComponent::SetUnarmedMode()
 	ChangeType(EWeaponType::Max);
 }
 
+// Fist 모드
+void UCWeaponComponent::SetFistMode()
+{
+	CheckFalse(IsIdleMode());
+
+	SetMode(EWeaponType::Fist);
+}
+
 // Sword 모드
 void UCWeaponComponent::SetSwordMode()
 {
@@ -103,6 +111,7 @@ void UCWeaponComponent::SetSwordMode()
 	SetMode(EWeaponType::Sword);
 }
 
+// Axe 모드
 void UCWeaponComponent::SetAxeMode()
 {
 	CheckFalse(IsIdleMode());

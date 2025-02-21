@@ -39,9 +39,10 @@ MYPORTFOLIO_API void FAttachmentEndOverlap_DelegateWrapper(const FMulticastScrip
 #define FID_MyPortfolio_Source_MyPortfolio_Weapons_CAttachment_h_16_EDITOR_ONLY_SPARSE_DATA_PROPERTY_ACCESSORS
 #define FID_MyPortfolio_Source_MyPortfolio_Weapons_CAttachment_h_16_RPC_WRAPPERS_NO_PURE_DECLS \
  \
-	DECLARE_FUNCTION(execAttachTo); \
 	DECLARE_FUNCTION(execOnComponentEndOverlap); \
 	DECLARE_FUNCTION(execOnComponentBeginOverlap); \
+	DECLARE_FUNCTION(execAttachToCollision); \
+	DECLARE_FUNCTION(execAttachTo); \
 	DECLARE_FUNCTION(execOnUnequip); \
 	DECLARE_FUNCTION(execOnBeginEquip);
 

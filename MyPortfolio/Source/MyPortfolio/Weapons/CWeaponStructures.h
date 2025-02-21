@@ -9,7 +9,7 @@
 UENUM(BlueprintType)
 enum class EWeaponType : uint8
 {
-	Sword, Axe, Max,
+	Fist,Sword, Axe, Max,
 };
 
 USTRUCT()

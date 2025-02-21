@@ -182,14 +182,6 @@ void FAttachmentEndOverlap_DelegateWrapper(const FMulticastScriptDelegate& Attac
 	Parms.InOther=InOther;
 	AttachmentEndOverlap.ProcessMulticastDelegate<UObject>(&Parms);
 }
-	DEFINE_FUNCTION(ACAttachment::execAttachTo)
-	{
-		P_GET_PROPERTY(FNameProperty,Z_Param_InSocketName);
-		P_FINISH;
-		P_NATIVE_BEGIN;
-		P_THIS->AttachTo(Z_Param_InSocketName);
-		P_NATIVE_END;
-	}
 	DEFINE_FUNCTION(ACAttachment::execOnComponentEndOverlap)
 	{
 		P_GET_OBJECT(UPrimitiveComponent,Z_Param_OverlappedComponent);
@@ -212,6 +204,22 @@ void FAttachmentEndOverlap_DelegateWrapper(const FMulticastScriptDelegate& Attac
 		P_FINISH;
 		P_NATIVE_BEGIN;
 		P_THIS->OnComponentBeginOverlap(Z_Param_OverlappedComponent,Z_Param_OtherActor,Z_Param_OtherComp,Z_Param_OtherBodyIndex,Z_Param_bFromSweep,Z_Param_Out_SweepResult);
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(ACAttachment::execAttachToCollision)
+	{
+		P_GET_PROPERTY(FNameProperty,Z_Param_InCollisionName);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		P_THIS->AttachToCollision(Z_Param_InCollisionName);
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(ACAttachment::execAttachTo)
+	{
+		P_GET_PROPERTY(FNameProperty,Z_Param_InSocketName);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		P_THIS->AttachTo(Z_Param_InSocketName);
 		P_NATIVE_END;
 	}
 	DEFINE_FUNCTION(ACAttachment::execOnUnequip)
@@ -243,6 +251,7 @@ void FAttachmentEndOverlap_DelegateWrapper(const FMulticastScriptDelegate& Attac
 		UClass* Class = ACAttachment::StaticClass();
 		static const FNameNativePtrPair Funcs[] = {
 			{ "AttachTo", &ACAttachment::execAttachTo },
+			{ "AttachToCollision", &ACAttachment::execAttachToCollision },
 			{ "OnBeginEquip", &ACAttachment::execOnBeginEquip },
 			{ "OnComponentBeginOverlap", &ACAttachment::execOnComponentBeginOverlap },
 			{ "OnComponentEndOverlap", &ACAttachment::execOnComponentEndOverlap },
@@ -282,6 +291,41 @@ void FAttachmentEndOverlap_DelegateWrapper(const FMulticastScriptDelegate& Attac
 		if (!ReturnFunction)
 		{
 			UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_ACAttachment_AttachTo_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
+	struct Z_Construct_UFunction_ACAttachment_AttachToCollision_Statics
+	{
+		struct CAttachment_eventAttachToCollision_Parms
+		{
+			FName InCollisionName;
+		};
+		static const UECodeGen_Private::FNamePropertyParams NewProp_InCollisionName;
+		static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UECodeGen_Private::FFunctionParams FuncParams;
+	};
+	const UECodeGen_Private::FNamePropertyParams Z_Construct_UFunction_ACAttachment_AttachToCollision_Statics::NewProp_InCollisionName = { "InCollisionName", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Name, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(CAttachment_eventAttachToCollision_Parms, InCollisionName), METADATA_PARAMS(0, nullptr) };
+	const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_ACAttachment_AttachToCollision_Statics::PropPointers[] = {
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_ACAttachment_AttachToCollision_Statics::NewProp_InCollisionName,
+	};
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_ACAttachment_AttachToCollision_Statics::Function_MetaDataParams[] = {
+		{ "Category", "Attach" },
+		{ "ModuleRelativePath", "Weapons/CAttachment.h" },
+	};
+#endif
+	const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_ACAttachment_AttachToCollision_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ACAttachment, nullptr, "AttachToCollision", nullptr, nullptr, Z_Construct_UFunction_ACAttachment_AttachToCollision_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_ACAttachment_AttachToCollision_Statics::PropPointers), sizeof(Z_Construct_UFunction_ACAttachment_AttachToCollision_Statics::CAttachment_eventAttachToCollision_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04080401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_ACAttachment_AttachToCollision_Statics::Function_MetaDataParams), Z_Construct_UFunction_ACAttachment_AttachToCollision_Statics::Function_MetaDataParams) };
+	static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_ACAttachment_AttachToCollision_Statics::PropPointers) < 2048);
+	static_assert(sizeof(Z_Construct_UFunction_ACAttachment_AttachToCollision_Statics::CAttachment_eventAttachToCollision_Parms) < MAX_uint16);
+	UFunction* Z_Construct_UFunction_ACAttachment_AttachToCollision()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_ACAttachment_AttachToCollision_Statics::FuncParams);
 		}
 		return ReturnFunction;
 	}
@@ -505,6 +549,7 @@ void FAttachmentEndOverlap_DelegateWrapper(const FMulticastScriptDelegate& Attac
 	static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_ACAttachment_Statics::DependentSingletons) < 16);
 	const FClassFunctionLinkInfo Z_Construct_UClass_ACAttachment_Statics::FuncInfo[] = {
 		{ &Z_Construct_UFunction_ACAttachment_AttachTo, "AttachTo" }, // 1835352562
+		{ &Z_Construct_UFunction_ACAttachment_AttachToCollision, "AttachToCollision" }, // 1033660067
 		{ &Z_Construct_UFunction_ACAttachment_OnBeginEquip, "OnBeginEquip" }, // 3104372570
 		{ &Z_Construct_UFunction_ACAttachment_OnComponentBeginOverlap, "OnComponentBeginOverlap" }, // 1292463223
 		{ &Z_Construct_UFunction_ACAttachment_OnComponentEndOverlap, "OnComponentEndOverlap" }, // 91070707
@@ -574,9 +619,9 @@ void FAttachmentEndOverlap_DelegateWrapper(const FMulticastScriptDelegate& Attac
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_MyPortfolio_Source_MyPortfolio_Weapons_CAttachment_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_ACAttachment, ACAttachment::StaticClass, TEXT("ACAttachment"), &Z_Registration_Info_UClass_ACAttachment, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ACAttachment), 2021048087U) },
+		{ Z_Construct_UClass_ACAttachment, ACAttachment::StaticClass, TEXT("ACAttachment"), &Z_Registration_Info_UClass_ACAttachment, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ACAttachment), 2623188385U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_MyPortfolio_Source_MyPortfolio_Weapons_CAttachment_h_2343072308(TEXT("/Script/MyPortfolio"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_MyPortfolio_Source_MyPortfolio_Weapons_CAttachment_h_2312623434(TEXT("/Script/MyPortfolio"),
 		Z_CompiledInDeferFile_FID_MyPortfolio_Source_MyPortfolio_Weapons_CAttachment_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_MyPortfolio_Source_MyPortfolio_Weapons_CAttachment_h_Statics::ClassInfo),
 		nullptr, 0,
 		nullptr, 0);
