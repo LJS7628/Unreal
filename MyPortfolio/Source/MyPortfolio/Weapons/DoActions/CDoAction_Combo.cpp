@@ -39,14 +39,45 @@ void UCDoAction_Combo::End_DoAction()
 	Index = 0;
 }
 
+void UCDoAction_Combo::Tick(float InDeltaTime)
+{
+	CheckNull(Candidate);
+
+	APlayerController* controller = OwnerCharacter->GetController<APlayerController>();
+	CheckNull(controller);
+
+	FRotator controlRotation = OwnerCharacter->GetControlRotation();
+	FRotator ownerToTarget = UKismetMathLibrary::FindLookAtRotation(OwnerCharacter->GetActorLocation(), Candidate->GetActorLocation());
+
+	ownerToTarget.Pitch = controlRotation.Pitch;
+
+	if (controlRotation.Equals(ownerToTarget, FinishAngle)) 
+	{
+		Candidate = nullptr;
+		controller->SetControlRotation(ownerToTarget);
+
+		return;
+	}
+
+	FRotator targetRotation = FRotator(controlRotation.Pitch, ownerToTarget.Yaw, ownerToTarget.Roll);
+	FRotator result = UKismetMathLibrary::RInterpTo(controlRotation, targetRotation, InDeltaTime, RotationSpeed);
+
+	controller->SetControlRotation(result);
+}
+
 void UCDoAction_Combo::OnAttachmentEndCollision()
 {
 	Super::OnAttachmentEndCollision();
 
-	CheckTrue(Hitted.IsEmpty());
+	if (Movement->GetFixedCamera() == false) 
+	{
+		Hitted.Empty();
+
+		return;
+	}
 
 	float angle = -2.0f;
-	ACharacter* candidate = nullptr;
+
 
 	for (ACharacter* hitted : Hitted) 
 	{
@@ -57,26 +88,14 @@ void UCDoAction_Combo::OnAttachmentEndCollision()
 
 		float dot = FVector::DotProduct(direction, forward);
 
-		if (dot < 0.75f || dot < angle)
+		if (dot < AvailableAngle || dot < angle)
 			continue;
 
 		angle = dot;
-		candidate = hitted;
+		Candidate = hitted;
 	}
 
-	if (!!candidate)
-	{
-		FRotator rotator = UKismetMathLibrary::FindLookAtRotation(OwnerCharacter->GetActorLocation(), candidate->GetActorLocation());
-
-		APlayerController* controller = OwnerCharacter->GetController<APlayerController>();
-
-		if (!!controller) 
-		{
-			FRotator target = FRotator(0, rotator.Yaw, 0);
-
-			controller->SetControlRotation(target);
-		}
-	}
+	
 
 	Hitted.Empty();
 }

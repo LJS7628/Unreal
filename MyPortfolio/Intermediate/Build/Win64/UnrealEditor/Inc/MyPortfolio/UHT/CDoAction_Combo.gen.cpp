@@ -28,6 +28,19 @@ void EmptyLinkFunctionForGeneratedCodeCDoAction_Combo() {}
 #if WITH_METADATA
 		static const UECodeGen_Private::FMetaDataPairParam Class_MetaDataParams[];
 #endif
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam NewProp_FinishAngle_MetaData[];
+#endif
+		static const UECodeGen_Private::FFloatPropertyParams NewProp_FinishAngle;
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam NewProp_RotationSpeed_MetaData[];
+#endif
+		static const UECodeGen_Private::FFloatPropertyParams NewProp_RotationSpeed;
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam NewProp_AvailableAngle_MetaData[];
+#endif
+		static const UECodeGen_Private::FFloatPropertyParams NewProp_AvailableAngle;
+		static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 		static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
 		static const UECodeGen_Private::FClassParams ClassParams;
 	};
@@ -38,10 +51,38 @@ void EmptyLinkFunctionForGeneratedCodeCDoAction_Combo() {}
 	static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_UCDoAction_Combo_Statics::DependentSingletons) < 16);
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UCDoAction_Combo_Statics::Class_MetaDataParams[] = {
+		{ "BlueprintType", "true" },
 		{ "IncludePath", "Weapons/DoActions/CDoAction_Combo.h" },
+		{ "IsBlueprintBase", "true" },
 		{ "ModuleRelativePath", "Weapons/DoActions/CDoAction_Combo.h" },
 	};
 #endif
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UCDoAction_Combo_Statics::NewProp_FinishAngle_MetaData[] = {
+		{ "Category", "Angle" },
+		{ "ModuleRelativePath", "Weapons/DoActions/CDoAction_Combo.h" },
+	};
+#endif
+	const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_UCDoAction_Combo_Statics::NewProp_FinishAngle = { "FinishAngle", nullptr, (EPropertyFlags)0x0040000000000001, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UCDoAction_Combo, FinishAngle), METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_UCDoAction_Combo_Statics::NewProp_FinishAngle_MetaData), Z_Construct_UClass_UCDoAction_Combo_Statics::NewProp_FinishAngle_MetaData) };
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UCDoAction_Combo_Statics::NewProp_RotationSpeed_MetaData[] = {
+		{ "Category", "Angle" },
+		{ "ModuleRelativePath", "Weapons/DoActions/CDoAction_Combo.h" },
+	};
+#endif
+	const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_UCDoAction_Combo_Statics::NewProp_RotationSpeed = { "RotationSpeed", nullptr, (EPropertyFlags)0x0040000000000001, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UCDoAction_Combo, RotationSpeed), METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_UCDoAction_Combo_Statics::NewProp_RotationSpeed_MetaData), Z_Construct_UClass_UCDoAction_Combo_Statics::NewProp_RotationSpeed_MetaData) };
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UCDoAction_Combo_Statics::NewProp_AvailableAngle_MetaData[] = {
+		{ "Category", "Angle" },
+		{ "ModuleRelativePath", "Weapons/DoActions/CDoAction_Combo.h" },
+	};
+#endif
+	const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_UCDoAction_Combo_Statics::NewProp_AvailableAngle = { "AvailableAngle", nullptr, (EPropertyFlags)0x0040000000000001, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UCDoAction_Combo, AvailableAngle), METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_UCDoAction_Combo_Statics::NewProp_AvailableAngle_MetaData), Z_Construct_UClass_UCDoAction_Combo_Statics::NewProp_AvailableAngle_MetaData) };
+	const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_UCDoAction_Combo_Statics::PropPointers[] = {
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UCDoAction_Combo_Statics::NewProp_FinishAngle,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UCDoAction_Combo_Statics::NewProp_RotationSpeed,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UCDoAction_Combo_Statics::NewProp_AvailableAngle,
+	};
 	const FCppClassTypeInfoStatic Z_Construct_UClass_UCDoAction_Combo_Statics::StaticCppClassTypeInfo = {
 		TCppClassTypeTraits<UCDoAction_Combo>::IsAbstract,
 	};
@@ -51,15 +92,16 @@ void EmptyLinkFunctionForGeneratedCodeCDoAction_Combo() {}
 		&StaticCppClassTypeInfo,
 		DependentSingletons,
 		nullptr,
-		nullptr,
+		Z_Construct_UClass_UCDoAction_Combo_Statics::PropPointers,
 		nullptr,
 		UE_ARRAY_COUNT(DependentSingletons),
 		0,
-		0,
+		UE_ARRAY_COUNT(Z_Construct_UClass_UCDoAction_Combo_Statics::PropPointers),
 		0,
 		0x001000A0u,
 		METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_UCDoAction_Combo_Statics::Class_MetaDataParams), Z_Construct_UClass_UCDoAction_Combo_Statics::Class_MetaDataParams)
 	};
+	static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_UCDoAction_Combo_Statics::PropPointers) < 2048);
 	UClass* Z_Construct_UClass_UCDoAction_Combo()
 	{
 		if (!Z_Registration_Info_UClass_UCDoAction_Combo.OuterSingleton)
@@ -80,9 +122,9 @@ void EmptyLinkFunctionForGeneratedCodeCDoAction_Combo() {}
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_MyPortfolio_Source_MyPortfolio_Weapons_DoActions_CDoAction_Combo_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_UCDoAction_Combo, UCDoAction_Combo::StaticClass, TEXT("UCDoAction_Combo"), &Z_Registration_Info_UClass_UCDoAction_Combo, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UCDoAction_Combo), 3438633263U) },
+		{ Z_Construct_UClass_UCDoAction_Combo, UCDoAction_Combo::StaticClass, TEXT("UCDoAction_Combo"), &Z_Registration_Info_UClass_UCDoAction_Combo, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UCDoAction_Combo), 669174060U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_MyPortfolio_Source_MyPortfolio_Weapons_DoActions_CDoAction_Combo_h_1330876782(TEXT("/Script/MyPortfolio"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_MyPortfolio_Source_MyPortfolio_Weapons_DoActions_CDoAction_Combo_h_2966941795(TEXT("/Script/MyPortfolio"),
 		Z_CompiledInDeferFile_FID_MyPortfolio_Source_MyPortfolio_Weapons_DoActions_CDoAction_Combo_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_MyPortfolio_Source_MyPortfolio_Weapons_DoActions_CDoAction_Combo_h_Statics::ClassInfo),
 		nullptr, 0,
 		nullptr, 0);

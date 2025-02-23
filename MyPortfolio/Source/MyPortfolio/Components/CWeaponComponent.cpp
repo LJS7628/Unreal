@@ -34,6 +34,15 @@ void UCWeaponComponent::TickComponent(float DeltaTime, ELevelTick TickType, FAct
 {
 	Super::TickComponent(DeltaTime, TickType, ThisTickFunction);
 
+	for (int i = 0; i < DataAssets.Num(); i++) 
+	{
+		if (DataAssets[i] == NULL)
+			continue;
+
+		DataAssets[i]->GetDoAction()->Tick(DeltaTime);
+	}
+
+
 }
 
 // Idle모드 체크

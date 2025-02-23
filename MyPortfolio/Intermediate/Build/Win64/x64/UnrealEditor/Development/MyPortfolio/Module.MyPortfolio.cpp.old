@@ -41,5 +41,4 @@
 #include "D:/UnrealProject/Unreal/MyPortfolio/Source/MyPortfolio/Utilities/CLog.cpp"
 #include "D:/UnrealProject/Unreal/MyPortfolio/Source/MyPortfolio/Weapons/CEquipment.cpp"
 #include "D:/UnrealProject/Unreal/MyPortfolio/Source/MyPortfolio/Weapons/CWeapon.cpp"
-#include "D:/UnrealProject/Unreal/MyPortfolio/Source/MyPortfolio/Weapons/CWeaponAsset.cpp"
 #include "D:/UnrealProject/Unreal/MyPortfolio/Source/MyPortfolio/Weapons/CWeaponStructures.cpp"
