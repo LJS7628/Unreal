@@ -56,6 +56,9 @@ private:
 	void OffCollision();
 
 public:
+	FAttachmentBeginCollision OnAttachmentBeginCollision;
+	FAttachmentEndCollision OnAttachmentEndCollision;
+
 	FAttachmentBeginOverlap OnAttachmentBeginOverlap;
 	FAttachmentEndOverlap OnAttachmentEndOverlap;
 

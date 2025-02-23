@@ -18,7 +18,6 @@ void UCDoAction_Combo::DoAction()
 		return;
 	}
 
-
 	CheckFalse(State->IsIdleMode());
 
 	Super::DoAction();
@@ -40,12 +39,61 @@ void UCDoAction_Combo::End_DoAction()
 	Index = 0;
 }
 
+void UCDoAction_Combo::OnAttachmentEndCollision()
+{
+	Super::OnAttachmentEndCollision();
+
+	CheckTrue(Hitted.IsEmpty());
+
+	float angle = -2.0f;
+	ACharacter* candidate = nullptr;
+
+	for (ACharacter* hitted : Hitted) 
+	{
+		FVector direction = hitted->GetActorLocation() - OwnerCharacter->GetActorLocation();
+		direction = direction.GetSafeNormal2D();
+
+		FVector forward = OwnerCharacter->GetActorForwardVector();
+
+		float dot = FVector::DotProduct(direction, forward);
+
+		if (dot < 0.75f || dot < angle)
+			continue;
+
+		angle = dot;
+		candidate = hitted;
+	}
+
+	if (!!candidate)
+	{
+		FRotator rotator = UKismetMathLibrary::FindLookAtRotation(OwnerCharacter->GetActorLocation(), candidate->GetActorLocation());
+
+		APlayerController* controller = OwnerCharacter->GetController<APlayerController>();
+
+		if (!!controller) 
+		{
+			FRotator target = FRotator(0, rotator.Yaw, 0);
+
+			controller->SetControlRotation(target);
+		}
+	}
+
+	Hitted.Empty();
+}
+
 void UCDoAction_Combo::OnAttachmentBeginOverlap(ACharacter* InAttacker, AActor* InAttackCauser, ACharacter* InOther)
 {
 	Super::OnAttachmentBeginOverlap(InAttacker, InAttackCauser, InOther);
 
-	//CLog::Log(InOther->GetName());
+	for (ACharacter* hitted : Hitted)
+		CheckTrue(hitted == InOther);
+
+	Hitted.AddUnique(InOther);
+
+	CLog::Log(InOther->GetName());
 
 	CheckTrue(HitDatas.Num() - 1 < Index);
 	HitDatas[Index].SendDamage(InAttacker, InAttackCauser, InOther);
 }
+
+

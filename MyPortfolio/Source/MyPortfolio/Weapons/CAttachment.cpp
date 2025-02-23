@@ -70,12 +70,19 @@ void ACAttachment::OnComponentEndOverlap(UPrimitiveComponent* OverlappedComponen
 
 void ACAttachment::OnCollision()
 {
+	if (OnAttachmentBeginCollision.IsBound())
+		OnAttachmentBeginCollision.Broadcast();
+
 	for (UShapeComponent* shape : Collisions)
 		shape->SetCollisionEnabled(ECollisionEnabled::QueryAndPhysics);
+
 }
 
 void ACAttachment::OffCollision()
 {
+	if (OnAttachmentEndCollision.IsBound())
+		OnAttachmentEndCollision.Broadcast();
+
 	for (UShapeComponent* shape : Collisions)
 		shape->SetCollisionEnabled(ECollisionEnabled::NoCollision);
 }

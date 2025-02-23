@@ -19,8 +19,8 @@ public:
 	void Begin_DoAction() override;
 	void End_DoAction() override;
 
-
 public:
+	void OnAttachmentEndCollision() override;
 	void OnAttachmentBeginOverlap(class ACharacter* InAttacker, AActor* InAttackCauser, class ACharacter* InOther) override;
 	
 private:
@@ -29,4 +29,7 @@ private:
 private:
 	bool bEnable;
 	bool bExist;
+
+private:
+	TArray<class ACharacter*> Hitted;
 };

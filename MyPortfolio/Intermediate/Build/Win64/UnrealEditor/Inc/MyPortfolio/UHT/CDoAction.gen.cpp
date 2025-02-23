@@ -35,14 +35,52 @@ void EmptyLinkFunctionForGeneratedCodeCDoAction() {}
 		P_THIS->OnAttachmentBeginOverlap(Z_Param_InAttacker,Z_Param_InAttackCauser,Z_Param_InOther);
 		P_NATIVE_END;
 	}
+	DEFINE_FUNCTION(UCDoAction::execOnAttachmentEndCollision)
+	{
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		P_THIS->OnAttachmentEndCollision();
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(UCDoAction::execOnAttachmentBeginCollision)
+	{
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		P_THIS->OnAttachmentBeginCollision();
+		P_NATIVE_END;
+	}
 	void UCDoAction::StaticRegisterNativesUCDoAction()
 	{
 		UClass* Class = UCDoAction::StaticClass();
 		static const FNameNativePtrPair Funcs[] = {
+			{ "OnAttachmentBeginCollision", &UCDoAction::execOnAttachmentBeginCollision },
 			{ "OnAttachmentBeginOverlap", &UCDoAction::execOnAttachmentBeginOverlap },
+			{ "OnAttachmentEndCollision", &UCDoAction::execOnAttachmentEndCollision },
 			{ "OnAttachmentEndOverlap", &UCDoAction::execOnAttachmentEndOverlap },
 		};
 		FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
+	}
+	struct Z_Construct_UFunction_UCDoAction_OnAttachmentBeginCollision_Statics
+	{
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UECodeGen_Private::FFunctionParams FuncParams;
+	};
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UCDoAction_OnAttachmentBeginCollision_Statics::Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "Weapons/CDoAction.h" },
+	};
+#endif
+	const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UCDoAction_OnAttachmentBeginCollision_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UCDoAction, nullptr, "OnAttachmentBeginCollision", nullptr, nullptr, nullptr, 0, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00020400, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UCDoAction_OnAttachmentBeginCollision_Statics::Function_MetaDataParams), Z_Construct_UFunction_UCDoAction_OnAttachmentBeginCollision_Statics::Function_MetaDataParams) };
+	UFunction* Z_Construct_UFunction_UCDoAction_OnAttachmentBeginCollision()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_UCDoAction_OnAttachmentBeginCollision_Statics::FuncParams);
+		}
+		return ReturnFunction;
 	}
 	struct Z_Construct_UFunction_UCDoAction_OnAttachmentBeginOverlap_Statics
 	{
@@ -83,6 +121,28 @@ void EmptyLinkFunctionForGeneratedCodeCDoAction() {}
 		if (!ReturnFunction)
 		{
 			UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_UCDoAction_OnAttachmentBeginOverlap_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
+	struct Z_Construct_UFunction_UCDoAction_OnAttachmentEndCollision_Statics
+	{
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UECodeGen_Private::FFunctionParams FuncParams;
+	};
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UCDoAction_OnAttachmentEndCollision_Statics::Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "Weapons/CDoAction.h" },
+	};
+#endif
+	const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UCDoAction_OnAttachmentEndCollision_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UCDoAction, nullptr, "OnAttachmentEndCollision", nullptr, nullptr, nullptr, 0, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00020400, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UCDoAction_OnAttachmentEndCollision_Statics::Function_MetaDataParams), Z_Construct_UFunction_UCDoAction_OnAttachmentEndCollision_Statics::Function_MetaDataParams) };
+	UFunction* Z_Construct_UFunction_UCDoAction_OnAttachmentEndCollision()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_UCDoAction_OnAttachmentEndCollision_Statics::FuncParams);
 		}
 		return ReturnFunction;
 	}
@@ -145,7 +205,9 @@ void EmptyLinkFunctionForGeneratedCodeCDoAction() {}
 	};
 	static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_UCDoAction_Statics::DependentSingletons) < 16);
 	const FClassFunctionLinkInfo Z_Construct_UClass_UCDoAction_Statics::FuncInfo[] = {
+		{ &Z_Construct_UFunction_UCDoAction_OnAttachmentBeginCollision, "OnAttachmentBeginCollision" }, // 90780140
 		{ &Z_Construct_UFunction_UCDoAction_OnAttachmentBeginOverlap, "OnAttachmentBeginOverlap" }, // 1077065723
+		{ &Z_Construct_UFunction_UCDoAction_OnAttachmentEndCollision, "OnAttachmentEndCollision" }, // 1472429685
 		{ &Z_Construct_UFunction_UCDoAction_OnAttachmentEndOverlap, "OnAttachmentEndOverlap" }, // 2089155958
 	};
 	static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_UCDoAction_Statics::FuncInfo) < 2048);
@@ -193,9 +255,9 @@ void EmptyLinkFunctionForGeneratedCodeCDoAction() {}
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_MyPortfolio_Source_MyPortfolio_Weapons_CDoAction_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_UCDoAction, UCDoAction::StaticClass, TEXT("UCDoAction"), &Z_Registration_Info_UClass_UCDoAction, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UCDoAction), 1294648905U) },
+		{ Z_Construct_UClass_UCDoAction, UCDoAction::StaticClass, TEXT("UCDoAction"), &Z_Registration_Info_UClass_UCDoAction, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UCDoAction), 112817882U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_MyPortfolio_Source_MyPortfolio_Weapons_CDoAction_h_2943633497(TEXT("/Script/MyPortfolio"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_MyPortfolio_Source_MyPortfolio_Weapons_CDoAction_h_2738749992(TEXT("/Script/MyPortfolio"),
 		Z_CompiledInDeferFile_FID_MyPortfolio_Source_MyPortfolio_Weapons_CDoAction_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_MyPortfolio_Source_MyPortfolio_Weapons_CDoAction_h_Statics::ClassInfo),
 		nullptr, 0,
 		nullptr, 0);

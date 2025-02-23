@@ -29,6 +29,12 @@ protected:
 
 public:
 	UFUNCTION()
+	virtual void OnAttachmentBeginCollision() {}
+
+	UFUNCTION()
+	virtual void OnAttachmentEndCollision() {}
+
+	UFUNCTION()
 	virtual void OnAttachmentBeginOverlap(class ACharacter* InAttacker, AActor* InAttackCauser, class ACharacter* InOther) {}
 
 	UFUNCTION()

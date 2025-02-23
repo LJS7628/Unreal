@@ -22,7 +22,9 @@ class ACharacter;
 #define FID_MyPortfolio_Source_MyPortfolio_Weapons_CDoAction_h_12_RPC_WRAPPERS_NO_PURE_DECLS \
  \
 	DECLARE_FUNCTION(execOnAttachmentEndOverlap); \
-	DECLARE_FUNCTION(execOnAttachmentBeginOverlap);
+	DECLARE_FUNCTION(execOnAttachmentBeginOverlap); \
+	DECLARE_FUNCTION(execOnAttachmentEndCollision); \
+	DECLARE_FUNCTION(execOnAttachmentBeginCollision);
 
 
 #define FID_MyPortfolio_Source_MyPortfolio_Weapons_CDoAction_h_12_ACCESSORS
