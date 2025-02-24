@@ -204,9 +204,24 @@
     <ClInclude Include="..\..\Source\MyPortfolio\Weapons\CWeaponStructures.h">
       <Filter>Source\MyPortfolio\Weapons</Filter>
     </ClInclude>
+    <Filter Include="Source\MyPortfolio\Weapons\Attachments">
+      <UniqueIdentifier>{EE8E55CF-0849-381E-B864-7A66008D32BA}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\MyPortfolio\Weapons\Attachments\CAttachment_Bow.cpp">
+      <Filter>Source\MyPortfolio\Weapons\Attachments</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\MyPortfolio\Weapons\Attachments\CAttachment_Bow.h">
+      <Filter>Source\MyPortfolio\Weapons\Attachments</Filter>
+    </ClInclude>
     <Filter Include="Source\MyPortfolio\Weapons\DoActions">
       <UniqueIdentifier>{8B9F4CCB-81A1-39A3-8DED-63C98702B77D}</UniqueIdentifier>
     </Filter>
+    <ClCompile Include="..\..\Source\MyPortfolio\Weapons\DoActions\CDoAction_Bow.cpp">
+      <Filter>Source\MyPortfolio\Weapons\DoActions</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\MyPortfolio\Weapons\DoActions\CDoAction_Bow.h">
+      <Filter>Source\MyPortfolio\Weapons\DoActions</Filter>
+    </ClInclude>
     <ClCompile Include="..\..\Source\MyPortfolio\Weapons\DoActions\CDoAction_Combo.cpp">
       <Filter>Source\MyPortfolio\Weapons\DoActions</Filter>
     </ClCompile>

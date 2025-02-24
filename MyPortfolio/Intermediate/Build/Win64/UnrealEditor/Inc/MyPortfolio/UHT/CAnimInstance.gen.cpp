@@ -51,9 +51,9 @@ void EmptyLinkFunctionForGeneratedCodeCAnimInstance() {}
 		static const UECodeGen_Private::FFunctionParams FuncParams;
 	};
 	const UECodeGen_Private::FBytePropertyParams Z_Construct_UFunction_UCAnimInstance_OnWeaponTypeChanged_Statics::NewProp_InPrevType_Underlying = { "UnderlyingType", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, nullptr, METADATA_PARAMS(0, nullptr) };
-	const UECodeGen_Private::FEnumPropertyParams Z_Construct_UFunction_UCAnimInstance_OnWeaponTypeChanged_Statics::NewProp_InPrevType = { "InPrevType", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(CAnimInstance_eventOnWeaponTypeChanged_Parms, InPrevType), Z_Construct_UEnum_MyPortfolio_EWeaponType, METADATA_PARAMS(0, nullptr) }; // 3021230382
+	const UECodeGen_Private::FEnumPropertyParams Z_Construct_UFunction_UCAnimInstance_OnWeaponTypeChanged_Statics::NewProp_InPrevType = { "InPrevType", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(CAnimInstance_eventOnWeaponTypeChanged_Parms, InPrevType), Z_Construct_UEnum_MyPortfolio_EWeaponType, METADATA_PARAMS(0, nullptr) }; // 701054448
 	const UECodeGen_Private::FBytePropertyParams Z_Construct_UFunction_UCAnimInstance_OnWeaponTypeChanged_Statics::NewProp_InNewType_Underlying = { "UnderlyingType", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, nullptr, METADATA_PARAMS(0, nullptr) };
-	const UECodeGen_Private::FEnumPropertyParams Z_Construct_UFunction_UCAnimInstance_OnWeaponTypeChanged_Statics::NewProp_InNewType = { "InNewType", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(CAnimInstance_eventOnWeaponTypeChanged_Parms, InNewType), Z_Construct_UEnum_MyPortfolio_EWeaponType, METADATA_PARAMS(0, nullptr) }; // 3021230382
+	const UECodeGen_Private::FEnumPropertyParams Z_Construct_UFunction_UCAnimInstance_OnWeaponTypeChanged_Statics::NewProp_InNewType = { "InNewType", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(CAnimInstance_eventOnWeaponTypeChanged_Parms, InNewType), Z_Construct_UEnum_MyPortfolio_EWeaponType, METADATA_PARAMS(0, nullptr) }; // 701054448
 	const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UCAnimInstance_OnWeaponTypeChanged_Statics::PropPointers[] = {
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UCAnimInstance_OnWeaponTypeChanged_Statics::NewProp_InPrevType_Underlying,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UCAnimInstance_OnWeaponTypeChanged_Statics::NewProp_InPrevType,
@@ -127,7 +127,7 @@ void EmptyLinkFunctionForGeneratedCodeCAnimInstance() {}
 	};
 	static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_UCAnimInstance_Statics::DependentSingletons) < 16);
 	const FClassFunctionLinkInfo Z_Construct_UClass_UCAnimInstance_Statics::FuncInfo[] = {
-		{ &Z_Construct_UFunction_UCAnimInstance_OnWeaponTypeChanged, "OnWeaponTypeChanged" }, // 649993554
+		{ &Z_Construct_UFunction_UCAnimInstance_OnWeaponTypeChanged, "OnWeaponTypeChanged" }, // 1699524179
 	};
 	static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_UCAnimInstance_Statics::FuncInfo) < 2048);
 #if WITH_METADATA
@@ -194,7 +194,7 @@ void EmptyLinkFunctionForGeneratedCodeCAnimInstance() {}
 		{ "ModuleRelativePath", "Characters/CAnimInstance.h" },
 	};
 #endif
-	const UECodeGen_Private::FEnumPropertyParams Z_Construct_UClass_UCAnimInstance_Statics::NewProp_WeaponType = { "WeaponType", nullptr, (EPropertyFlags)0x0020080000000015, UECodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UCAnimInstance, WeaponType), Z_Construct_UEnum_MyPortfolio_EWeaponType, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_UCAnimInstance_Statics::NewProp_WeaponType_MetaData), Z_Construct_UClass_UCAnimInstance_Statics::NewProp_WeaponType_MetaData) }; // 3021230382
+	const UECodeGen_Private::FEnumPropertyParams Z_Construct_UClass_UCAnimInstance_Statics::NewProp_WeaponType = { "WeaponType", nullptr, (EPropertyFlags)0x0020080000000015, UECodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UCAnimInstance, WeaponType), Z_Construct_UEnum_MyPortfolio_EWeaponType, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_UCAnimInstance_Statics::NewProp_WeaponType_MetaData), Z_Construct_UClass_UCAnimInstance_Statics::NewProp_WeaponType_MetaData) }; // 701054448
 	const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_UCAnimInstance_Statics::PropPointers[] = {
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UCAnimInstance_Statics::NewProp_Speed,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UCAnimInstance_Statics::NewProp_Direction,
@@ -242,9 +242,9 @@ void EmptyLinkFunctionForGeneratedCodeCAnimInstance() {}
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_MyPortfolio_Source_MyPortfolio_Characters_CAnimInstance_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_UCAnimInstance, UCAnimInstance::StaticClass, TEXT("UCAnimInstance"), &Z_Registration_Info_UClass_UCAnimInstance, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UCAnimInstance), 2833397308U) },
+		{ Z_Construct_UClass_UCAnimInstance, UCAnimInstance::StaticClass, TEXT("UCAnimInstance"), &Z_Registration_Info_UClass_UCAnimInstance, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UCAnimInstance), 1821468132U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_MyPortfolio_Source_MyPortfolio_Characters_CAnimInstance_h_1187708085(TEXT("/Script/MyPortfolio"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_MyPortfolio_Source_MyPortfolio_Characters_CAnimInstance_h_3260881770(TEXT("/Script/MyPortfolio"),
 		Z_CompiledInDeferFile_FID_MyPortfolio_Source_MyPortfolio_Characters_CAnimInstance_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_MyPortfolio_Source_MyPortfolio_Characters_CAnimInstance_h_Statics::ClassInfo),
 		nullptr, 0,
 		nullptr, 0);

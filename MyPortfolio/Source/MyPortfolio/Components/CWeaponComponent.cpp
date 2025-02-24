@@ -128,6 +128,14 @@ void UCWeaponComponent::SetAxeMode()
 	SetMode(EWeaponType::Axe);
 }
 
+// Bow 모드
+void UCWeaponComponent::SetBowMode()
+{
+	CheckFalse(IsIdleMode());
+
+	SetMode(EWeaponType::Bow);
+}
+
 // 모드 설정
 void UCWeaponComponent::SetMode(EWeaponType InType)
 {

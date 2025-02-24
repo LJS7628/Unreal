@@ -18,7 +18,12 @@ private:
 public:
 	UCDoAction();
 
-	void BeginPlay(class ACharacter* InOwner,const TArray<FDoActionData>& InDoActionDatas, const TArray<FHitData>& InHitDatas);
+	virtual void BeginPlay
+	(
+		class ACharacter* InOwner,
+		const TArray<FDoActionData>& InDoActionDatas, 
+		const TArray<FHitData>& InHitDatas
+	);
 	virtual void Tick(float InDeltaTime) {}
 
 public:

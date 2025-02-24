@@ -31,11 +31,11 @@ protected:
 public:
 	UFUNCTION(BlueprintNativeEvent)
 	void OnBeginEquip();
-	void OnBeginEquip_Implementation() {};
+	virtual void OnBeginEquip_Implementation() {};
 
 	UFUNCTION(BlueprintNativeEvent)
 	void OnUnequip();
-	void OnUnequip_Implementation() {};
+	virtual void OnUnequip_Implementation() {};
 
 protected:
 	UFUNCTION(BlueprintCallable, Category = "Attach")
