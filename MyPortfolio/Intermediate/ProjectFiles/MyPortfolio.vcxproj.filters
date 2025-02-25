@@ -204,6 +204,15 @@
     <ClInclude Include="..\..\Source\MyPortfolio\Weapons\CWeaponStructures.h">
       <Filter>Source\MyPortfolio\Weapons</Filter>
     </ClInclude>
+    <Filter Include="Source\MyPortfolio\Weapons\AddOns">
+      <UniqueIdentifier>{B222AD82-DE16-321B-8AD4-561BD03526E1}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\MyPortfolio\Weapons\AddOns\CArrow.cpp">
+      <Filter>Source\MyPortfolio\Weapons\AddOns</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\MyPortfolio\Weapons\AddOns\CArrow.h">
+      <Filter>Source\MyPortfolio\Weapons\AddOns</Filter>
+    </ClInclude>
     <Filter Include="Source\MyPortfolio\Weapons\Attachments">
       <UniqueIdentifier>{EE8E55CF-0849-381E-B864-7A66008D32BA}</UniqueIdentifier>
     </Filter>

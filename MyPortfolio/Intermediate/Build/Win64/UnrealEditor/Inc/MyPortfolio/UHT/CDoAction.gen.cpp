@@ -49,6 +49,20 @@ void EmptyLinkFunctionForGeneratedCodeCDoAction() {}
 		P_THIS->OnAttachmentBeginCollision();
 		P_NATIVE_END;
 	}
+	DEFINE_FUNCTION(UCDoAction::execOnUnequip)
+	{
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		P_THIS->OnUnequip();
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(UCDoAction::execOnBeginEquip)
+	{
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		P_THIS->OnBeginEquip();
+		P_NATIVE_END;
+	}
 	void UCDoAction::StaticRegisterNativesUCDoAction()
 	{
 		UClass* Class = UCDoAction::StaticClass();
@@ -57,6 +71,8 @@ void EmptyLinkFunctionForGeneratedCodeCDoAction() {}
 			{ "OnAttachmentBeginOverlap", &UCDoAction::execOnAttachmentBeginOverlap },
 			{ "OnAttachmentEndCollision", &UCDoAction::execOnAttachmentEndCollision },
 			{ "OnAttachmentEndOverlap", &UCDoAction::execOnAttachmentEndOverlap },
+			{ "OnBeginEquip", &UCDoAction::execOnBeginEquip },
+			{ "OnUnequip", &UCDoAction::execOnUnequip },
 		};
 		FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
 	}
@@ -184,6 +200,50 @@ void EmptyLinkFunctionForGeneratedCodeCDoAction() {}
 		}
 		return ReturnFunction;
 	}
+	struct Z_Construct_UFunction_UCDoAction_OnBeginEquip_Statics
+	{
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UECodeGen_Private::FFunctionParams FuncParams;
+	};
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UCDoAction_OnBeginEquip_Statics::Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "Weapons/CDoAction.h" },
+	};
+#endif
+	const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UCDoAction_OnBeginEquip_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UCDoAction, nullptr, "OnBeginEquip", nullptr, nullptr, nullptr, 0, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00020400, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UCDoAction_OnBeginEquip_Statics::Function_MetaDataParams), Z_Construct_UFunction_UCDoAction_OnBeginEquip_Statics::Function_MetaDataParams) };
+	UFunction* Z_Construct_UFunction_UCDoAction_OnBeginEquip()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_UCDoAction_OnBeginEquip_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
+	struct Z_Construct_UFunction_UCDoAction_OnUnequip_Statics
+	{
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UECodeGen_Private::FFunctionParams FuncParams;
+	};
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UCDoAction_OnUnequip_Statics::Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "Weapons/CDoAction.h" },
+	};
+#endif
+	const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UCDoAction_OnUnequip_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UCDoAction, nullptr, "OnUnequip", nullptr, nullptr, nullptr, 0, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00020400, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UCDoAction_OnUnequip_Statics::Function_MetaDataParams), Z_Construct_UFunction_UCDoAction_OnUnequip_Statics::Function_MetaDataParams) };
+	UFunction* Z_Construct_UFunction_UCDoAction_OnUnequip()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_UCDoAction_OnUnequip_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
 	IMPLEMENT_CLASS_NO_AUTO_REGISTRATION(UCDoAction);
 	UClass* Z_Construct_UClass_UCDoAction_NoRegister()
 	{
@@ -209,6 +269,8 @@ void EmptyLinkFunctionForGeneratedCodeCDoAction() {}
 		{ &Z_Construct_UFunction_UCDoAction_OnAttachmentBeginOverlap, "OnAttachmentBeginOverlap" }, // 1077065723
 		{ &Z_Construct_UFunction_UCDoAction_OnAttachmentEndCollision, "OnAttachmentEndCollision" }, // 1472429685
 		{ &Z_Construct_UFunction_UCDoAction_OnAttachmentEndOverlap, "OnAttachmentEndOverlap" }, // 2089155958
+		{ &Z_Construct_UFunction_UCDoAction_OnBeginEquip, "OnBeginEquip" }, // 2194725723
+		{ &Z_Construct_UFunction_UCDoAction_OnUnequip, "OnUnequip" }, // 772639943
 	};
 	static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_UCDoAction_Statics::FuncInfo) < 2048);
 #if WITH_METADATA
@@ -255,9 +317,9 @@ void EmptyLinkFunctionForGeneratedCodeCDoAction() {}
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_MyPortfolio_Source_MyPortfolio_Weapons_CDoAction_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_UCDoAction, UCDoAction::StaticClass, TEXT("UCDoAction"), &Z_Registration_Info_UClass_UCDoAction, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UCDoAction), 112817882U) },
+		{ Z_Construct_UClass_UCDoAction, UCDoAction::StaticClass, TEXT("UCDoAction"), &Z_Registration_Info_UClass_UCDoAction, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UCDoAction), 2904111216U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_MyPortfolio_Source_MyPortfolio_Weapons_CDoAction_h_2738749992(TEXT("/Script/MyPortfolio"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_MyPortfolio_Source_MyPortfolio_Weapons_CDoAction_h_45606458(TEXT("/Script/MyPortfolio"),
 		Z_CompiledInDeferFile_FID_MyPortfolio_Source_MyPortfolio_Weapons_CDoAction_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_MyPortfolio_Source_MyPortfolio_Weapons_CDoAction_h_Statics::ClassInfo),
 		nullptr, 0,
 		nullptr, 0);

@@ -37,7 +37,7 @@ void UCWeaponAsset::BeginPlay(ACharacter* InOwner)
 	if (!!DoActionClass) 
 	{
 		DoAction = NewObject<UCDoAction>(this, DoActionClass);
-		DoAction->BeginPlay(InOwner, DoActionDatas,HitDatas);
+		DoAction->BeginPlay(InOwner, Attachment, Equipment,DoActionDatas,HitDatas);
 
 		if (!!Attachment) 
 		{
@@ -46,6 +46,12 @@ void UCWeaponAsset::BeginPlay(ACharacter* InOwner)
 
 			Attachment->OnAttachmentBeginOverlap.AddDynamic(DoAction, &UCDoAction::OnAttachmentBeginOverlap);
 			Attachment->OnAttachmentEndOverlap.AddDynamic(DoAction, &UCDoAction::OnAttachmentEndOverlap);
+		}
+
+		if (!!Equipment) 
+		{
+			Equipment->OnEquipmentBeginEquip.AddDynamic(DoAction, &UCDoAction::OnBeginEquip);
+			Equipment->OnEquipmentUnequip.AddDynamic(DoAction, &UCDoAction::OnUnequip);
 		}
 	}
 }

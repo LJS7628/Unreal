@@ -42,6 +42,8 @@ void UCEquipment::Begin_Equip_Implementation()
 
 void UCEquipment::End_Equip_Implementation()
 {
+	bEquipped = true;
+
 	if(Data.bCanMove == false)
 		Movement->Move();
 
@@ -50,6 +52,8 @@ void UCEquipment::End_Equip_Implementation()
 
 void UCEquipment::Unequip_Implementation()
 {
+	bEquipped = false;
+
 	if (Data.bUseControlRotation)
 		Movement->DisenableControlRotation();
 

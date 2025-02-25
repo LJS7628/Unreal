@@ -24,7 +24,9 @@ class ACharacter;
 	DECLARE_FUNCTION(execOnAttachmentEndOverlap); \
 	DECLARE_FUNCTION(execOnAttachmentBeginOverlap); \
 	DECLARE_FUNCTION(execOnAttachmentEndCollision); \
-	DECLARE_FUNCTION(execOnAttachmentBeginCollision);
+	DECLARE_FUNCTION(execOnAttachmentBeginCollision); \
+	DECLARE_FUNCTION(execOnUnequip); \
+	DECLARE_FUNCTION(execOnBeginEquip);
 
 
 #define FID_MyPortfolio_Source_MyPortfolio_Weapons_CDoAction_h_12_ACCESSORS

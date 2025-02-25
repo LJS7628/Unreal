@@ -11,6 +11,10 @@ class MYPORTFOLIO_API UCDoAction_Bow : public UCDoAction
 	GENERATED_BODY()
 	
 private:
+	UPROPERTY(EditDefaultsOnly, Category = "Arrow")
+	TSubclassOf<class ACArrow> ArrowClass;
+
+private:
 	friend class UCAnimNotify_BeginAction;
 	friend class UCAnimNotify_EndAction;
 
@@ -20,6 +24,8 @@ public:
 	void BeginPlay
 	(
 		class ACharacter* InOwner,
+		class ACAttachment* InAttachment,
+		class UCEquipment* InEquipment,
 		const TArray<FDoActionData>& InDoActionDatas,
 		const TArray<FHitData>& InHitDatas
 	) override;
@@ -32,4 +38,18 @@ public:
 protected:
 	void Begin_DoAction() override;
 	void End_DoAction() override;
+
+public:
+	void OnBeginEquip() override;
+	void OnUnequip() override;
+
+private:
+	class USkeletalMeshComponent* SkeletalMesh;
+	class UPoseableMeshComponent* PoseableMesh;
+
+private:
+	const bool*  bEquipped;
+
+private:
+	FVector OriginLocation;
 };

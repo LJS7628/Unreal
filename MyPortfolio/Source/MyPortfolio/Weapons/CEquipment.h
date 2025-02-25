@@ -17,6 +17,9 @@ private:
 	friend class UCAnimNotifyState_Equip;
 
 public:
+	FORCEINLINE const bool* GetEquipped() { return &bEquipped; }
+
+public:
 	void BeginPlay(class ACharacter* InOwner, const FEquipmentData& InData);
 
 public:
@@ -53,4 +56,7 @@ private:
 private:
 	class UCStateComponent* State;
 	class UCMovementComponent* Movement;
+
+private:
+	bool bEquipped;
 };

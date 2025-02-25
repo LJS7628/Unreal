@@ -21,6 +21,8 @@ public:
 	virtual void BeginPlay
 	(
 		class ACharacter* InOwner,
+		class ACAttachment* InAttachment,
+		class UCEquipment* InEquipment,
 		const TArray<FDoActionData>& InDoActionDatas, 
 		const TArray<FHitData>& InHitDatas
 	);
@@ -32,6 +34,13 @@ public:
 protected:
 	virtual void Begin_DoAction();
 	virtual void End_DoAction();
+
+public:
+	UFUNCTION()
+	virtual void OnBeginEquip() {}
+
+	UFUNCTION()
+	virtual void OnUnequip() {}
 
 public:
 	UFUNCTION()
