@@ -55,6 +55,8 @@ void UCDoAction_Bow::End_DoAction()
 void UCDoAction_Bow::OnBeginEquip()
 {
 	Super::OnBeginEquip();
+
+	CreateArrow();
 }
 
 void UCDoAction_Bow::OnUnequip()
@@ -62,4 +64,21 @@ void UCDoAction_Bow::OnUnequip()
 	Super::OnUnequip();
 
 	PoseableMesh->SetBoneLocationByName("bow_string_mid", OriginLocation, EBoneSpaces::ComponentSpace);
+}
+
+void UCDoAction_Bow::CreateArrow()
+{
+	CheckTrue(World->bIsTearingDown);
+	CheckNull(ArrowClass);
+
+	FTransform transform;
+	ACArrow* arrow = World->SpawnActorDeferred<ACArrow>(ArrowClass, transform, nullptr, nullptr, ESpawnActorCollisionHandlingMethod::AlwaysSpawn);
+	CheckNull(arrow);
+
+	arrow->AddIgnoreActor(OwnerCharacter);
+
+	FAttachmentTransformRules rule = FAttachmentTransformRules(EAttachmentRule::KeepRelative, true);
+	arrow->AttachToComponent(OwnerCharacter->GetMesh(), rule, "Hand_Bow_Right_Arrow");
+
+	UGameplayStatics::FinishSpawningActor(arrow, transform);
 }

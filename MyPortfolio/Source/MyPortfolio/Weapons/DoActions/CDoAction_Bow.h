@@ -44,6 +44,9 @@ public:
 	void OnUnequip() override;
 
 private:
+	void CreateArrow();
+
+private:
 	class USkeletalMeshComponent* SkeletalMesh;
 	class UPoseableMeshComponent* PoseableMesh;
 

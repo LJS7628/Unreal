@@ -17,12 +17,15 @@ private:
 	UPROPERTY(VisibleAnywhere)
 	class UProjectileMovementComponent* Projectile;
 
+public:
+	FORCEINLINE void AddIgnoreActor(AActor* InActor) { Ignores.Add(InActor); }
 public:	
 	ACArrow();
 
 protected:
 	virtual void BeginPlay() override;
 
-
+private:
+	TArray<AActor*> Ignores;
 
 };
