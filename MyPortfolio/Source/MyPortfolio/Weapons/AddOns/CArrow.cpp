@@ -22,6 +22,8 @@ void ACArrow::BeginPlay()
 {
 	Super::BeginPlay();
 	
+	Capsule->SetCollisionEnabled(ECollisionEnabled::NoCollision);
+
 	Projectile->SetActive(false);
 }
 

@@ -44,6 +44,7 @@ public:
 	class UCEquipment* GetEquipment();
 	class ACAttachment* GetAttachment();
 	class UCDoAction* GetDoAction();
+	class UCSubAction* GetSubAction();
 
 public:
 	//무기 모드
@@ -62,6 +63,10 @@ private:
 public:
 	//공격
 	void DoAction();
+
+public:
+	void SubAction_Pressed();
+	void SubAction_Released();
 
 public:
 	FWeaponTypeChanged OnWeaponTypeChanged;

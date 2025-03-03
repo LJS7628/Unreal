@@ -4,6 +4,7 @@
 #include "CAttachment.h"
 #include "CEquipment.h"
 #include "CDoAction.h"
+#include "CSubAction.h"
 
 UCWeaponAsset::UCWeaponAsset()
 {
@@ -53,5 +54,12 @@ void UCWeaponAsset::BeginPlay(ACharacter* InOwner)
 			Equipment->OnEquipmentBeginEquip.AddDynamic(DoAction, &UCDoAction::OnBeginEquip);
 			Equipment->OnEquipmentUnequip.AddDynamic(DoAction, &UCDoAction::OnUnequip);
 		}
+	}
+
+	if (!!SubActionClass) 
+	{
+		SubAction = NewObject<UCSubAction>(this, SubActionClass);
+		SubAction->BeginPlay(InOwner, Attachment,DoAction);
+
 	}
 }

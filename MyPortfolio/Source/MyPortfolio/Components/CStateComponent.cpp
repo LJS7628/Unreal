@@ -48,6 +48,18 @@ void UCStateComponent::SetDeadMode()
 	ChangeType(EStateType::Dead);
 }
 
+// SubActionMode On
+void UCStateComponent::OnSubActionMode()
+{
+	bInSubActionMode = true;
+}
+
+// SubActionMode Off
+void UCStateComponent::OffSubActionMode()
+{
+	bInSubActionMode = false;
+}
+
 // 타입 변경 알림
 void UCStateComponent::ChangeType(EStateType InType)
 {

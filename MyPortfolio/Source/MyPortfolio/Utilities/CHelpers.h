@@ -58,6 +58,8 @@ public:
 		*OutObject = asset.Object;
 	}
 
+
+
 	template<typename T> //런타임시 에셋을 가져와야 할 때
 	static void GetAssetDynamic(T** OutObject, FString InPath)
 	{
@@ -123,6 +125,7 @@ public:
 		return nullptr;
 	}
 
+	//효과 재생 (파티클, 나이아가라)
 	static void PlayEffect(UWorld* InWorld, UFXSystemAsset* InAsset, const FTransform& InTransform, USceneComponent* InAttach = nullptr, FName InSocketName = NAME_None)
 	{
 		UParticleSystem* particle = Cast<UParticleSystem>(InAsset);

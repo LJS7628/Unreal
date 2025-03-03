@@ -27,6 +27,9 @@ private :
 	TSubclassOf<class UCDoAction> DoActionClass;
 
 	UPROPERTY(EditAnywhere)
+	TSubclassOf<class UCSubAction> SubActionClass;
+
+	UPROPERTY(EditAnywhere)
 	TArray<FDoActionData> DoActionDatas;
 
 	UPROPERTY(EditAnywhere)
@@ -38,6 +41,7 @@ public:
 	FORCEINLINE class ACAttachment* GetAttachment() { return Attachment; }
 	FORCEINLINE class UCEquipment* GetEquipment() { return Equipment; }
 	FORCEINLINE class UCDoAction* GetDoAction() { return DoAction; }
+	FORCEINLINE class UCSubAction* GetSubAction() { return SubAction; }
 
 public:
 	UCWeaponAsset();
@@ -54,5 +58,8 @@ private:
 
 	UPROPERTY()
 	class UCDoAction* DoAction;
+
+	UPROPERTY()
+	class UCSubAction* SubAction;
 
 };

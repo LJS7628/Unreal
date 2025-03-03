@@ -23,6 +23,9 @@ public:
 	// Idle State Check 용
 	FORCEINLINE bool IsIdleMode() { return currentType == EStateType::Idle; }
 
+	//Sub Action State Check 용
+	FORCEINLINE bool IsSubActionMode() { return  bInSubActionMode; }
+
 public:	
 
 	UCStateComponent();
@@ -39,6 +42,9 @@ public:
 	void SetActionMode();
 	void SetDeadMode();
 
+	void OnSubActionMode();
+	void OffSubActionMode();
+
 private:
 	void ChangeType(EStateType InType);
 
@@ -48,4 +54,7 @@ public:
 
 private:
 	EStateType currentType; //현재 타입
+
+private:
+	bool bInSubActionMode;
 };

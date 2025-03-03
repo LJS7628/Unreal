@@ -186,6 +186,12 @@
     <ClInclude Include="..\..\Source\MyPortfolio\Weapons\CEquipment.h">
       <Filter>Source\MyPortfolio\Weapons</Filter>
     </ClInclude>
+    <ClCompile Include="..\..\Source\MyPortfolio\Weapons\CSubAction.cpp">
+      <Filter>Source\MyPortfolio\Weapons</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\MyPortfolio\Weapons\CSubAction.h">
+      <Filter>Source\MyPortfolio\Weapons</Filter>
+    </ClInclude>
     <ClCompile Include="..\..\Source\MyPortfolio\Weapons\CWeapon.cpp">
       <Filter>Source\MyPortfolio\Weapons</Filter>
     </ClCompile>
@@ -236,6 +242,15 @@
     </ClCompile>
     <ClInclude Include="..\..\Source\MyPortfolio\Weapons\DoActions\CDoAction_Combo.h">
       <Filter>Source\MyPortfolio\Weapons\DoActions</Filter>
+    </ClInclude>
+    <Filter Include="Source\MyPortfolio\Weapons\SubActions">
+      <UniqueIdentifier>{4D3810AE-9C3D-301F-94F8-B9091FFB5D75}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\MyPortfolio\Weapons\SubActions\CSubAction_Aiming.cpp">
+      <Filter>Source\MyPortfolio\Weapons\SubActions</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\MyPortfolio\Weapons\SubActions\CSubAction_Aiming.h">
+      <Filter>Source\MyPortfolio\Weapons\SubActions</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

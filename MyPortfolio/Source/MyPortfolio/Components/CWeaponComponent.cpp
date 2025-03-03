@@ -4,6 +4,7 @@
 #include "CStateComponent.h" //상태 컴포넌트
 #include "../Weapons/CEquipment.h" //장착
 #include "../Weapons/CDoAction.h" // 액션 헤더
+#include "../Weapons/CSubAction.h"// 서브 액션 헤더
 #include "../Weapons/CWeaponAsset.h" //웨폰 에셋
 
 UCWeaponComponent::UCWeaponComponent()
@@ -39,7 +40,16 @@ void UCWeaponComponent::TickComponent(float DeltaTime, ELevelTick TickType, FAct
 		if (DataAssets[i] == NULL)
 			continue;
 
-		DataAssets[i]->GetDoAction()->Tick(DeltaTime);
+		UCDoAction* doAction = DataAssets[i]->GetDoAction();
+
+		if(!!doAction)
+			doAction->Tick(DeltaTime);
+		
+		UCSubAction* subAction = DataAssets[i]->GetSubAction();
+
+		if (!!subAction)
+			subAction->Tick(DeltaTime);
+
 	}
 
 
@@ -94,6 +104,16 @@ UCDoAction* UCWeaponComponent::GetDoAction()
 	CheckNullResult(asset, nullptr);
 
 	return asset->GetDoAction();
+}
+
+UCSubAction* UCWeaponComponent::GetSubAction()
+{
+	CheckTrueResult(IsUnarmedMode(), nullptr);
+
+	UCWeaponAsset* asset = GetWeaponAsset(Current);
+	CheckNullResult(asset, nullptr);
+
+	return asset->GetSubAction();
 }
 
 // Unarmed 모드
@@ -179,6 +199,22 @@ void UCWeaponComponent::DoAction()
 
 	if (!!doAction)
 		doAction->DoAction();
+}
+
+void UCWeaponComponent::SubAction_Pressed()
+{
+	UCSubAction* subAction = GetSubAction();
+
+	if (!!subAction)
+		subAction->Pressed();
+}
+
+void UCWeaponComponent::SubAction_Released()
+{
+	UCSubAction* subAction = GetSubAction();
+
+	if (!!subAction)
+		subAction->Released();
 }
 
 
