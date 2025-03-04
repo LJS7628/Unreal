@@ -11,6 +11,7 @@ class MYPORTFOLIO_API UCSubAction : public UObject
 	GENERATED_BODY()
 	
 
+public:
 	FORCEINLINE bool GetInAction() { return bInAction; }
 
 public:

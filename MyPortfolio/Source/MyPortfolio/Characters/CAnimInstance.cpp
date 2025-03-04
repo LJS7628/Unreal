@@ -6,6 +6,7 @@
 
 #include "../Characters/CPlayer.h" //플레이어 
 #include "../Components/CWeaponComponent.h" //웨폰
+#include "../Weapons/CSubAction.h"
 
 void UCAnimInstance::NativeBeginPlay()
 {
@@ -39,6 +40,16 @@ void UCAnimInstance::NativeUpdateAnimation(float DeltaSeconds)
 
 	//점프 상태 체크
 	bFalling = OwnerCharacter->GetCharacterMovement()->IsFalling();
+
+	CheckNull(Weapon);
+	
+	bBow_Aiming = false;
+	CheckFalse(Weapon->IsBowMode());
+
+	UCSubAction* subAction = Weapon->GetSubAction();
+	CheckNull(subAction);
+	
+	bBow_Aiming = subAction->GetInAction();
 }
 
 void UCAnimInstance::OnWeaponTypeChanged(EWeaponType InPrevType, EWeaponType InNewType)

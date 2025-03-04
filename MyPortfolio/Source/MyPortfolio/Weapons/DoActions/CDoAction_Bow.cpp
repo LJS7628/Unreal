@@ -4,6 +4,7 @@
 
 #include "Components/SkeletalMeshComponent.h"
 #include "Components/PoseableMeshComponent.h"
+#include "../../Components/CStateComponent.h"
 
 #include "../../Weapons/CAttachment.h"
 #include "../../Weapons/CEquipment.h"
@@ -42,14 +43,33 @@ void UCDoAction_Bow::Tick(float InDeltaTime)
 
 void UCDoAction_Bow::DoAction()
 {
+	CheckFalse(State->IsIdleMode());
+
+	Super::DoAction();
+
+	DoActionDatas[0].DoAction(OwnerCharacter);
 }
 
 void UCDoAction_Bow::Begin_DoAction()
 {
+	Super::Begin_DoAction();
+
+	ACArrow* arrow = GetAttachedArrow();
+	arrow->DetachFromActor(FDetachmentTransformRules(EDetachmentRule::KeepWorld, true));
+
+	arrow->OnEndPlay.AddDynamic(this, &UCDoAction_Bow::OnArrowEndPlay);
+
+	//화살 궤적을 만드는 곳 :: 수정해야함 
+	FVector forward = FQuat(OwnerCharacter->GetControlRotation()).GetForwardVector();
+
+	arrow->Shoot(forward);
 }
 
 void UCDoAction_Bow::End_DoAction()
 {
+	Super::End_DoAction();
+
+	CreateArrow();
 }
 
 void UCDoAction_Bow::OnBeginEquip()
@@ -80,5 +100,23 @@ void UCDoAction_Bow::CreateArrow()
 	FAttachmentTransformRules rule = FAttachmentTransformRules(EAttachmentRule::KeepRelative, true);
 	arrow->AttachToComponent(OwnerCharacter->GetMesh(), rule, "Hand_Bow_Right_Arrow");
 
+	Arrows.Add(arrow);
 	UGameplayStatics::FinishSpawningActor(arrow, transform);
+}
+
+ACArrow* UCDoAction_Bow::GetAttachedArrow()
+{
+	for (ACArrow* arrow : Arrows) 
+	{
+		if (!!arrow->GetAttachParentActor())
+			return arrow;
+	}
+
+
+	return nullptr;
+}
+
+void UCDoAction_Bow::OnArrowEndPlay(ACArrow* InDestroyer)
+{
+	Arrows.Remove(InDestroyer);
 }

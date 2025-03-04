@@ -21,6 +21,7 @@ private:
 public:
 	//무기 해제 상태 체크
 	FORCEINLINE bool IsUnarmedMode() { return Current == EWeaponType::Max; }
+	FORCEINLINE bool IsBowMode() { return Current == EWeaponType::Bow; }
 
 public:	
 	UCWeaponComponent();

@@ -27,6 +27,10 @@ protected:
 	UPROPERTY(BlueprintReadOnly, EditAnywhere, Category = "Weapon")
 	EWeaponType WeaponType = EWeaponType::Max; //NULL 방지용 초기화
 
+protected:
+	UPROPERTY(BlueprintReadOnly, EditAnywhere, Category = "Weapon")
+	bool bBow_Aiming;
+
 public:
 	void NativeBeginPlay() override;
 	void NativeUpdateAnimation(float DeltaSeconds) override;

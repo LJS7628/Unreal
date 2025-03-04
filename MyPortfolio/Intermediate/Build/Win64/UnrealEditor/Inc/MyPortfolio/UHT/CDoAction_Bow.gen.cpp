@@ -16,8 +16,55 @@ void EmptyLinkFunctionForGeneratedCodeCDoAction_Bow() {}
 	MYPORTFOLIO_API UClass* Z_Construct_UClass_UCDoAction_Bow_NoRegister();
 	UPackage* Z_Construct_UPackage__Script_MyPortfolio();
 // End Cross Module References
+	DEFINE_FUNCTION(UCDoAction_Bow::execOnArrowEndPlay)
+	{
+		P_GET_OBJECT(ACArrow,Z_Param_InDestroyer);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		P_THIS->OnArrowEndPlay(Z_Param_InDestroyer);
+		P_NATIVE_END;
+	}
 	void UCDoAction_Bow::StaticRegisterNativesUCDoAction_Bow()
 	{
+		UClass* Class = UCDoAction_Bow::StaticClass();
+		static const FNameNativePtrPair Funcs[] = {
+			{ "OnArrowEndPlay", &UCDoAction_Bow::execOnArrowEndPlay },
+		};
+		FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
+	}
+	struct Z_Construct_UFunction_UCDoAction_Bow_OnArrowEndPlay_Statics
+	{
+		struct CDoAction_Bow_eventOnArrowEndPlay_Parms
+		{
+			ACArrow* InDestroyer;
+		};
+		static const UECodeGen_Private::FObjectPropertyParams NewProp_InDestroyer;
+		static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UECodeGen_Private::FFunctionParams FuncParams;
+	};
+	const UECodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_UCDoAction_Bow_OnArrowEndPlay_Statics::NewProp_InDestroyer = { "InDestroyer", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(CDoAction_Bow_eventOnArrowEndPlay_Parms, InDestroyer), Z_Construct_UClass_ACArrow_NoRegister, METADATA_PARAMS(0, nullptr) };
+	const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UCDoAction_Bow_OnArrowEndPlay_Statics::PropPointers[] = {
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UCDoAction_Bow_OnArrowEndPlay_Statics::NewProp_InDestroyer,
+	};
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UCDoAction_Bow_OnArrowEndPlay_Statics::Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "Weapons/DoActions/CDoAction_Bow.h" },
+	};
+#endif
+	const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UCDoAction_Bow_OnArrowEndPlay_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UCDoAction_Bow, nullptr, "OnArrowEndPlay", nullptr, nullptr, Z_Construct_UFunction_UCDoAction_Bow_OnArrowEndPlay_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UCDoAction_Bow_OnArrowEndPlay_Statics::PropPointers), sizeof(Z_Construct_UFunction_UCDoAction_Bow_OnArrowEndPlay_Statics::CDoAction_Bow_eventOnArrowEndPlay_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00040401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UCDoAction_Bow_OnArrowEndPlay_Statics::Function_MetaDataParams), Z_Construct_UFunction_UCDoAction_Bow_OnArrowEndPlay_Statics::Function_MetaDataParams) };
+	static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_UCDoAction_Bow_OnArrowEndPlay_Statics::PropPointers) < 2048);
+	static_assert(sizeof(Z_Construct_UFunction_UCDoAction_Bow_OnArrowEndPlay_Statics::CDoAction_Bow_eventOnArrowEndPlay_Parms) < MAX_uint16);
+	UFunction* Z_Construct_UFunction_UCDoAction_Bow_OnArrowEndPlay()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_UCDoAction_Bow_OnArrowEndPlay_Statics::FuncParams);
+		}
+		return ReturnFunction;
 	}
 	IMPLEMENT_CLASS_NO_AUTO_REGISTRATION(UCDoAction_Bow);
 	UClass* Z_Construct_UClass_UCDoAction_Bow_NoRegister()
@@ -27,6 +74,7 @@ void EmptyLinkFunctionForGeneratedCodeCDoAction_Bow() {}
 	struct Z_Construct_UClass_UCDoAction_Bow_Statics
 	{
 		static UObject* (*const DependentSingletons[])();
+		static const FClassFunctionLinkInfo FuncInfo[];
 #if WITH_METADATA
 		static const UECodeGen_Private::FMetaDataPairParam Class_MetaDataParams[];
 #endif
@@ -43,6 +91,10 @@ void EmptyLinkFunctionForGeneratedCodeCDoAction_Bow() {}
 		(UObject* (*)())Z_Construct_UPackage__Script_MyPortfolio,
 	};
 	static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_UCDoAction_Bow_Statics::DependentSingletons) < 16);
+	const FClassFunctionLinkInfo Z_Construct_UClass_UCDoAction_Bow_Statics::FuncInfo[] = {
+		{ &Z_Construct_UFunction_UCDoAction_Bow_OnArrowEndPlay, "OnArrowEndPlay" }, // 2529041237
+	};
+	static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_UCDoAction_Bow_Statics::FuncInfo) < 2048);
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UCDoAction_Bow_Statics::Class_MetaDataParams[] = {
 		{ "BlueprintType", "true" },
@@ -69,11 +121,11 @@ void EmptyLinkFunctionForGeneratedCodeCDoAction_Bow() {}
 		nullptr,
 		&StaticCppClassTypeInfo,
 		DependentSingletons,
-		nullptr,
+		FuncInfo,
 		Z_Construct_UClass_UCDoAction_Bow_Statics::PropPointers,
 		nullptr,
 		UE_ARRAY_COUNT(DependentSingletons),
-		0,
+		UE_ARRAY_COUNT(FuncInfo),
 		UE_ARRAY_COUNT(Z_Construct_UClass_UCDoAction_Bow_Statics::PropPointers),
 		0,
 		0x001000A0u,
@@ -99,9 +151,9 @@ void EmptyLinkFunctionForGeneratedCodeCDoAction_Bow() {}
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_MyPortfolio_Source_MyPortfolio_Weapons_DoActions_CDoAction_Bow_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_UCDoAction_Bow, UCDoAction_Bow::StaticClass, TEXT("UCDoAction_Bow"), &Z_Registration_Info_UClass_UCDoAction_Bow, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UCDoAction_Bow), 2967925834U) },
+		{ Z_Construct_UClass_UCDoAction_Bow, UCDoAction_Bow::StaticClass, TEXT("UCDoAction_Bow"), &Z_Registration_Info_UClass_UCDoAction_Bow, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UCDoAction_Bow), 4048620841U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_MyPortfolio_Source_MyPortfolio_Weapons_DoActions_CDoAction_Bow_h_1317739733(TEXT("/Script/MyPortfolio"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_MyPortfolio_Source_MyPortfolio_Weapons_DoActions_CDoAction_Bow_h_2521246387(TEXT("/Script/MyPortfolio"),
 		Z_CompiledInDeferFile_FID_MyPortfolio_Source_MyPortfolio_Weapons_DoActions_CDoAction_Bow_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_MyPortfolio_Source_MyPortfolio_Weapons_DoActions_CDoAction_Bow_h_Statics::ClassInfo),
 		nullptr, 0,
 		nullptr, 0);

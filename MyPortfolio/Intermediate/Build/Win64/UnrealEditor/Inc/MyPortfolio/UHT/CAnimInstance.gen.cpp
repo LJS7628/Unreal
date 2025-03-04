@@ -117,6 +117,11 @@ void EmptyLinkFunctionForGeneratedCodeCAnimInstance() {}
 		static const UECodeGen_Private::FMetaDataPairParam NewProp_WeaponType_MetaData[];
 #endif
 		static const UECodeGen_Private::FEnumPropertyParams NewProp_WeaponType;
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam NewProp_bBow_Aiming_MetaData[];
+#endif
+		static void NewProp_bBow_Aiming_SetBit(void* Obj);
+		static const UECodeGen_Private::FBoolPropertyParams NewProp_bBow_Aiming;
 		static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 		static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
 		static const UECodeGen_Private::FClassParams ClassParams;
@@ -195,6 +200,17 @@ void EmptyLinkFunctionForGeneratedCodeCAnimInstance() {}
 	};
 #endif
 	const UECodeGen_Private::FEnumPropertyParams Z_Construct_UClass_UCAnimInstance_Statics::NewProp_WeaponType = { "WeaponType", nullptr, (EPropertyFlags)0x0020080000000015, UECodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UCAnimInstance, WeaponType), Z_Construct_UEnum_MyPortfolio_EWeaponType, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_UCAnimInstance_Statics::NewProp_WeaponType_MetaData), Z_Construct_UClass_UCAnimInstance_Statics::NewProp_WeaponType_MetaData) }; // 701054448
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UCAnimInstance_Statics::NewProp_bBow_Aiming_MetaData[] = {
+		{ "Category", "Weapon" },
+		{ "ModuleRelativePath", "Characters/CAnimInstance.h" },
+	};
+#endif
+	void Z_Construct_UClass_UCAnimInstance_Statics::NewProp_bBow_Aiming_SetBit(void* Obj)
+	{
+		((UCAnimInstance*)Obj)->bBow_Aiming = 1;
+	}
+	const UECodeGen_Private::FBoolPropertyParams Z_Construct_UClass_UCAnimInstance_Statics::NewProp_bBow_Aiming = { "bBow_Aiming", nullptr, (EPropertyFlags)0x0020080000000015, UECodeGen_Private::EPropertyGenFlags::Bool | UECodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, sizeof(bool), sizeof(UCAnimInstance), &Z_Construct_UClass_UCAnimInstance_Statics::NewProp_bBow_Aiming_SetBit, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_UCAnimInstance_Statics::NewProp_bBow_Aiming_MetaData), Z_Construct_UClass_UCAnimInstance_Statics::NewProp_bBow_Aiming_MetaData) };
 	const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_UCAnimInstance_Statics::PropPointers[] = {
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UCAnimInstance_Statics::NewProp_Speed,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UCAnimInstance_Statics::NewProp_Direction,
@@ -202,6 +218,7 @@ void EmptyLinkFunctionForGeneratedCodeCAnimInstance() {}
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UCAnimInstance_Statics::NewProp_bFalling,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UCAnimInstance_Statics::NewProp_WeaponType_Underlying,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UCAnimInstance_Statics::NewProp_WeaponType,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UCAnimInstance_Statics::NewProp_bBow_Aiming,
 	};
 	const FCppClassTypeInfoStatic Z_Construct_UClass_UCAnimInstance_Statics::StaticCppClassTypeInfo = {
 		TCppClassTypeTraits<UCAnimInstance>::IsAbstract,
@@ -242,9 +259,9 @@ void EmptyLinkFunctionForGeneratedCodeCAnimInstance() {}
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_MyPortfolio_Source_MyPortfolio_Characters_CAnimInstance_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_UCAnimInstance, UCAnimInstance::StaticClass, TEXT("UCAnimInstance"), &Z_Registration_Info_UClass_UCAnimInstance, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UCAnimInstance), 1821468132U) },
+		{ Z_Construct_UClass_UCAnimInstance, UCAnimInstance::StaticClass, TEXT("UCAnimInstance"), &Z_Registration_Info_UClass_UCAnimInstance, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UCAnimInstance), 4195660358U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_MyPortfolio_Source_MyPortfolio_Characters_CAnimInstance_h_3260881770(TEXT("/Script/MyPortfolio"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_MyPortfolio_Source_MyPortfolio_Characters_CAnimInstance_h_605850099(TEXT("/Script/MyPortfolio"),
 		Z_CompiledInDeferFile_FID_MyPortfolio_Source_MyPortfolio_Characters_CAnimInstance_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_MyPortfolio_Source_MyPortfolio_Characters_CAnimInstance_h_Statics::ClassInfo),
 		nullptr, 0,
 		nullptr, 0);
