@@ -2,9 +2,11 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/Actor.h"
+#include "GameFramework/Character.h"
 #include "CArrow.generated.h"
 
 DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FProjectileEndPlay, class ACArrow*, InDestroyer);
+DECLARE_DYNAMIC_MULTICAST_DELEGATE_TwoParams(FProjectileHit, class AActor*, InCauser, class ACharacter*, InOtherCharacter);
 
 UCLASS()
 class MYPORTFOLIO_API ACArrow : public AActor
@@ -42,6 +44,7 @@ private:
 
 public:
 	FProjectileEndPlay OnEndPlay;
+	FProjectileHit OnHit;
 
 private:
 	TArray<AActor*> Ignores;

@@ -54,6 +54,7 @@ public:
 	void SetSwordMode();
 	void SetAxeMode();
 	void SetBowMode();
+	void SetWarpMode();
 
 private:
 	//모드 세팅, 타입 변경 알림

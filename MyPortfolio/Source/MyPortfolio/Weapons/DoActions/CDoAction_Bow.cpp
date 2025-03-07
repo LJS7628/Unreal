@@ -34,6 +34,7 @@ void UCDoAction_Bow::Tick(float InDeltaTime)
 	Super::Tick(InDeltaTime);
 
 	CheckFalse(*bEquipped);
+	CheckFalse(bAttachString);
 
 	PoseableMesh->CopyPoseFromSkeletalComponent(SkeletalMesh);
 
@@ -54,10 +55,10 @@ void UCDoAction_Bow::Begin_DoAction()
 {
 	Super::Begin_DoAction();
 
+	bAttachString = false;
+
 	ACArrow* arrow = GetAttachedArrow();
 	arrow->DetachFromActor(FDetachmentTransformRules(EDetachmentRule::KeepWorld, true));
-
-	arrow->OnEndPlay.AddDynamic(this, &UCDoAction_Bow::OnArrowEndPlay);
 
 	//화살 궤적을 만드는 곳 :: 수정해야함 
 	FVector forward = FQuat(OwnerCharacter->GetControlRotation()).GetForwardVector();
@@ -84,6 +85,12 @@ void UCDoAction_Bow::OnUnequip()
 	Super::OnUnequip();
 
 	PoseableMesh->SetBoneLocationByName("bow_string_mid", OriginLocation, EBoneSpaces::ComponentSpace);
+
+	ACArrow* arrow = GetAttachedArrow();
+
+	if (!!arrow) 
+		arrow->Destroy();
+	
 }
 
 void UCDoAction_Bow::CreateArrow()
@@ -96,6 +103,8 @@ void UCDoAction_Bow::CreateArrow()
 	CheckNull(arrow);
 
 	arrow->AddIgnoreActor(OwnerCharacter);
+	arrow->OnEndPlay.AddDynamic(this, &UCDoAction_Bow::OnArrowEndPlay);
+	arrow->OnHit.AddDynamic(this, &UCDoAction_Bow::OnArrowHit);
 
 	FAttachmentTransformRules rule = FAttachmentTransformRules(EAttachmentRule::KeepRelative, true);
 	arrow->AttachToComponent(OwnerCharacter->GetMesh(), rule, "Hand_Bow_Right_Arrow");
@@ -116,7 +125,19 @@ ACArrow* UCDoAction_Bow::GetAttachedArrow()
 	return nullptr;
 }
 
+void UCDoAction_Bow::End_BowString()
+{
+	bAttachString = true;
+}
+
 void UCDoAction_Bow::OnArrowEndPlay(ACArrow* InDestroyer)
 {
 	Arrows.Remove(InDestroyer);
+}
+
+void UCDoAction_Bow::OnArrowHit(AActor* InCauser, ACharacter* InOtherCharacter)
+{
+	CheckFalse(HitDatas.Num() > 0);
+
+	HitDatas[0].SendDamage(OwnerCharacter, InCauser, InOtherCharacter);
 }

@@ -15,6 +15,7 @@ void EmptyLinkFunctionForGeneratedCodeMyPortfolio_init() {}
 	MYPORTFOLIO_API UFunction* Z_Construct_UDelegateFunction_MyPortfolio_EquipmentUnequip__DelegateSignature();
 	MYPORTFOLIO_API UFunction* Z_Construct_UDelegateFunction_MyPortfolio_HealthPointChanged__DelegateSignature();
 	MYPORTFOLIO_API UFunction* Z_Construct_UDelegateFunction_MyPortfolio_ProjectileEndPlay__DelegateSignature();
+	MYPORTFOLIO_API UFunction* Z_Construct_UDelegateFunction_MyPortfolio_ProjectileHit__DelegateSignature();
 	MYPORTFOLIO_API UFunction* Z_Construct_UDelegateFunction_MyPortfolio_StateTypeChanged__DelegateSignature();
 	MYPORTFOLIO_API UFunction* Z_Construct_UDelegateFunction_MyPortfolio_WeaponTypeChanged__DelegateSignature();
 	static FPackageRegistrationInfo Z_Registration_Info_UPackage__Script_MyPortfolio;
@@ -31,6 +32,7 @@ void EmptyLinkFunctionForGeneratedCodeMyPortfolio_init() {}
 				(UObject* (*)())Z_Construct_UDelegateFunction_MyPortfolio_EquipmentUnequip__DelegateSignature,
 				(UObject* (*)())Z_Construct_UDelegateFunction_MyPortfolio_HealthPointChanged__DelegateSignature,
 				(UObject* (*)())Z_Construct_UDelegateFunction_MyPortfolio_ProjectileEndPlay__DelegateSignature,
+				(UObject* (*)())Z_Construct_UDelegateFunction_MyPortfolio_ProjectileHit__DelegateSignature,
 				(UObject* (*)())Z_Construct_UDelegateFunction_MyPortfolio_StateTypeChanged__DelegateSignature,
 				(UObject* (*)())Z_Construct_UDelegateFunction_MyPortfolio_WeaponTypeChanged__DelegateSignature,
 			};
@@ -39,13 +41,13 @@ void EmptyLinkFunctionForGeneratedCodeMyPortfolio_init() {}
 				SingletonFuncArray,
 				UE_ARRAY_COUNT(SingletonFuncArray),
 				PKG_CompiledIn | 0x00000000,
-				0x28A9932B,
-				0xF32FD5E7,
+				0x67099C81,
+				0xBC780A4C,
 				METADATA_PARAMS(0, nullptr)
 			};
 			UECodeGen_Private::ConstructUPackage(Z_Registration_Info_UPackage__Script_MyPortfolio.OuterSingleton, PackageParams);
 		}
 		return Z_Registration_Info_UPackage__Script_MyPortfolio.OuterSingleton;
 	}
-	static FRegisterCompiledInInfo Z_CompiledInDeferPackage_UPackage__Script_MyPortfolio(Z_Construct_UPackage__Script_MyPortfolio, TEXT("/Script/MyPortfolio"), Z_Registration_Info_UPackage__Script_MyPortfolio, CONSTRUCT_RELOAD_VERSION_INFO(FPackageReloadVersionInfo, 0x28A9932B, 0xF32FD5E7));
+	static FRegisterCompiledInInfo Z_CompiledInDeferPackage_UPackage__Script_MyPortfolio(Z_Construct_UPackage__Script_MyPortfolio, TEXT("/Script/MyPortfolio"), Z_Registration_Info_UPackage__Script_MyPortfolio, CONSTRUCT_RELOAD_VERSION_INFO(FPackageReloadVersionInfo, 0x67099C81, 0xBC780A4C));
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

@@ -97,6 +97,7 @@ template<> MYPORTFOLIO_API UClass* StaticClass<class UCWeaponStructures>();
 	op(EWeaponType::Sword) \
 	op(EWeaponType::Axe) \
 	op(EWeaponType::Bow) \
+	op(EWeaponType::Warp) \
 	op(EWeaponType::Max) 
 
 enum class EWeaponType : uint8;

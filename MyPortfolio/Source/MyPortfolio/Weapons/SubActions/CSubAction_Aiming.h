@@ -56,8 +56,8 @@ private:
 	UFUNCTION()
 	void OnAiming(FVector Output);
 
-//public:
-//	void OnUnequip() override;
+public:
+	void OnUnequip() override;
 
 private:
 	class USpringArmComponent* SpringArm;

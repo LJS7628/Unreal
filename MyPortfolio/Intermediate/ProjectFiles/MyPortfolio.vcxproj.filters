@@ -132,6 +132,12 @@
     <ClInclude Include="..\..\Source\MyPortfolio\Notifies\CAnimNotify_BeginAction.h">
       <Filter>Source\MyPortfolio\Notifies</Filter>
     </ClInclude>
+    <ClCompile Include="..\..\Source\MyPortfolio\Notifies\CAnimNotify_BowString.cpp">
+      <Filter>Source\MyPortfolio\Notifies</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\MyPortfolio\Notifies\CAnimNotify_BowString.h">
+      <Filter>Source\MyPortfolio\Notifies</Filter>
+    </ClInclude>
     <ClCompile Include="..\..\Source\MyPortfolio\Notifies\CAnimNotify_CameraShake.cpp">
       <Filter>Source\MyPortfolio\Notifies</Filter>
     </ClCompile>
@@ -241,6 +247,12 @@
       <Filter>Source\MyPortfolio\Weapons\DoActions</Filter>
     </ClCompile>
     <ClInclude Include="..\..\Source\MyPortfolio\Weapons\DoActions\CDoAction_Combo.h">
+      <Filter>Source\MyPortfolio\Weapons\DoActions</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\MyPortfolio\Weapons\DoActions\CDoAction_Warp.cpp">
+      <Filter>Source\MyPortfolio\Weapons\DoActions</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\MyPortfolio\Weapons\DoActions\CDoAction_Warp.h">
       <Filter>Source\MyPortfolio\Weapons\DoActions</Filter>
     </ClInclude>
     <Filter Include="Source\MyPortfolio\Weapons\SubActions">

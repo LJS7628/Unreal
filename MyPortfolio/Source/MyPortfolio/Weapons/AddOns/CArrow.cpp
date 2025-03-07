@@ -61,9 +61,9 @@ void ACArrow::OnComponentHit(UPrimitiveComponent* HitComponent, AActor* OtherAct
 
 	Capsule->SetCollisionEnabled(ECollisionEnabled::NoCollision);
 
-	//ACharacter* character = Cast<ACharacter>(OtherActor);
-	//if (!!character && OnHit.IsBound())
-	//	OnHit.Broadcast(this, character);
+	ACharacter* character = Cast<ACharacter>(OtherActor);
+	if (!!character && OnHit.IsBound())
+		OnHit.Broadcast(this, character);
 }
 
 

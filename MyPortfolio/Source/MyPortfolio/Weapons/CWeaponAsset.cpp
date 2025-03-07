@@ -61,5 +61,9 @@ void UCWeaponAsset::BeginPlay(ACharacter* InOwner)
 		SubAction = NewObject<UCSubAction>(this, SubActionClass);
 		SubAction->BeginPlay(InOwner, Attachment,DoAction);
 
+		if (!!Equipment) 
+		{
+			Equipment->OnEquipmentUnequip.AddDynamic(SubAction, &UCSubAction::OnUnequip);
+		}
 	}
 }

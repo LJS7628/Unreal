@@ -1,0 +1,28 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "d:\\unrealproject\\unreal\\myportfolio\\source\\myportfolio\\weapons\\doactions\\cdoaction_warp.cpp",
+        "ProvidedModule": "",
+        "PCH": "d:\\unrealproject\\unreal\\myportfolio\\intermediate\\build\\win64\\x64\\myportfolioeditor\\development\\engine\\sharedpch.engine.cpp20.h.pch",
+        "Includes": [
+            "d:\\unrealproject\\unreal\\myportfolio\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\myportfolio\\definitions.myportfolio.h",
+            "d:\\unrealproject\\unreal\\myportfolio\\source\\myportfolio\\weapons\\doactions\\cdoaction_warp.h",
+            "d:\\unrealproject\\unreal\\myportfolio\\source\\myportfolio\\weapons\\cdoaction.h",
+            "c:\\program files\\epic games\\ue_5.3\\engine\\source\\runtime\\coreuobject\\public\\uobject\\noexporttypes.h",
+            "c:\\program files\\epic games\\ue_5.3\\engine\\source\\runtime\\coreuobject\\public\\uobject\\propertyaccessutil.h",
+            "c:\\program files\\epic games\\ue_5.3\\engine\\source\\runtime\\coreuobject\\public\\serialization\\testundeclaredscriptstructobjectreferences.h",
+            "c:\\program files\\epic games\\ue_5.3\\engine\\source\\runtime\\core\\public\\math\\unitconversion.h",
+            "c:\\program files\\epic games\\ue_5.3\\engine\\source\\runtime\\core\\public\\math\\unitconversion.inl",
+            "c:\\program files\\epic games\\ue_5.3\\engine\\source\\runtime\\core\\public\\internationalization\\polyglottextdata.h",
+            "c:\\program files\\epic games\\ue_5.3\\engine\\source\\runtime\\coreuobject\\public\\assetregistry\\arfilter.h",
+            "d:\\unrealproject\\unreal\\myportfolio\\source\\myportfolio\\weapons\\cweaponstructures.h",
+            "c:\\program files\\epic games\\ue_5.3\\engine\\source\\runtime\\engine\\classes\\engine\\damageevents.h",
+            "c:\\program files\\epic games\\ue_5.3\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\damageevents.generated.h",
+            "d:\\unrealproject\\unreal\\myportfolio\\intermediate\\build\\win64\\unrealeditor\\inc\\myportfolio\\uht\\cweaponstructures.generated.h",
+            "d:\\unrealproject\\unreal\\myportfolio\\intermediate\\build\\win64\\unrealeditor\\inc\\myportfolio\\uht\\cdoaction.generated.h",
+            "d:\\unrealproject\\unreal\\myportfolio\\intermediate\\build\\win64\\unrealeditor\\inc\\myportfolio\\uht\\cdoaction_warp.generated.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

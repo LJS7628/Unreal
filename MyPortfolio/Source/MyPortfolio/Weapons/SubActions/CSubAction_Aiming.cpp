@@ -81,3 +81,10 @@ void UCSubAction_Aiming::OnAiming(FVector Output)
 	Camera->FieldOfView = Output.X;
 
 }
+
+void UCSubAction_Aiming::OnUnequip()
+{
+	CheckFalse(State->IsSubActionMode());
+
+	Released();
+}

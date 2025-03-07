@@ -10,12 +10,23 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 void EmptyLinkFunctionForGeneratedCodeCDoAction_Bow() {}
 // Cross Module References
 	COREUOBJECT_API UClass* Z_Construct_UClass_UClass();
+	ENGINE_API UClass* Z_Construct_UClass_AActor_NoRegister();
+	ENGINE_API UClass* Z_Construct_UClass_ACharacter_NoRegister();
 	MYPORTFOLIO_API UClass* Z_Construct_UClass_ACArrow_NoRegister();
 	MYPORTFOLIO_API UClass* Z_Construct_UClass_UCDoAction();
 	MYPORTFOLIO_API UClass* Z_Construct_UClass_UCDoAction_Bow();
 	MYPORTFOLIO_API UClass* Z_Construct_UClass_UCDoAction_Bow_NoRegister();
 	UPackage* Z_Construct_UPackage__Script_MyPortfolio();
 // End Cross Module References
+	DEFINE_FUNCTION(UCDoAction_Bow::execOnArrowHit)
+	{
+		P_GET_OBJECT(AActor,Z_Param_InCauser);
+		P_GET_OBJECT(ACharacter,Z_Param_InOtherCharacter);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		P_THIS->OnArrowHit(Z_Param_InCauser,Z_Param_InOtherCharacter);
+		P_NATIVE_END;
+	}
 	DEFINE_FUNCTION(UCDoAction_Bow::execOnArrowEndPlay)
 	{
 		P_GET_OBJECT(ACArrow,Z_Param_InDestroyer);
@@ -29,6 +40,7 @@ void EmptyLinkFunctionForGeneratedCodeCDoAction_Bow() {}
 		UClass* Class = UCDoAction_Bow::StaticClass();
 		static const FNameNativePtrPair Funcs[] = {
 			{ "OnArrowEndPlay", &UCDoAction_Bow::execOnArrowEndPlay },
+			{ "OnArrowHit", &UCDoAction_Bow::execOnArrowHit },
 		};
 		FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
 	}
@@ -66,6 +78,44 @@ void EmptyLinkFunctionForGeneratedCodeCDoAction_Bow() {}
 		}
 		return ReturnFunction;
 	}
+	struct Z_Construct_UFunction_UCDoAction_Bow_OnArrowHit_Statics
+	{
+		struct CDoAction_Bow_eventOnArrowHit_Parms
+		{
+			AActor* InCauser;
+			ACharacter* InOtherCharacter;
+		};
+		static const UECodeGen_Private::FObjectPropertyParams NewProp_InCauser;
+		static const UECodeGen_Private::FObjectPropertyParams NewProp_InOtherCharacter;
+		static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UECodeGen_Private::FFunctionParams FuncParams;
+	};
+	const UECodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_UCDoAction_Bow_OnArrowHit_Statics::NewProp_InCauser = { "InCauser", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(CDoAction_Bow_eventOnArrowHit_Parms, InCauser), Z_Construct_UClass_AActor_NoRegister, METADATA_PARAMS(0, nullptr) };
+	const UECodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_UCDoAction_Bow_OnArrowHit_Statics::NewProp_InOtherCharacter = { "InOtherCharacter", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(CDoAction_Bow_eventOnArrowHit_Parms, InOtherCharacter), Z_Construct_UClass_ACharacter_NoRegister, METADATA_PARAMS(0, nullptr) };
+	const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UCDoAction_Bow_OnArrowHit_Statics::PropPointers[] = {
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UCDoAction_Bow_OnArrowHit_Statics::NewProp_InCauser,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UCDoAction_Bow_OnArrowHit_Statics::NewProp_InOtherCharacter,
+	};
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UCDoAction_Bow_OnArrowHit_Statics::Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "Weapons/DoActions/CDoAction_Bow.h" },
+	};
+#endif
+	const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UCDoAction_Bow_OnArrowHit_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UCDoAction_Bow, nullptr, "OnArrowHit", nullptr, nullptr, Z_Construct_UFunction_UCDoAction_Bow_OnArrowHit_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UCDoAction_Bow_OnArrowHit_Statics::PropPointers), sizeof(Z_Construct_UFunction_UCDoAction_Bow_OnArrowHit_Statics::CDoAction_Bow_eventOnArrowHit_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00040401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UCDoAction_Bow_OnArrowHit_Statics::Function_MetaDataParams), Z_Construct_UFunction_UCDoAction_Bow_OnArrowHit_Statics::Function_MetaDataParams) };
+	static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_UCDoAction_Bow_OnArrowHit_Statics::PropPointers) < 2048);
+	static_assert(sizeof(Z_Construct_UFunction_UCDoAction_Bow_OnArrowHit_Statics::CDoAction_Bow_eventOnArrowHit_Parms) < MAX_uint16);
+	UFunction* Z_Construct_UFunction_UCDoAction_Bow_OnArrowHit()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_UCDoAction_Bow_OnArrowHit_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
 	IMPLEMENT_CLASS_NO_AUTO_REGISTRATION(UCDoAction_Bow);
 	UClass* Z_Construct_UClass_UCDoAction_Bow_NoRegister()
 	{
@@ -93,6 +143,7 @@ void EmptyLinkFunctionForGeneratedCodeCDoAction_Bow() {}
 	static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_UCDoAction_Bow_Statics::DependentSingletons) < 16);
 	const FClassFunctionLinkInfo Z_Construct_UClass_UCDoAction_Bow_Statics::FuncInfo[] = {
 		{ &Z_Construct_UFunction_UCDoAction_Bow_OnArrowEndPlay, "OnArrowEndPlay" }, // 2529041237
+		{ &Z_Construct_UFunction_UCDoAction_Bow_OnArrowHit, "OnArrowHit" }, // 3348472250
 	};
 	static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_UCDoAction_Bow_Statics::FuncInfo) < 2048);
 #if WITH_METADATA
@@ -151,9 +202,9 @@ void EmptyLinkFunctionForGeneratedCodeCDoAction_Bow() {}
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_MyPortfolio_Source_MyPortfolio_Weapons_DoActions_CDoAction_Bow_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_UCDoAction_Bow, UCDoAction_Bow::StaticClass, TEXT("UCDoAction_Bow"), &Z_Registration_Info_UClass_UCDoAction_Bow, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UCDoAction_Bow), 4048620841U) },
+		{ Z_Construct_UClass_UCDoAction_Bow, UCDoAction_Bow::StaticClass, TEXT("UCDoAction_Bow"), &Z_Registration_Info_UClass_UCDoAction_Bow, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UCDoAction_Bow), 1699139749U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_MyPortfolio_Source_MyPortfolio_Weapons_DoActions_CDoAction_Bow_h_2521246387(TEXT("/Script/MyPortfolio"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_MyPortfolio_Source_MyPortfolio_Weapons_DoActions_CDoAction_Bow_h_2429459667(TEXT("/Script/MyPortfolio"),
 		Z_CompiledInDeferFile_FID_MyPortfolio_Source_MyPortfolio_Weapons_DoActions_CDoAction_Bow_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_MyPortfolio_Source_MyPortfolio_Weapons_DoActions_CDoAction_Bow_h_Statics::ClassInfo),
 		nullptr, 0,
 		nullptr, 0);

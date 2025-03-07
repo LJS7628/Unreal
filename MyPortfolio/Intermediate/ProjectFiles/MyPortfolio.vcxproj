@@ -200,6 +200,12 @@
       <AdditionalOptions>$(ClCompile_AdditionalOptions)</AdditionalOptions>
     </ClCompile>
     <ClInclude Include="..\..\Source\MyPortfolio\Notifies\CAnimNotify_BeginAction.h"/>
+    <ClCompile Include="..\..\Source\MyPortfolio\Notifies\CAnimNotify_BowString.cpp">
+      <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <ForcedIncludeFiles>$(ClCompile_ForcedIncludeFiles)</ForcedIncludeFiles>
+      <AdditionalOptions>$(ClCompile_AdditionalOptions)</AdditionalOptions>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\MyPortfolio\Notifies\CAnimNotify_BowString.h"/>
     <ClCompile Include="..\..\Source\MyPortfolio\Notifies\CAnimNotify_CameraShake.cpp">
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <ForcedIncludeFiles>$(ClCompile_ForcedIncludeFiles)</ForcedIncludeFiles>
@@ -296,6 +302,12 @@
       <AdditionalOptions>$(ClCompile_AdditionalOptions)</AdditionalOptions>
     </ClCompile>
     <ClInclude Include="..\..\Source\MyPortfolio\Weapons\DoActions\CDoAction_Combo.h"/>
+    <ClCompile Include="..\..\Source\MyPortfolio\Weapons\DoActions\CDoAction_Warp.cpp">
+      <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <ForcedIncludeFiles>$(ClCompile_ForcedIncludeFiles)</ForcedIncludeFiles>
+      <AdditionalOptions>$(ClCompile_AdditionalOptions)</AdditionalOptions>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\MyPortfolio\Weapons\DoActions\CDoAction_Warp.h"/>
     <ClCompile Include="..\..\Source\MyPortfolio\Weapons\SubActions\CSubAction_Aiming.cpp">
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <ForcedIncludeFiles>$(ClCompile_ForcedIncludeFiles)</ForcedIncludeFiles>

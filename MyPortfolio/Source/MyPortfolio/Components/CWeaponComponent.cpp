@@ -156,6 +156,14 @@ void UCWeaponComponent::SetBowMode()
 	SetMode(EWeaponType::Bow);
 }
 
+//Warp 모드
+void UCWeaponComponent::SetWarpMode()
+{
+	CheckFalse(IsIdleMode());
+
+	SetMode(EWeaponType::Warp);
+}
+
 // 모드 설정
 void UCWeaponComponent::SetMode(EWeaponType InType)
 {

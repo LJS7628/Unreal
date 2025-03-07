@@ -25,6 +25,10 @@ public:
 	virtual void Pressed();
 	virtual void Released();
 
+public:
+	UFUNCTION()
+	virtual void OnUnequip() {}
+
 protected:
 	bool bInAction;
 

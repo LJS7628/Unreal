@@ -47,9 +47,15 @@ private:
 	void CreateArrow();
 	class ACArrow* GetAttachedArrow();
 
+public:
+	void End_BowString();
+
 private:
 	UFUNCTION()
 	void OnArrowEndPlay(class ACArrow* InDestroyer);
+
+	UFUNCTION()
+	void OnArrowHit(class AActor* InCauser, class ACharacter* InOtherCharacter);
 
 private:
 	class USkeletalMeshComponent* SkeletalMesh;
@@ -60,6 +66,9 @@ private:
 
 private:
 	FVector OriginLocation;
+
+private:
+	bool bAttachString = true;
 
 private:
 	TArray<class ACArrow*> Arrows;

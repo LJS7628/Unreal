@@ -11,6 +11,7 @@
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
 class AActor;
 class ACArrow;
+class ACharacter;
 class UPrimitiveComponent;
 struct FHitResult;
 #ifdef MYPORTFOLIO_CArrow_generated_h
@@ -18,20 +19,24 @@ struct FHitResult;
 #endif
 #define MYPORTFOLIO_CArrow_generated_h
 
-#define FID_MyPortfolio_Source_MyPortfolio_Weapons_AddOns_CArrow_h_7_DELEGATE \
+#define FID_MyPortfolio_Source_MyPortfolio_Weapons_AddOns_CArrow_h_8_DELEGATE \
 MYPORTFOLIO_API void FProjectileEndPlay_DelegateWrapper(const FMulticastScriptDelegate& ProjectileEndPlay, ACArrow* InDestroyer);
 
 
-#define FID_MyPortfolio_Source_MyPortfolio_Weapons_AddOns_CArrow_h_12_SPARSE_DATA
-#define FID_MyPortfolio_Source_MyPortfolio_Weapons_AddOns_CArrow_h_12_SPARSE_DATA_PROPERTY_ACCESSORS
-#define FID_MyPortfolio_Source_MyPortfolio_Weapons_AddOns_CArrow_h_12_EDITOR_ONLY_SPARSE_DATA_PROPERTY_ACCESSORS
-#define FID_MyPortfolio_Source_MyPortfolio_Weapons_AddOns_CArrow_h_12_RPC_WRAPPERS_NO_PURE_DECLS \
+#define FID_MyPortfolio_Source_MyPortfolio_Weapons_AddOns_CArrow_h_9_DELEGATE \
+MYPORTFOLIO_API void FProjectileHit_DelegateWrapper(const FMulticastScriptDelegate& ProjectileHit, AActor* InCauser, ACharacter* InOtherCharacter);
+
+
+#define FID_MyPortfolio_Source_MyPortfolio_Weapons_AddOns_CArrow_h_14_SPARSE_DATA
+#define FID_MyPortfolio_Source_MyPortfolio_Weapons_AddOns_CArrow_h_14_SPARSE_DATA_PROPERTY_ACCESSORS
+#define FID_MyPortfolio_Source_MyPortfolio_Weapons_AddOns_CArrow_h_14_EDITOR_ONLY_SPARSE_DATA_PROPERTY_ACCESSORS
+#define FID_MyPortfolio_Source_MyPortfolio_Weapons_AddOns_CArrow_h_14_RPC_WRAPPERS_NO_PURE_DECLS \
  \
 	DECLARE_FUNCTION(execOnComponentHit);
 
 
-#define FID_MyPortfolio_Source_MyPortfolio_Weapons_AddOns_CArrow_h_12_ACCESSORS
-#define FID_MyPortfolio_Source_MyPortfolio_Weapons_AddOns_CArrow_h_12_INCLASS_NO_PURE_DECLS \
+#define FID_MyPortfolio_Source_MyPortfolio_Weapons_AddOns_CArrow_h_14_ACCESSORS
+#define FID_MyPortfolio_Source_MyPortfolio_Weapons_AddOns_CArrow_h_14_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesACArrow(); \
 	friend struct Z_Construct_UClass_ACArrow_Statics; \
@@ -40,7 +45,7 @@ public: \
 	DECLARE_SERIALIZER(ACArrow)
 
 
-#define FID_MyPortfolio_Source_MyPortfolio_Weapons_AddOns_CArrow_h_12_ENHANCED_CONSTRUCTORS \
+#define FID_MyPortfolio_Source_MyPortfolio_Weapons_AddOns_CArrow_h_14_ENHANCED_CONSTRUCTORS \
 private: \
 	/** Private move- and copy-constructors, should never be used */ \
 	NO_API ACArrow(ACArrow&&); \
@@ -52,17 +57,17 @@ public: \
 	NO_API virtual ~ACArrow();
 
 
-#define FID_MyPortfolio_Source_MyPortfolio_Weapons_AddOns_CArrow_h_9_PROLOG
-#define FID_MyPortfolio_Source_MyPortfolio_Weapons_AddOns_CArrow_h_12_GENERATED_BODY \
+#define FID_MyPortfolio_Source_MyPortfolio_Weapons_AddOns_CArrow_h_11_PROLOG
+#define FID_MyPortfolio_Source_MyPortfolio_Weapons_AddOns_CArrow_h_14_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_MyPortfolio_Source_MyPortfolio_Weapons_AddOns_CArrow_h_12_SPARSE_DATA \
-	FID_MyPortfolio_Source_MyPortfolio_Weapons_AddOns_CArrow_h_12_SPARSE_DATA_PROPERTY_ACCESSORS \
-	FID_MyPortfolio_Source_MyPortfolio_Weapons_AddOns_CArrow_h_12_EDITOR_ONLY_SPARSE_DATA_PROPERTY_ACCESSORS \
-	FID_MyPortfolio_Source_MyPortfolio_Weapons_AddOns_CArrow_h_12_RPC_WRAPPERS_NO_PURE_DECLS \
-	FID_MyPortfolio_Source_MyPortfolio_Weapons_AddOns_CArrow_h_12_ACCESSORS \
-	FID_MyPortfolio_Source_MyPortfolio_Weapons_AddOns_CArrow_h_12_INCLASS_NO_PURE_DECLS \
-	FID_MyPortfolio_Source_MyPortfolio_Weapons_AddOns_CArrow_h_12_ENHANCED_CONSTRUCTORS \
+	FID_MyPortfolio_Source_MyPortfolio_Weapons_AddOns_CArrow_h_14_SPARSE_DATA \
+	FID_MyPortfolio_Source_MyPortfolio_Weapons_AddOns_CArrow_h_14_SPARSE_DATA_PROPERTY_ACCESSORS \
+	FID_MyPortfolio_Source_MyPortfolio_Weapons_AddOns_CArrow_h_14_EDITOR_ONLY_SPARSE_DATA_PROPERTY_ACCESSORS \
+	FID_MyPortfolio_Source_MyPortfolio_Weapons_AddOns_CArrow_h_14_RPC_WRAPPERS_NO_PURE_DECLS \
+	FID_MyPortfolio_Source_MyPortfolio_Weapons_AddOns_CArrow_h_14_ACCESSORS \
+	FID_MyPortfolio_Source_MyPortfolio_Weapons_AddOns_CArrow_h_14_INCLASS_NO_PURE_DECLS \
+	FID_MyPortfolio_Source_MyPortfolio_Weapons_AddOns_CArrow_h_14_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
