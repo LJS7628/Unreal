@@ -33,8 +33,8 @@ protected:
 public:
 	void Tick(float DeltaTime) override;
 
-//public:
-//	float* GetAnimInstance_Bending();
+public:
+	float* GetAnimInstance_Bending();
 
 private:
 	FVector2D OriginViewPitchAngle;

@@ -69,6 +69,6 @@ private:
 private:
 	FTimeline Timeline;
 
-//private:
-//	float* Bending;
+private:
+	float* Bending;
 };

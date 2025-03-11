@@ -174,6 +174,12 @@
     <Filter Include="Source\MyPortfolio\Weapons">
       <UniqueIdentifier>{0B60D5B6-9240-32D5-9632-47050705EC51}</UniqueIdentifier>
     </Filter>
+    <ClCompile Include="..\..\Source\MyPortfolio\Weapons\CAnimInstance_Bow.cpp">
+      <Filter>Source\MyPortfolio\Weapons</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\MyPortfolio\Weapons\CAnimInstance_Bow.h">
+      <Filter>Source\MyPortfolio\Weapons</Filter>
+    </ClInclude>
     <ClCompile Include="..\..\Source\MyPortfolio\Weapons\CAttachment.cpp">
       <Filter>Source\MyPortfolio\Weapons</Filter>
     </ClCompile>

@@ -4,6 +4,7 @@
 #include "GameFramework/PlayerController.h"
 #include "Components/SkeletalMeshComponent.h"
 #include "Components/PoseableMeshComponent.h"
+#include "../../Weapons/CAnimInstance_Bow.h"
 
 ACAttachment_Bow::ACAttachment_Bow()
 {
@@ -16,9 +17,9 @@ ACAttachment_Bow::ACAttachment_Bow()
 	CHelpers::GetAsset<USkeletalMesh>(&mesh, "/Script/Engine.SkeletalMesh'/Game/Characters/Weapons/Bow/SK_ElvenBow.SK_ElvenBow'");
 	SkeletalMesh->SetSkeletalMesh(mesh);
 
-	//TSubclassOf<UCAnimInstance_Bow> animInstance;
-	//CHelpers::GetClass<UCAnimInstance_Bow>(&animInstance, "/Script/Engine.AnimBlueprint'/Game/Weapons/Bow/ABP_Bow.ABP_Bow_C'");
-	//SkeletalMesh->SetAnimInstanceClass(animInstance);
+	TSubclassOf<UCAnimInstance_Bow> animInstance;
+	CHelpers::GetClass<UCAnimInstance_Bow>(&animInstance, "/Script/Engine.AnimBlueprint'/Game/Weapons/Bow/ABP_Bow.ABP_Bow_C'");
+	SkeletalMesh->SetAnimInstanceClass(animInstance);
 }
 
 void ACAttachment_Bow::OnBeginEquip_Implementation()
@@ -67,10 +68,10 @@ void ACAttachment_Bow::Tick(float DeltaTime)
 	Super::Tick(DeltaTime);
 }
 
-//float* ACAttachment_Bow::GetAnimInstance_Bending()
-//{
-//	UCAnimInstance_Bow* bow = Cast<UCAnimInstance_Bow>(SkeletalMesh->GetAnimInstance());
-//	CheckNullResult(bow, nullptr);
-//
-//	return bow->GetBending();
-//}
+float* ACAttachment_Bow::GetAnimInstance_Bending()
+{
+	UCAnimInstance_Bow* bow = Cast<UCAnimInstance_Bow>(SkeletalMesh->GetAnimInstance());
+	CheckNullResult(bow, nullptr);
+
+	return bow->GetBending();
+}

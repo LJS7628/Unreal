@@ -101,7 +101,7 @@ void ACEnemy::Damaged()
 	if (HealthPoint->IsDead() == true) 
 	{
 		State->SetDeadMode();
-
+		GetMesh()->SetCollisionEnabled(ECollisionEnabled::NoCollision);
 		return;
 	}
 

@@ -28,6 +28,11 @@ void UCSubAction_Aiming::BeginPlay(ACharacter* InOwner, ACAttachment* InAttachme
 
 	Timeline.AddInterpVector(Curve, timeline);
 	Timeline.SetPlayRate(AimingSpeed);
+
+	ACAttachment_Bow* bow = Cast<ACAttachment_Bow>(InAttachment);
+
+	if (!!bow)
+		Bending = bow->GetAnimInstance_Bending();
 }
 
 void UCSubAction_Aiming::Tick(float InDeltaTime)
@@ -80,6 +85,8 @@ void UCSubAction_Aiming::OnAiming(FVector Output)
 {
 	Camera->FieldOfView = Output.X;
 
+	if (!!Bending)
+		*Bending = Output.Y;
 }
 
 void UCSubAction_Aiming::OnUnequip()

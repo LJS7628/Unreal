@@ -69,6 +69,7 @@ private:
 
 private:
 	bool bAttachString = true;
+	float* Bending;
 
 private:
 	TArray<class ACArrow*> Arrows;
