@@ -72,7 +72,6 @@ void EmptyLinkFunctionForGeneratedCodeCDoAction_Warp() {}
 	{
 		return UCDoAction_Warp::StaticClass();
 	}
-	UCDoAction_Warp::UCDoAction_Warp() {}
 	DEFINE_VTABLE_PTR_HELPER_CTOR(UCDoAction_Warp);
 	UCDoAction_Warp::~UCDoAction_Warp() {}
 	struct Z_CompiledInDeferFile_FID_MyPortfolio_Source_MyPortfolio_Weapons_DoActions_CDoAction_Warp_h_Statics

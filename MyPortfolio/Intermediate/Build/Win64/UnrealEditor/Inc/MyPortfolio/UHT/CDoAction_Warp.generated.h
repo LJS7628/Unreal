@@ -29,8 +29,6 @@ public: \
 
 
 #define FID_MyPortfolio_Source_MyPortfolio_Weapons_DoActions_CDoAction_Warp_h_11_ENHANCED_CONSTRUCTORS \
-	/** Standard constructor, called after all reflected properties have been initialized */ \
-	NO_API UCDoAction_Warp(); \
 private: \
 	/** Private move- and copy-constructors, should never be used */ \
 	NO_API UCDoAction_Warp(UCDoAction_Warp&&); \
