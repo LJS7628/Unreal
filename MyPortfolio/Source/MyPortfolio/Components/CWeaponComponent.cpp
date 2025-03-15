@@ -26,6 +26,7 @@ void UCWeaponComponent::BeginPlay()
 		if (DataAssets[i] == NULL)
 			continue;
 
+		// 무기별 BeginPlay 실행
 		DataAssets[i]->BeginPlay(OwnerCharacter);
 	}
 }
@@ -42,11 +43,13 @@ void UCWeaponComponent::TickComponent(float DeltaTime, ELevelTick TickType, FAct
 
 		UCDoAction* doAction = DataAssets[i]->GetDoAction();
 
+		// 무기별 doAction Tick 호출
 		if(!!doAction)
 			doAction->Tick(DeltaTime);
 		
 		UCSubAction* subAction = DataAssets[i]->GetSubAction();
 
+		// 활 서브 액션 호출
 		if (!!subAction)
 			subAction->Tick(DeltaTime);
 
@@ -106,6 +109,7 @@ UCDoAction* UCWeaponComponent::GetDoAction()
 	return asset->GetDoAction();
 }
 
+// 서브액션 가져오기
 UCSubAction* UCWeaponComponent::GetSubAction()
 {
 	CheckTrueResult(IsUnarmedMode(), nullptr);
@@ -209,6 +213,7 @@ void UCWeaponComponent::DoAction()
 		doAction->DoAction();
 }
 
+// 활 줌 모드 눌렀을 떄
 void UCWeaponComponent::SubAction_Pressed()
 {
 	UCSubAction* subAction = GetSubAction();
@@ -217,6 +222,7 @@ void UCWeaponComponent::SubAction_Pressed()
 		subAction->Pressed();
 }
 
+// 활 줌 모드 뗐을 때
 void UCWeaponComponent::SubAction_Released()
 {
 	UCSubAction* subAction = GetSubAction();

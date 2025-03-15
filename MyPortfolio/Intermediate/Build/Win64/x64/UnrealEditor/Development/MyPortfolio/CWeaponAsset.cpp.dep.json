@@ -112,7 +112,9 @@
             "d:\\unrealproject\\unreal\\myportfolio\\source\\myportfolio\\weapons\\cdoaction.h",
             "d:\\unrealproject\\unreal\\myportfolio\\intermediate\\build\\win64\\unrealeditor\\inc\\myportfolio\\uht\\cdoaction.generated.h",
             "d:\\unrealproject\\unreal\\myportfolio\\source\\myportfolio\\weapons\\csubaction.h",
-            "d:\\unrealproject\\unreal\\myportfolio\\intermediate\\build\\win64\\unrealeditor\\inc\\myportfolio\\uht\\csubaction.generated.h"
+            "d:\\unrealproject\\unreal\\myportfolio\\intermediate\\build\\win64\\unrealeditor\\inc\\myportfolio\\uht\\csubaction.generated.h",
+            "d:\\unrealproject\\unreal\\myportfolio\\source\\myportfolio\\weapons\\addons\\cghosttrail.h",
+            "d:\\unrealproject\\unreal\\myportfolio\\intermediate\\build\\win64\\unrealeditor\\inc\\myportfolio\\uht\\cghosttrail.generated.h"
         ],
         "ImportedModules": [],
         "ImportedHeaderUnits": []

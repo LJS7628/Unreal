@@ -39,9 +39,11 @@ ACPlayer::ACPlayer()
 	CHelpers::GetClass<UCAnimInstance>(&animInstance, "/Script/Engine.AnimBlueprint'/Game/Characters/ABP_Character.ABP_Character_C'");
 	GetMesh()->SetAnimClass(animInstance);
 
+	//움직임 속도,카메라
 	GetCharacterMovement()->MaxWalkSpeed = 400; //걷기 최대 속도 
 	GetCharacterMovement()->RotationRate = FRotator(0, 720, 0); //카메라 회전 2배
 
+	// 스프링 암 조절
 	SpringArm->SetRelativeLocation(FVector(0, 0, 60));
 	SpringArm->TargetArmLength = 200;
 	SpringArm->bUsePawnControlRotation = true; //폰 컨트롤러 회전사용
@@ -97,6 +99,7 @@ void ACPlayer::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
 	
 }
 
+//상태 변화 
 void ACPlayer::OnStateTypeChanged(EStateType InPrevType, EStateType InNewType)
 {
 	switch (InNewType) 
@@ -106,6 +109,7 @@ void ACPlayer::OnStateTypeChanged(EStateType InPrevType, EStateType InNewType)
 	}
 }
 
+//회피 종료 후 원상복구 
 void ACPlayer::End_Backstep()
 {
 	Movement->DisenableControlRotation();
@@ -134,7 +138,7 @@ void ACPlayer::OnEvade()
 
 }
 
-//카메라 확대
+
 void ACPlayer::OnZoom(float InAxisValue)
 {
 

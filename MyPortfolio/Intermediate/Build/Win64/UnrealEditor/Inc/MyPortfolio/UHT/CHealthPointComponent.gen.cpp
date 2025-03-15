@@ -38,7 +38,13 @@ void EmptyLinkFunctionForGeneratedCodeCHealthPointComponent() {}
 	};
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UDelegateFunction_MyPortfolio_HealthPointChanged__DelegateSignature_Statics::Function_MetaDataParams[] = {
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "// \xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd \xc3\xb3\xef\xbf\xbd\xef\xbf\xbd \xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xc6\xae\n" },
+#endif
 		{ "ModuleRelativePath", "Components/CHealthPointComponent.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd \xc3\xb3\xef\xbf\xbd\xef\xbf\xbd \xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xef\xbf\xbd\xc6\xae" },
+#endif
 	};
 #endif
 	const UECodeGen_Private::FFunctionParams Z_Construct_UDelegateFunction_MyPortfolio_HealthPointChanged__DelegateSignature_Statics::FuncParams = { (UObject*(*)())Z_Construct_UPackage__Script_MyPortfolio, nullptr, "HealthPointChanged__DelegateSignature", nullptr, nullptr, Z_Construct_UDelegateFunction_MyPortfolio_HealthPointChanged__DelegateSignature_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UDelegateFunction_MyPortfolio_HealthPointChanged__DelegateSignature_Statics::PropPointers), sizeof(Z_Construct_UDelegateFunction_MyPortfolio_HealthPointChanged__DelegateSignature_Statics::_Script_MyPortfolio_eventHealthPointChanged_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00130000, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UDelegateFunction_MyPortfolio_HealthPointChanged__DelegateSignature_Statics::Function_MetaDataParams), Z_Construct_UDelegateFunction_MyPortfolio_HealthPointChanged__DelegateSignature_Statics::Function_MetaDataParams) };
@@ -103,7 +109,13 @@ void FHealthPointChanged_DelegateWrapper(const FMulticastScriptDelegate& HealthP
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UCHealthPointComponent_Statics::NewProp_MaxHealth_MetaData[] = {
 		{ "Category", "Health" },
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "// \xc3\xbc\xef\xbf\xbd\xef\xbf\xbd \xef\xbf\xbd\xef\xbf\xbd\xc4\xa1\n" },
+#endif
 		{ "ModuleRelativePath", "Components/CHealthPointComponent.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "\xc3\xbc\xef\xbf\xbd\xef\xbf\xbd \xef\xbf\xbd\xef\xbf\xbd\xc4\xa1" },
+#endif
 	};
 #endif
 	const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_UCHealthPointComponent_Statics::NewProp_MaxHealth = { "MaxHealth", nullptr, (EPropertyFlags)0x0040000000000001, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UCHealthPointComponent, MaxHealth), METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_UCHealthPointComponent_Statics::NewProp_MaxHealth_MetaData), Z_Construct_UClass_UCHealthPointComponent_Statics::NewProp_MaxHealth_MetaData) };
@@ -148,9 +160,9 @@ void FHealthPointChanged_DelegateWrapper(const FMulticastScriptDelegate& HealthP
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_MyPortfolio_Source_MyPortfolio_Components_CHealthPointComponent_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_UCHealthPointComponent, UCHealthPointComponent::StaticClass, TEXT("UCHealthPointComponent"), &Z_Registration_Info_UClass_UCHealthPointComponent, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UCHealthPointComponent), 2591080454U) },
+		{ Z_Construct_UClass_UCHealthPointComponent, UCHealthPointComponent::StaticClass, TEXT("UCHealthPointComponent"), &Z_Registration_Info_UClass_UCHealthPointComponent, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UCHealthPointComponent), 3344056729U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_MyPortfolio_Source_MyPortfolio_Components_CHealthPointComponent_h_1442800070(TEXT("/Script/MyPortfolio"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_MyPortfolio_Source_MyPortfolio_Components_CHealthPointComponent_h_817185869(TEXT("/Script/MyPortfolio"),
 		Z_CompiledInDeferFile_FID_MyPortfolio_Source_MyPortfolio_Components_CHealthPointComponent_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_MyPortfolio_Source_MyPortfolio_Components_CHealthPointComponent_h_Statics::ClassInfo),
 		nullptr, 0,
 		nullptr, 0);

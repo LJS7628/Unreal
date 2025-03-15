@@ -66,6 +66,7 @@ public:
 	//공격
 	void DoAction();
 
+	//줌 모드 누름/해제
 public:
 	void SubAction_Pressed();
 	void SubAction_Released();

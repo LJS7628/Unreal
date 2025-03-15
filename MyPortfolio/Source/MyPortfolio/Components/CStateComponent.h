@@ -34,6 +34,7 @@ protected:
 
 	virtual void BeginPlay() override;
 		
+// 모드 설정
 public:
 	void SetIdleMode();
 	void SetEvadeMode();
@@ -42,9 +43,11 @@ public:
 	void SetActionMode();
 	void SetDeadMode();
 
+	// 활 줌 모드 On/Off
 	void OnSubActionMode();
 	void OffSubActionMode();
 
+	//상태 변화
 private:
 	void ChangeType(EStateType InType);
 
@@ -55,6 +58,7 @@ public:
 private:
 	EStateType currentType; //현재 타입
 
+// 줌 모드 체크 
 private:
 	bool bInSubActionMode;
 };

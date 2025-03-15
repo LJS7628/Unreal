@@ -49,6 +49,7 @@ protected:
 	virtual void BeginPlay() override;
 
 public:	
+	//캐릭터 입력 컴포넌트 
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
 
 private:

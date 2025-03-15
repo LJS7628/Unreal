@@ -5,6 +5,7 @@
 #include "CEquipment.h"
 #include "CDoAction.h"
 #include "CSubAction.h"
+#include "AddOns/CGhostTrail.h"
 
 UCWeaponAsset::UCWeaponAsset()
 {

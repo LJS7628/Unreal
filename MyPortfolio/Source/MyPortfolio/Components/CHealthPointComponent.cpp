@@ -6,6 +6,7 @@ UCHealthPointComponent::UCHealthPointComponent()
 
 }
 
+// 최대 체력 설정
 void UCHealthPointComponent::BeginPlay()
 {
 	Super::BeginPlay();
@@ -13,6 +14,7 @@ void UCHealthPointComponent::BeginPlay()
 	Health = MaxHealth;
 }
 
+// 데미지 처리
 void UCHealthPointComponent::Damage(float InAmount)
 {
 	Health += (InAmount * -1.0f);
