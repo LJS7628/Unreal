@@ -51,10 +51,10 @@ private:
 	UFUNCTION()
 	void OnStateTypeChanged(EStateType InPrevType, EStateType InNewType);
 
-private:
+protected:
 	//피격, 사망처리 
 	void Damaged();
-	void Dead();
+	virtual void Dead();
 	
 public:
 	// 사망 이후 삭제

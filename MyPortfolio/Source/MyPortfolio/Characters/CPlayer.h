@@ -2,6 +2,7 @@
 
 #include "CoreMinimal.h"
 #include "../Interfaces/IStatable.h" // 상태 인터페이스
+#include "GenericTeamAgentInterface.h" // 팀번호 부여 (아군,적군,중립 구별)
 #include "GameFramework/Character.h"
 #include "CPlayer.generated.h"
 
@@ -9,9 +10,15 @@ UCLASS()
 class MYPORTFOLIO_API ACPlayer 
 	: public ACharacter
 	, public IIStatable  //상태 인터페이스 상속
+	, public IGenericTeamAgentInterface //팀 번호
 
 {
 	GENERATED_BODY()
+
+//팀 번호
+private:
+	UPROPERTY(EditDefaultsOnly, Category = "Team")
+	uint8 TeamID = 1;
 
 //카메라
 private:
@@ -51,6 +58,9 @@ protected:
 public:	
 	//캐릭터 입력 컴포넌트 
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
+	// 팀 번호 부여
+	FGenericTeamId GetGenericTeamId() const { return FGenericTeamId(TeamID); }
+
 
 private:
 	//CStateComponent delegate 연결 함수

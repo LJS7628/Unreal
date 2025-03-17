@@ -51,6 +51,12 @@
     <Filter Include="Source\MyPortfolio\Characters">
       <UniqueIdentifier>{71756EB4-5967-30DA-89E4-1D8A2740E08C}</UniqueIdentifier>
     </Filter>
+    <ClCompile Include="..\..\Source\MyPortfolio\Characters\CAIController.cpp">
+      <Filter>Source\MyPortfolio\Characters</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\MyPortfolio\Characters\CAIController.h">
+      <Filter>Source\MyPortfolio\Characters</Filter>
+    </ClInclude>
     <ClCompile Include="..\..\Source\MyPortfolio\Characters\CAnimInstance.cpp">
       <Filter>Source\MyPortfolio\Characters</Filter>
     </ClCompile>
@@ -61,6 +67,12 @@
       <Filter>Source\MyPortfolio\Characters</Filter>
     </ClCompile>
     <ClInclude Include="..\..\Source\MyPortfolio\Characters\CEnemy.h">
+      <Filter>Source\MyPortfolio\Characters</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\MyPortfolio\Characters\CEnemy_AI.cpp">
+      <Filter>Source\MyPortfolio\Characters</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\MyPortfolio\Characters\CEnemy_AI.h">
       <Filter>Source\MyPortfolio\Characters</Filter>
     </ClInclude>
     <ClCompile Include="..\..\Source\MyPortfolio\Characters\CPlayer.cpp">

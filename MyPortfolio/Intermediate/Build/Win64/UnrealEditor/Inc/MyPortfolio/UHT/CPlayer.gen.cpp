@@ -9,6 +9,7 @@
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
 void EmptyLinkFunctionForGeneratedCodeCPlayer() {}
 // Cross Module References
+	AIMODULE_API UClass* Z_Construct_UClass_UGenericTeamAgentInterface_NoRegister();
 	ENGINE_API UClass* Z_Construct_UClass_ACharacter();
 	ENGINE_API UClass* Z_Construct_UClass_UCameraComponent_NoRegister();
 	ENGINE_API UClass* Z_Construct_UClass_USpringArmComponent_NoRegister();
@@ -101,6 +102,10 @@ void EmptyLinkFunctionForGeneratedCodeCPlayer() {}
 		static const UECodeGen_Private::FMetaDataPairParam Class_MetaDataParams[];
 #endif
 #if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam NewProp_TeamID_MetaData[];
+#endif
+		static const UECodeGen_Private::FBytePropertyParams NewProp_TeamID;
+#if WITH_METADATA
 		static const UECodeGen_Private::FMetaDataPairParam NewProp_SpringArm_MetaData[];
 #endif
 		static const UECodeGen_Private::FObjectPropertyParams NewProp_SpringArm;
@@ -142,6 +147,13 @@ void EmptyLinkFunctionForGeneratedCodeCPlayer() {}
 	};
 #endif
 #if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ACPlayer_Statics::NewProp_TeamID_MetaData[] = {
+		{ "Category", "Team" },
+		{ "ModuleRelativePath", "Characters/CPlayer.h" },
+	};
+#endif
+	const UECodeGen_Private::FBytePropertyParams Z_Construct_UClass_ACPlayer_Statics::NewProp_TeamID = { "TeamID", nullptr, (EPropertyFlags)0x0040000000010001, UECodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ACPlayer, TeamID), nullptr, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_ACPlayer_Statics::NewProp_TeamID_MetaData), Z_Construct_UClass_ACPlayer_Statics::NewProp_TeamID_MetaData) };
+#if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ACPlayer_Statics::NewProp_SpringArm_MetaData[] = {
 		{ "Category", "CPlayer" },
 		{ "EditInline", "true" },
@@ -182,6 +194,7 @@ void EmptyLinkFunctionForGeneratedCodeCPlayer() {}
 #endif
 	const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ACPlayer_Statics::NewProp_Movement = { "Movement", nullptr, (EPropertyFlags)0x00400000000a0009, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ACPlayer, Movement), Z_Construct_UClass_UCMovementComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_ACPlayer_Statics::NewProp_Movement_MetaData), Z_Construct_UClass_ACPlayer_Statics::NewProp_Movement_MetaData) };
 	const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_ACPlayer_Statics::PropPointers[] = {
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACPlayer_Statics::NewProp_TeamID,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACPlayer_Statics::NewProp_SpringArm,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACPlayer_Statics::NewProp_Camera,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACPlayer_Statics::NewProp_Weapon,
@@ -190,6 +203,7 @@ void EmptyLinkFunctionForGeneratedCodeCPlayer() {}
 	};
 		const UECodeGen_Private::FImplementedInterfaceParams Z_Construct_UClass_ACPlayer_Statics::InterfaceParams[] = {
 			{ Z_Construct_UClass_UIStatable_NoRegister, (int32)VTABLE_OFFSET(ACPlayer, IIStatable), false },  // 3651956757
+			{ Z_Construct_UClass_UGenericTeamAgentInterface_NoRegister, (int32)VTABLE_OFFSET(ACPlayer, IGenericTeamAgentInterface), false },  // 4142440172
 		};
 	static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_ACPlayer_Statics::InterfaceParams) < 64);
 	const FCppClassTypeInfoStatic Z_Construct_UClass_ACPlayer_Statics::StaticCppClassTypeInfo = {
@@ -230,9 +244,9 @@ void EmptyLinkFunctionForGeneratedCodeCPlayer() {}
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_MyPortfolio_Source_MyPortfolio_Characters_CPlayer_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_ACPlayer, ACPlayer::StaticClass, TEXT("ACPlayer"), &Z_Registration_Info_UClass_ACPlayer, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ACPlayer), 1861341979U) },
+		{ Z_Construct_UClass_ACPlayer, ACPlayer::StaticClass, TEXT("ACPlayer"), &Z_Registration_Info_UClass_ACPlayer, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ACPlayer), 3740916796U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_MyPortfolio_Source_MyPortfolio_Characters_CPlayer_h_3436907759(TEXT("/Script/MyPortfolio"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_MyPortfolio_Source_MyPortfolio_Characters_CPlayer_h_2101596882(TEXT("/Script/MyPortfolio"),
 		Z_CompiledInDeferFile_FID_MyPortfolio_Source_MyPortfolio_Characters_CPlayer_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_MyPortfolio_Source_MyPortfolio_Characters_CPlayer_h_Statics::ClassInfo),
 		nullptr, 0,
 		nullptr, 0);

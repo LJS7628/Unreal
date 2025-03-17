@@ -5,6 +5,10 @@
 #include "../Components/CMovementComponent.h"
 
 #include "Camera/CameraShakeBase.h" //Camera Shake
+#include "Components/CapsuleComponent.h"
+
+#include "../Weapons/AddOns/CGhostTrail.h"
+
 
 void FDoActionData::DoAction(ACharacter* InOwner)
 {
@@ -21,6 +25,28 @@ void FDoActionData::DoAction(ACharacter* InOwner)
 
 	if (!!Montage)
 		InOwner->PlayAnimMontage(Montage, PlayRate);
+
+	if (!!GhostTrailClass)
+	{
+		FVector location = InOwner->GetActorLocation();
+		location.Z -= InOwner->GetCapsuleComponent()->GetScaledCapsuleHalfHeight();
+
+
+		FActorSpawnParameters params;
+		params.Owner = InOwner;
+		params.SpawnCollisionHandlingOverride = ESpawnActorCollisionHandlingMethod::AlwaysSpawn;
+
+		FTransform transform;
+		transform.SetTranslation(location);
+
+		GhostTrail = InOwner->GetWorld()->SpawnActor<ACGhostTrail>(GhostTrailClass, transform, params);
+	}
+}
+
+void FDoActionData::DestoryGhostTrail()
+{
+	if (!!GhostTrail)
+		GhostTrail->Destroy();
 }
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////
