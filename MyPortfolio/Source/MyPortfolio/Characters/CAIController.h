@@ -10,11 +10,13 @@ class MYPORTFOLIO_API ACAIController : public AAIController
 {
 	GENERATED_BODY()
 	
-
 private:
 	//°¨Áö
 	UPROPERTY(VisibleAnywhere)
 	class UAIPerceptionComponent* Perception;
+
+	UPROPERTY(VisibleAnywhere)
+	class UCAIBehaviorComponent* Behavior;
 
 public:
 	ACAIController();
@@ -26,6 +28,10 @@ protected:
 	//AI ºùÀÇ, ºùÀÇ ÇØÁ¦ 
 	virtual void OnPossess(APawn* InPawn) override;
 	virtual void OnUnPossess() override;
+
+private:
+	UFUNCTION()
+	void OnPerceptionUpdated(const TArray<AActor*>& UpdatedActors);
 
 private:
 	class ACEnemy_AI* Enemy;

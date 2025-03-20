@@ -1,0 +1,15 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "d:\\unrealproject\\unreal\\myportfolio\\intermediate\\build\\win64\\unrealeditor\\inc\\myportfolio\\uht\\caibehaviorcomponent.gen.cpp",
+        "ProvidedModule": "",
+        "PCH": "d:\\unrealproject\\unreal\\myportfolio\\intermediate\\build\\win64\\x64\\myportfolioeditor\\development\\unrealed\\sharedpch.unrealed.cpp20.h.pch",
+        "Includes": [
+            "d:\\unrealproject\\unreal\\myportfolio\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\myportfolio\\definitions.myportfolio.h",
+            "d:\\unrealproject\\unreal\\myportfolio\\source\\myportfolio\\components\\caibehaviorcomponent.h",
+            "d:\\unrealproject\\unreal\\myportfolio\\intermediate\\build\\win64\\unrealeditor\\inc\\myportfolio\\uht\\caibehaviorcomponent.generated.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

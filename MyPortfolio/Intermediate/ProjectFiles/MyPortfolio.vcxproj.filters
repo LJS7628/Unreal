@@ -48,6 +48,27 @@
     <ClInclude Include="..\..\Source\MyPortfolio\MyPortfolio.h">
       <Filter>Source\MyPortfolio</Filter>
     </ClInclude>
+    <Filter Include="Source\MyPortfolio\BehaviorTree">
+      <UniqueIdentifier>{F1218D53-C04B-3A13-B201-6C299ABCAD02}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\MyPortfolio\BehaviorTree\CBTService_Melee.cpp">
+      <Filter>Source\MyPortfolio\BehaviorTree</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\MyPortfolio\BehaviorTree\CBTService_Melee.h">
+      <Filter>Source\MyPortfolio\BehaviorTree</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\MyPortfolio\BehaviorTree\CBTTaskNode_Speed.cpp">
+      <Filter>Source\MyPortfolio\BehaviorTree</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\MyPortfolio\BehaviorTree\CBTTaskNode_Speed.h">
+      <Filter>Source\MyPortfolio\BehaviorTree</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\MyPortfolio\BehaviorTree\CBTTask_Print.cpp">
+      <Filter>Source\MyPortfolio\BehaviorTree</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\MyPortfolio\BehaviorTree\CBTTask_Print.h">
+      <Filter>Source\MyPortfolio\BehaviorTree</Filter>
+    </ClInclude>
     <Filter Include="Source\MyPortfolio\Characters">
       <UniqueIdentifier>{71756EB4-5967-30DA-89E4-1D8A2740E08C}</UniqueIdentifier>
     </Filter>
@@ -84,6 +105,12 @@
     <Filter Include="Source\MyPortfolio\Components">
       <UniqueIdentifier>{04CEF9F2-E057-35EF-B02C-2103B7367564}</UniqueIdentifier>
     </Filter>
+    <ClCompile Include="..\..\Source\MyPortfolio\Components\CAIBehaviorComponent.cpp">
+      <Filter>Source\MyPortfolio\Components</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\MyPortfolio\Components\CAIBehaviorComponent.h">
+      <Filter>Source\MyPortfolio\Components</Filter>
+    </ClInclude>
     <ClCompile Include="..\..\Source\MyPortfolio\Components\CHealthPointComponent.cpp">
       <Filter>Source\MyPortfolio\Components</Filter>
     </ClCompile>
