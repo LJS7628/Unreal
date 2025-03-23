@@ -2,6 +2,8 @@
 	"RemapUnityFiles": 
 	{
 		"Module.MyPortfolio.cpp.obj": [
+			"CAIBehaviorComponent.gen.cpp.obj",
+			"CAIController.gen.cpp.obj",
 			"CAnimInstance.gen.cpp.obj",
 			"CAnimInstance_Bow.gen.cpp.obj",
 			"CAnimNotifyState_Collision.gen.cpp.obj",
@@ -15,7 +17,9 @@
 			"CArrow.gen.cpp.obj",
 			"CAttachment.gen.cpp.obj",
 			"CAttachment_Bow.gen.cpp.obj",
+			"CBTService_Melee.gen.cpp.obj",
 			"CBTTaskNode_Speed.gen.cpp.obj",
+			"CBTTask_Print.gen.cpp.obj",
 			"CDoAction.gen.cpp.obj",
 			"CDoAction_Bow.gen.cpp.obj",
 			"CDoAction_Combo.gen.cpp.obj",
@@ -36,11 +40,14 @@
 			"CWeaponComponent.gen.cpp.obj",
 			"CWeaponStructures.gen.cpp.obj",
 			"IStatable.gen.cpp.obj",
+			"CBTTaskNode_Speed.cpp.obj",
+			"CBTTask_Print.cpp.obj",
 			"CGameMode.cpp.obj",
+			"CAIController.cpp.obj",
 			"CAnimInstance.cpp.obj",
 			"CEnemy.cpp.obj",
-			"CEnemy_AI.cpp.obj",
 			"CPlayer.cpp.obj",
+			"CAIBehaviorComponent.cpp.obj",
 			"CHealthPointComponent.cpp.obj",
 			"CMovementComponent.cpp.obj",
 			"CStateComponent.cpp.obj",
@@ -72,16 +79,13 @@
 			"CDoAction_Combo.cpp.obj",
 			"CDoAction_Warp.cpp.obj",
 			"CSubAction_Aiming.cpp.obj",
-			"CAIBehaviorComponent.gen.cpp.obj",
-			"CAIController.gen.cpp.obj",
-			"CBTService_Melee.gen.cpp.obj",
-			"CBTTask_Print.gen.cpp.obj",
+			"CBTTaskNode_Patrol.gen.cpp.obj",
+			"CPatrolPath.gen.cpp.obj",
 			"MyPortfolio.init.gen.cpp.obj",
 			"CBTService_Melee.cpp.obj",
-			"CBTTaskNode_Speed.cpp.obj",
-			"CBTTask_Print.cpp.obj",
-			"CAIController.cpp.obj",
-			"CAIBehaviorComponent.cpp.obj"
+			"CBTTaskNode_Patrol.cpp.obj",
+			"CPatrolPath.cpp.obj",
+			"CEnemy_AI.cpp.obj"
 		]
 	}
 }

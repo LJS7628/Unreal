@@ -17,8 +17,12 @@ private:
 	uint8 TeamID = 2;
 
 	// 행동 트리
-	UPROPERTY(EditDefaultsOnly, Category = "Team")
+	UPROPERTY(EditDefaultsOnly, Category = "AI")
 	class UBehaviorTree* BehaviorTree;
+
+	// 순찰 경로
+	UPROPERTY(EditAnywhere, Category = "AI")
+	class ACPatrolPath* PatrolPath;
 
 private:
 	UPROPERTY(VisibleAnywhere)
@@ -28,6 +32,7 @@ public:
 	// 팀번호, BT 가져오기
 	FORCEINLINE uint8 GetTeamID() { return TeamID; }
 	FORCEINLINE class UBehaviorTree* GetBehaviorTree() { return BehaviorTree; }
+	FORCEINLINE class ACPatrolPath* GetPatrolPath() { return PatrolPath; }
 
 public:
 	ACEnemy_AI();

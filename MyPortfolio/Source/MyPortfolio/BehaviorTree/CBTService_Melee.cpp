@@ -29,8 +29,8 @@ void UCBTService_Melee::TickNode(UBehaviorTreeComponent& OwnerComp, uint8* NodeM
 
 	if (target == nullptr)
 	{
-		behavior->SetWaitMode();
-		//behavior->SetPatrolMode();
+		//behavior->SetWaitMode();
+		behavior->SetPatrolMode();
 
 		return;
 	}

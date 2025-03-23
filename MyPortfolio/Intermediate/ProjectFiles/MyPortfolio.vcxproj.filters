@@ -57,6 +57,12 @@
     <ClInclude Include="..\..\Source\MyPortfolio\BehaviorTree\CBTService_Melee.h">
       <Filter>Source\MyPortfolio\BehaviorTree</Filter>
     </ClInclude>
+    <ClCompile Include="..\..\Source\MyPortfolio\BehaviorTree\CBTTaskNode_Patrol.cpp">
+      <Filter>Source\MyPortfolio\BehaviorTree</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\MyPortfolio\BehaviorTree\CBTTaskNode_Patrol.h">
+      <Filter>Source\MyPortfolio\BehaviorTree</Filter>
+    </ClInclude>
     <ClCompile Include="..\..\Source\MyPortfolio\BehaviorTree\CBTTaskNode_Speed.cpp">
       <Filter>Source\MyPortfolio\BehaviorTree</Filter>
     </ClCompile>
@@ -67,6 +73,12 @@
       <Filter>Source\MyPortfolio\BehaviorTree</Filter>
     </ClCompile>
     <ClInclude Include="..\..\Source\MyPortfolio\BehaviorTree\CBTTask_Print.h">
+      <Filter>Source\MyPortfolio\BehaviorTree</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\MyPortfolio\BehaviorTree\CPatrolPath.cpp">
+      <Filter>Source\MyPortfolio\BehaviorTree</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\MyPortfolio\BehaviorTree\CPatrolPath.h">
       <Filter>Source\MyPortfolio\BehaviorTree</Filter>
     </ClInclude>
     <Filter Include="Source\MyPortfolio\Characters">

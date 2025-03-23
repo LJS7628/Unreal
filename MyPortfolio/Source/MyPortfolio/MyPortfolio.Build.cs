@@ -13,5 +13,6 @@ public class MyPortfolio : ModuleRules
         PublicDependencyModuleNames.Add("Engine");
         PublicDependencyModuleNames.Add("InputCore");
         PublicDependencyModuleNames.Add("Niagara");
-	}
+        PublicDependencyModuleNames.Add("NavigationSystem");
+    }
 }
