@@ -35,17 +35,17 @@ void UCBTService_Melee::TickNode(UBehaviorTreeComponent& OwnerComp, uint8* NodeM
 		return;
 	}
 
-	//CheckNull(weapon);
+	CheckNull(weapon);
 
-	//if (weapon->GetEquipment() == nullptr)  //¹«±â ÀåÂø
-	//{
-	//	behavior->SetEquipMode();
+	if (weapon->GetEquipment() == nullptr)  //¹«±â ÀåÂø
+	{
+		behavior->SetEquipMode();
 
-	//	return;
-	//}
+		return;
+	}
 
-	//bool bEquipped = *weapon->GetEquipment()->GetEquipped();
-	//CheckFalse(bEquipped);
+	bool bEquipped = *weapon->GetEquipment()->GetEquipped();
+	CheckFalse(bEquipped);
 
 	float distance = ai->GetDistanceTo(target);
 	if (distance < ActionRange)

@@ -57,6 +57,12 @@
     <ClInclude Include="..\..\Source\MyPortfolio\BehaviorTree\CBTService_Melee.h">
       <Filter>Source\MyPortfolio\BehaviorTree</Filter>
     </ClInclude>
+    <ClCompile Include="..\..\Source\MyPortfolio\BehaviorTree\CBTTaskNode_Equip.cpp">
+      <Filter>Source\MyPortfolio\BehaviorTree</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\MyPortfolio\BehaviorTree\CBTTaskNode_Equip.h">
+      <Filter>Source\MyPortfolio\BehaviorTree</Filter>
+    </ClInclude>
     <ClCompile Include="..\..\Source\MyPortfolio\BehaviorTree\CBTTaskNode_Patrol.cpp">
       <Filter>Source\MyPortfolio\BehaviorTree</Filter>
     </ClCompile>
@@ -265,6 +271,12 @@
       <Filter>Source\MyPortfolio\Weapons</Filter>
     </ClCompile>
     <ClInclude Include="..\..\Source\MyPortfolio\Weapons\CWeaponAsset.h">
+      <Filter>Source\MyPortfolio\Weapons</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\MyPortfolio\Weapons\CWeaponData.cpp">
+      <Filter>Source\MyPortfolio\Weapons</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\MyPortfolio\Weapons\CWeaponData.h">
       <Filter>Source\MyPortfolio\Weapons</Filter>
     </ClInclude>
     <ClCompile Include="..\..\Source\MyPortfolio\Weapons\CWeaponStructures.cpp">

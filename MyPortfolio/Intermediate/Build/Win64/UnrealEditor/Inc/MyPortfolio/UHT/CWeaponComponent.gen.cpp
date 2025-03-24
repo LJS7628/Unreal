@@ -13,6 +13,7 @@ void EmptyLinkFunctionForGeneratedCodeCWeaponComponent() {}
 	MYPORTFOLIO_API UClass* Z_Construct_UClass_UCWeaponAsset_NoRegister();
 	MYPORTFOLIO_API UClass* Z_Construct_UClass_UCWeaponComponent();
 	MYPORTFOLIO_API UClass* Z_Construct_UClass_UCWeaponComponent_NoRegister();
+	MYPORTFOLIO_API UClass* Z_Construct_UClass_UCWeaponData_NoRegister();
 	MYPORTFOLIO_API UEnum* Z_Construct_UEnum_MyPortfolio_EWeaponType();
 	MYPORTFOLIO_API UFunction* Z_Construct_UDelegateFunction_MyPortfolio_WeaponTypeChanged__DelegateSignature();
 	UPackage* Z_Construct_UPackage__Script_MyPortfolio();
@@ -98,6 +99,11 @@ void FWeaponTypeChanged_DelegateWrapper(const FMulticastScriptDelegate& WeaponTy
 		static const UECodeGen_Private::FMetaDataPairParam NewProp_DataAssets_MetaData[];
 #endif
 		static const UECodeGen_Private::FArrayPropertyParams NewProp_DataAssets;
+		static const UECodeGen_Private::FObjectPropertyParams NewProp_Datas_Inner;
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam NewProp_Datas_MetaData[];
+#endif
+		static const UECodeGen_Private::FArrayPropertyParams NewProp_Datas;
 		static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 		static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
 		static const UECodeGen_Private::FClassParams ClassParams;
@@ -127,9 +133,18 @@ void FWeaponTypeChanged_DelegateWrapper(const FMulticastScriptDelegate& WeaponTy
 	};
 #endif
 	const UECodeGen_Private::FArrayPropertyParams Z_Construct_UClass_UCWeaponComponent_Statics::NewProp_DataAssets = { "DataAssets", nullptr, (EPropertyFlags)0x0040000000000001, UECodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UCWeaponComponent, DataAssets), EArrayPropertyFlags::None, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_UCWeaponComponent_Statics::NewProp_DataAssets_MetaData), Z_Construct_UClass_UCWeaponComponent_Statics::NewProp_DataAssets_MetaData) };
+	const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UCWeaponComponent_Statics::NewProp_Datas_Inner = { "Datas", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, Z_Construct_UClass_UCWeaponData_NoRegister, METADATA_PARAMS(0, nullptr) };
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UCWeaponComponent_Statics::NewProp_Datas_MetaData[] = {
+		{ "ModuleRelativePath", "Components/CWeaponComponent.h" },
+	};
+#endif
+	const UECodeGen_Private::FArrayPropertyParams Z_Construct_UClass_UCWeaponComponent_Statics::NewProp_Datas = { "Datas", nullptr, (EPropertyFlags)0x0040000000000000, UECodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UCWeaponComponent, Datas), EArrayPropertyFlags::None, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_UCWeaponComponent_Statics::NewProp_Datas_MetaData), Z_Construct_UClass_UCWeaponComponent_Statics::NewProp_Datas_MetaData) };
 	const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_UCWeaponComponent_Statics::PropPointers[] = {
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UCWeaponComponent_Statics::NewProp_DataAssets_Inner,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UCWeaponComponent_Statics::NewProp_DataAssets,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UCWeaponComponent_Statics::NewProp_Datas_Inner,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UCWeaponComponent_Statics::NewProp_Datas,
 	};
 	const FCppClassTypeInfoStatic Z_Construct_UClass_UCWeaponComponent_Statics::StaticCppClassTypeInfo = {
 		TCppClassTypeTraits<UCWeaponComponent>::IsAbstract,
@@ -169,9 +184,9 @@ void FWeaponTypeChanged_DelegateWrapper(const FMulticastScriptDelegate& WeaponTy
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_MyPortfolio_Source_MyPortfolio_Components_CWeaponComponent_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_UCWeaponComponent, UCWeaponComponent::StaticClass, TEXT("UCWeaponComponent"), &Z_Registration_Info_UClass_UCWeaponComponent, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UCWeaponComponent), 829223774U) },
+		{ Z_Construct_UClass_UCWeaponComponent, UCWeaponComponent::StaticClass, TEXT("UCWeaponComponent"), &Z_Registration_Info_UClass_UCWeaponComponent, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UCWeaponComponent), 257497960U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_MyPortfolio_Source_MyPortfolio_Components_CWeaponComponent_h_4016475983(TEXT("/Script/MyPortfolio"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_MyPortfolio_Source_MyPortfolio_Components_CWeaponComponent_h_3112809895(TEXT("/Script/MyPortfolio"),
 		Z_CompiledInDeferFile_FID_MyPortfolio_Source_MyPortfolio_Components_CWeaponComponent_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_MyPortfolio_Source_MyPortfolio_Components_CWeaponComponent_h_Statics::ClassInfo),
 		nullptr, 0,
 		nullptr, 0);

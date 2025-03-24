@@ -19,6 +19,8 @@ private:
 	TArray<class UCWeaponAsset*> DataAssets;
 
 public:
+	FORCEINLINE EWeaponType GetCurrentType() { return Current; }
+
 	//무기 해제 상태 체크
 	FORCEINLINE bool IsUnarmedMode() { return Current == EWeaponType::Max; }
 	FORCEINLINE bool IsBowMode() { return Current == EWeaponType::Bow; }
@@ -37,8 +39,8 @@ private:
 	bool IsIdleMode();
 
 private:
-	// 무기 에셋 가져오기
-	class UCWeaponAsset* GetWeaponAsset(EWeaponType InType);
+	// 무기 데이터 가져오기
+	class UCWeaponData* GetWeaponData(EWeaponType InType);
 
 public:
 	//무기 부착, 장착, 공격
@@ -80,4 +82,7 @@ private:
 private:
 	EWeaponType Current = EWeaponType::Max;
 		
+private:
+	UPROPERTY()
+	TArray<class UCWeaponData*> Datas;
 };

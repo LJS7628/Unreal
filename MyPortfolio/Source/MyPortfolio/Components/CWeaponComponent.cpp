@@ -6,6 +6,7 @@
 #include "../Weapons/CDoAction.h" // 액션 헤더
 #include "../Weapons/CSubAction.h"// 서브 액션 헤더
 #include "../Weapons/CWeaponAsset.h" //웨폰 에셋
+#include "../Weapons/CWeaponData.h" //실제 무기 데이터
 
 UCWeaponComponent::UCWeaponComponent()
 {
@@ -27,7 +28,10 @@ void UCWeaponComponent::BeginPlay()
 			continue;
 
 		// 무기별 BeginPlay 실행
-		DataAssets[i]->BeginPlay(OwnerCharacter);
+		UCWeaponData* data = nullptr;
+		DataAssets[i]->BeginPlay(OwnerCharacter, &data);
+
+		Datas.Add(data);
 	}
 }
 
@@ -36,18 +40,18 @@ void UCWeaponComponent::TickComponent(float DeltaTime, ELevelTick TickType, FAct
 {
 	Super::TickComponent(DeltaTime, TickType, ThisTickFunction);
 
-	for (int i = 0; i < DataAssets.Num(); i++) 
+	for (int i = 0; i < Datas.Num(); i++) 
 	{
-		if (DataAssets[i] == NULL)
+		if (Datas[i] == NULL)
 			continue;
 
-		UCDoAction* doAction = DataAssets[i]->GetDoAction();
+		UCDoAction* doAction = Datas[i]->GetDoAction();
 
 		// 무기별 doAction Tick 호출
 		if(!!doAction)
 			doAction->Tick(DeltaTime);
 		
-		UCSubAction* subAction = DataAssets[i]->GetSubAction();
+		UCSubAction* subAction = Datas[i]->GetSubAction();
 
 		// 활 서브 액션 호출
 		if (!!subAction)
@@ -65,12 +69,12 @@ bool UCWeaponComponent::IsIdleMode()
 }
 
 //무기 에셋 가져오기
-UCWeaponAsset* UCWeaponComponent::GetWeaponAsset(EWeaponType InType)
+UCWeaponData* UCWeaponComponent::GetWeaponData(EWeaponType InType)
 {
-	for (UCWeaponAsset* asset : DataAssets)
+	for (UCWeaponData* data : Datas)
 	{
-		if (InType == asset->GetWeaponType())
-			return asset;
+		if (InType == data->GetWeaponType())
+			return data;
 	}
 
 	return nullptr;
@@ -81,10 +85,10 @@ ACAttachment* UCWeaponComponent::GetAttachment()
 {
 	CheckTrueResult(IsUnarmedMode(), nullptr);
 
-	UCWeaponAsset* asset = GetWeaponAsset(Current);
-	CheckNullResult(asset, nullptr);
+	UCWeaponData* data = GetWeaponData(Current);
+	CheckNullResult(data, nullptr);
 
-	return asset->GetAttachment();
+	return data->GetAttachment();
 }
 
 // 장착
@@ -92,10 +96,10 @@ UCEquipment* UCWeaponComponent::GetEquipment()
 {
 	CheckTrueResult(IsUnarmedMode(), nullptr);
 
-	UCWeaponAsset* asset = GetWeaponAsset(Current);
-	CheckNullResult(asset, nullptr);
+	UCWeaponData* data = GetWeaponData(Current);
+	CheckNullResult(data, nullptr);
 
-	return asset->GetEquipment();
+	return data->GetEquipment();
 }
 
 //에셋에 따른 DoAction 실행
@@ -103,10 +107,10 @@ UCDoAction* UCWeaponComponent::GetDoAction()
 {
 	CheckTrueResult(IsUnarmedMode(), nullptr);
 
-	UCWeaponAsset* asset = GetWeaponAsset(Current);
-	CheckNullResult(asset, nullptr);
+	UCWeaponData* data = GetWeaponData(Current);
+	CheckNullResult(data, nullptr);
 
-	return asset->GetDoAction();
+	return data->GetDoAction();
 }
 
 // 서브액션 가져오기
@@ -114,10 +118,10 @@ UCSubAction* UCWeaponComponent::GetSubAction()
 {
 	CheckTrueResult(IsUnarmedMode(), nullptr);
 
-	UCWeaponAsset* asset = GetWeaponAsset(Current);
-	CheckNullResult(asset, nullptr);
+	UCWeaponData* data = GetWeaponData(Current);
+	CheckNullResult(data, nullptr);
 
-	return asset->GetSubAction();
+	return data->GetSubAction();
 }
 
 // Unarmed 모드
@@ -185,11 +189,11 @@ void UCWeaponComponent::SetMode(EWeaponType InType)
 		GetEquipment()->Unequip();
 	}
 
-	UCWeaponAsset* asset = GetWeaponAsset(InType);
+	UCWeaponData* data = GetWeaponData(InType);
 
-	if (!!asset) 
+	if (!!data) 
 	{
-		asset->GetEquipment()->Equip(); //무기 장착
+		data->GetEquipment()->Equip(); //무기 장착
 		ChangeType(InType); // 상태 변화
 	}
 }
