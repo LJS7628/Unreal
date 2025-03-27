@@ -38,5 +38,15 @@ public:
 	ACEnemy_AI();
 
 protected:
+	void Damaged() override;
+	
+public:
+	void End_Damaged() override;
+
+protected:
 	void Dead() override;
+
+public:
+	void End_Dead() override;
+
 };

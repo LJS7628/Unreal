@@ -20,9 +20,10 @@ class MYPORTFOLIO_API UCStateComponent : public UActorComponent
 	GENERATED_BODY()
 
 public:
-	// Idle State Check ¿ë
+	// State Check ¿ë
 	FORCEINLINE bool IsIdleMode() { return currentType == EStateType::Idle; }
-
+	FORCEINLINE bool IsDamagedMode() { return currentType == EStateType::Damaged; }
+	FORCEINLINE bool IsDeadMode() { return currentType == EStateType::Dead; }
 	//Sub Action State Check ¿ë
 	FORCEINLINE bool IsSubActionMode() { return  bInSubActionMode; }
 

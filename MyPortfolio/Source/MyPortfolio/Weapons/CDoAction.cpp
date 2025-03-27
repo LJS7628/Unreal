@@ -27,15 +27,21 @@ void UCDoAction::BeginPlay(ACharacter* InOwner, ACAttachment* InAttachment, UCEq
 
 void UCDoAction::DoAction()
 {
+	bInAction = true;
+
 	State->SetActionMode();
 }
 
 void UCDoAction::Begin_DoAction()
 {
+	bBeginAction = true;
 }
 
 void UCDoAction::End_DoAction()
 {
+	bBeginAction = false;
+	bInAction = false;
+
 	State->SetIdleMode();
 
 	Movement->Move();

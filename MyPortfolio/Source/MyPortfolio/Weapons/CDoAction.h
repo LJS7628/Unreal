@@ -14,6 +14,11 @@ class MYPORTFOLIO_API UCDoAction : public UObject
 private:
 	friend class UCAnimNotify_BeginAction;
 	friend class UCAnimNotify_EndAction;
+	friend class UCBTTaskNode_Action;
+
+public:
+	FORCEINLINE bool GetBeginAction() { return bBeginAction; }
+	FORCEINLINE bool GetInAction() { return bInAction; }
 
 public:
 	UCDoAction();
@@ -54,6 +59,10 @@ public:
 
 	UFUNCTION()
 	virtual void OnAttachmentEndOverlap(class ACharacter* InAttacker, class ACharacter* InOther) {}
+
+private:
+	bool bBeginAction;
+	bool bInAction;
 
 protected:
 	class ACharacter* OwnerCharacter;

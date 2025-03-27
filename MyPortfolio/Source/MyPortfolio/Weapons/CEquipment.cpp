@@ -36,6 +36,8 @@ void UCEquipment::Equip_Implementation()
 
 void UCEquipment::Begin_Equip_Implementation()
 {
+	bBeginEquip = true;
+
 	if (OnEquipmentBeginEquip.IsBound())
 		OnEquipmentBeginEquip.Broadcast();
 }
@@ -43,6 +45,7 @@ void UCEquipment::Begin_Equip_Implementation()
 void UCEquipment::End_Equip_Implementation()
 {
 	bEquipped = true;
+	bBeginEquip = false;
 
 	if(Data.bCanMove == false)
 		Movement->Move();

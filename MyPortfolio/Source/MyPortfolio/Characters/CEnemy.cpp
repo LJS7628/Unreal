@@ -127,6 +127,11 @@ void ACEnemy::Dead()
 	PlayAnimMontage(DeadMontage, DeadMontage_PlayRate);
 }
 
+void ACEnemy::End_Damaged()
+{
+	State->SetIdleMode();
+}
+
 // 사망 이후 삭제 
 void ACEnemy::End_Dead()
 {

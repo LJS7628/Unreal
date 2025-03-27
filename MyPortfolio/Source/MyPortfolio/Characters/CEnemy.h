@@ -53,12 +53,13 @@ private:
 
 protected:
 	//피격, 사망처리 
-	void Damaged();
+	virtual void Damaged();
 	virtual void Dead();
 	
 public:
 	// 사망 이후 삭제
-	void End_Dead() override;
+	virtual void End_Damaged() override;
+	virtual void End_Dead() override;
 
 private:
 	// 데미지 관련 구조체 (피해량,공격자, 무기, 데미지 이벤트)

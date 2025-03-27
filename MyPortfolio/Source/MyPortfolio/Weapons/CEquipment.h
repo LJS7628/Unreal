@@ -15,9 +15,11 @@ class MYPORTFOLIO_API UCEquipment : public UObject
 
 private:
 	friend class UCAnimNotifyState_Equip;
+	friend class UCBTTaskNode_Equip;
 
 public:
 	FORCEINLINE const bool* GetEquipped() { return &bEquipped; }
+	FORCEINLINE bool GetBeginEquip() { return bBeginEquip; }
 
 public:
 	void BeginPlay(class ACharacter* InOwner, const FEquipmentData& InData);
@@ -59,4 +61,5 @@ private:
 
 private:
 	bool bEquipped;
+	bool bBeginEquip;
 };
