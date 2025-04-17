@@ -40,6 +40,9 @@ void UCWeaponComponent::TickComponent(float DeltaTime, ELevelTick TickType, FAct
 {
 	Super::TickComponent(DeltaTime, TickType, ThisTickFunction);
 
+	if (OwnerCharacter != nullptr)
+		CLog::Log("CWeaponComponent 44 Line");
+
 	for (int i = 0; i < Datas.Num(); i++) 
 	{
 		if (Datas[i] == NULL)

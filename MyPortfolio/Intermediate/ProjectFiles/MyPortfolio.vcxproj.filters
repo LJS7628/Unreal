@@ -11,7 +11,6 @@
     <None Include="..\..\Source\MyPortfolioEditor.Target.cs">
       <Filter>Source</Filter>
     </None>
-    <None Include="..\..\.vsconfig" />
     <Filter Include="Config">
       <UniqueIdentifier>{FA535FFB-25E1-3D20-B416-52F9BE21E06E}</UniqueIdentifier>
     </Filter>
@@ -57,6 +56,12 @@
     <ClInclude Include="..\..\Source\MyPortfolio\BehaviorTree\CBTService_Melee.h">
       <Filter>Source\MyPortfolio\BehaviorTree</Filter>
     </ClInclude>
+    <ClCompile Include="..\..\Source\MyPortfolio\BehaviorTree\CBTService_Range.cpp">
+      <Filter>Source\MyPortfolio\BehaviorTree</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\MyPortfolio\BehaviorTree\CBTService_Range.h">
+      <Filter>Source\MyPortfolio\BehaviorTree</Filter>
+    </ClInclude>
     <ClCompile Include="..\..\Source\MyPortfolio\BehaviorTree\CBTTaskNode_Action.cpp">
       <Filter>Source\MyPortfolio\BehaviorTree</Filter>
     </ClCompile>
@@ -91,6 +96,18 @@
       <Filter>Source\MyPortfolio\BehaviorTree</Filter>
     </ClCompile>
     <ClInclude Include="..\..\Source\MyPortfolio\BehaviorTree\CBTTask_Print.h">
+      <Filter>Source\MyPortfolio\BehaviorTree</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\MyPortfolio\BehaviorTree\CEnvQueryContext_Player.cpp">
+      <Filter>Source\MyPortfolio\BehaviorTree</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\MyPortfolio\BehaviorTree\CEnvQueryContext_Player.h">
+      <Filter>Source\MyPortfolio\BehaviorTree</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\MyPortfolio\BehaviorTree\CEnvQueryContext_Target.cpp">
+      <Filter>Source\MyPortfolio\BehaviorTree</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\MyPortfolio\BehaviorTree\CEnvQueryContext_Target.h">
       <Filter>Source\MyPortfolio\BehaviorTree</Filter>
     </ClInclude>
     <ClCompile Include="..\..\Source\MyPortfolio\BehaviorTree\CPatrolPath.cpp">
