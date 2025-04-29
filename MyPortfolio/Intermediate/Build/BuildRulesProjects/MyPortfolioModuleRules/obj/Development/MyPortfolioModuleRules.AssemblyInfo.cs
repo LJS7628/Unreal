@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("MyPortfolioModuleRules")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Development")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+fcd37a711ad5587844e381b07658b70b35280e4c")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c8d321e69d78017fb26ae540b93f670ed7228614")]
 [assembly: System.Reflection.AssemblyProductAttribute("MyPortfolioModuleRules")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MyPortfolioModuleRules")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

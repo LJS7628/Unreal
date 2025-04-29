@@ -135,7 +135,7 @@ void ACEnemy::End_Damaged()
 // 사망 이후 삭제 
 void ACEnemy::End_Dead()
 {
-	Destroy();
+	
 }
 
 

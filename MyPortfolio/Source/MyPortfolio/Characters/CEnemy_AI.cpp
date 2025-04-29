@@ -2,6 +2,7 @@
 #include "../Global.h"
 #include "../Components/CStateComponent.h"
 #include "../Components/CWeaponComponent.h" // 무기 컴포넌트
+#include "../Weapons/CAttachment.h"
 #include "../Components/CAIBehaviorComponent.h"
 #include "BehaviorTree/BehaviorTree.h" //BT 헤더
 
@@ -32,11 +33,21 @@ void ACEnemy_AI::End_Damaged()
 void ACEnemy_AI::Dead()
 {
 	Super::Dead();
+	
+	if (Weapon && Weapon->GetAttachment()) 
+	{
+		Weapon->GetAttachment()->Destroy();
+		CLog::Log("Attachment is destroyed");
+	}
+		
+	
+	else
+		CLog::Log("Attachment is nullptr or already destroyed");
 }
 
 void ACEnemy_AI::End_Dead()
 {
 	Super::End_Dead();
 
-
+	Destroy();
 }

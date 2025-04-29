@@ -7,7 +7,6 @@
 ACAttachment::ACAttachment()
 {
 	CHelpers::CreateComponent<USceneComponent>(this, &Root, "Root");
-	PrimaryActorTick.bCanEverTick = true;
 }
 
 void ACAttachment::BeginPlay()
@@ -32,11 +31,6 @@ void ACAttachment::BeginPlay()
 	OffCollision();
 
 	Super::BeginPlay();
-	
-}
-
-void ACAttachment::Tick(float DeltaTime)
-{
 	
 }
 

@@ -21,6 +21,7 @@ void UCWeaponComponent::BeginPlay()
 	Super::BeginPlay();
 	
 	OwnerCharacter = Cast<ACharacter>(GetOwner());
+	
 
 	for (int i = 0; i < DataAssets.Num(); i++) 
 	{
@@ -39,9 +40,6 @@ void UCWeaponComponent::BeginPlay()
 void UCWeaponComponent::TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction)
 {
 	Super::TickComponent(DeltaTime, TickType, ThisTickFunction);
-
-	if (OwnerCharacter != nullptr)
-		CLog::Log("CWeaponComponent 44 Line");
 
 	for (int i = 0; i < Datas.Num(); i++) 
 	{
@@ -93,6 +91,7 @@ ACAttachment* UCWeaponComponent::GetAttachment()
 
 	return data->GetAttachment();
 }
+
 
 // ÀåÂø
 UCEquipment* UCWeaponComponent::GetEquipment()

@@ -1,0 +1,17 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "d:\\unrealproject\\unreal\\myportfolio\\intermediate\\build\\win64\\unrealeditor\\inc\\myportfolio\\uht\\cattachment_bow.gen.cpp",
+        "ProvidedModule": "",
+        "PCH": "d:\\unrealproject\\unreal\\myportfolio\\intermediate\\build\\win64\\x64\\myportfolioeditor\\development\\unrealed\\sharedpch.unrealed.cpp20.h.pch",
+        "Includes": [
+            "d:\\unrealproject\\unreal\\myportfolio\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\myportfolio\\definitions.myportfolio.h",
+            "d:\\unrealproject\\unreal\\myportfolio\\source\\myportfolio\\weapons\\attachments\\cattachment_bow.h",
+            "d:\\unrealproject\\unreal\\myportfolio\\source\\myportfolio\\weapons\\cattachment.h",
+            "d:\\unrealproject\\unreal\\myportfolio\\intermediate\\build\\win64\\unrealeditor\\inc\\myportfolio\\uht\\cattachment.generated.h",
+            "d:\\unrealproject\\unreal\\myportfolio\\intermediate\\build\\win64\\unrealeditor\\inc\\myportfolio\\uht\\cattachment_bow.generated.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}
