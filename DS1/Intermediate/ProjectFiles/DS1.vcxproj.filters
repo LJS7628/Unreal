@@ -1,0 +1,394 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <None Include="..\..\DS1.uproject" />
+    <Filter Include="Source">
+      <UniqueIdentifier>{F31BBDD1-B3E8-3BCC-9652-680E16935819}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Source\DS1.Target.cs">
+      <Filter>Source</Filter>
+    </None>
+    <None Include="..\..\Source\DS1Editor.Target.cs">
+      <Filter>Source</Filter>
+    </None>
+    <None Include="..\..\.vsconfig" />
+    <Filter Include="Config">
+      <UniqueIdentifier>{FA535FFB-25E1-3D20-B416-52F9BE21E06E}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Config\DefaultEditor.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultEngine.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultGame.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultGameplayTags.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultInput.ini">
+      <Filter>Config</Filter>
+    </None>
+    <Filter Include="Source\DS1">
+      <UniqueIdentifier>{E5B96656-4446-3C50-BF0D-561203ACB8E0}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Source\DS1\DS1.Build.cs">
+      <Filter>Source\DS1</Filter>
+    </None>
+    <ClCompile Include="..\..\Source\DS1\DS1.cpp">
+      <Filter>Source\DS1</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\DS1\DS1.h">
+      <Filter>Source\DS1</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\DS1\DS1Define.cpp">
+      <Filter>Source\DS1</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\DS1\DS1Define.h">
+      <Filter>Source\DS1</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\DS1\DS1GameplayTags.cpp">
+      <Filter>Source\DS1</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\DS1\DS1GameplayTags.h">
+      <Filter>Source\DS1</Filter>
+    </ClCompile>
+    <Filter Include="Source\DS1\AI">
+      <UniqueIdentifier>{01436153-206F-345D-B7E4-4D2049C40658}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\DS1\AI\DS1EnemyAIController.cpp">
+      <Filter>Source\DS1\AI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\DS1\AI\DS1EnemyAIController.h">
+      <Filter>Source\DS1\AI</Filter>
+    </ClCompile>
+    <Filter Include="Source\DS1\AI\Decorator">
+      <UniqueIdentifier>{004B3559-55DC-3173-A862-5B3405C2D56A}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\DS1\AI\Decorator\BTDecorator_Chance.cpp">
+      <Filter>Source\DS1\AI\Decorator</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\DS1\AI\Decorator\BTDecorator_Chance.h">
+      <Filter>Source\DS1\AI\Decorator</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\DS1\AI\Decorator\BTDecorator_InRangeCheck.cpp">
+      <Filter>Source\DS1\AI\Decorator</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\DS1\AI\Decorator\BTDecorator_InRangeCheck.h">
+      <Filter>Source\DS1\AI\Decorator</Filter>
+    </ClCompile>
+    <Filter Include="Source\DS1\AI\Service">
+      <UniqueIdentifier>{F981D012-74D9-3BB6-A294-832E94AB106F}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\DS1\AI\Service\BTService_SelectBehavior.cpp">
+      <Filter>Source\DS1\AI\Service</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\DS1\AI\Service\BTService_SelectBehavior.h">
+      <Filter>Source\DS1\AI\Service</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\DS1\AI\Service\BTService_SelectBehaviorBoss.cpp">
+      <Filter>Source\DS1\AI\Service</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\DS1\AI\Service\BTService_SelectBehaviorBoss.h">
+      <Filter>Source\DS1\AI\Service</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\DS1\AI\Service\BTService_Strafe.cpp">
+      <Filter>Source\DS1\AI\Service</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\DS1\AI\Service\BTService_Strafe.h">
+      <Filter>Source\DS1\AI\Service</Filter>
+    </ClCompile>
+    <Filter Include="Source\DS1\AI\Task">
+      <UniqueIdentifier>{A52CD8CB-0BD7-3F42-9A67-2F11C0C5A420}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\DS1\AI\Task\BTTaskNode_UpdateMoveSpeed.cpp">
+      <Filter>Source\DS1\AI\Task</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\DS1\AI\Task\BTTaskNode_UpdateMoveSpeed.h">
+      <Filter>Source\DS1\AI\Task</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\DS1\AI\Task\BTTask_FindPatrolPoint.cpp">
+      <Filter>Source\DS1\AI\Task</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\DS1\AI\Task\BTTask_FindPatrolPoint.h">
+      <Filter>Source\DS1\AI\Task</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\DS1\AI\Task\BTTask_PerformAttack.cpp">
+      <Filter>Source\DS1\AI\Task</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\DS1\AI\Task\BTTask_PerformAttack.h">
+      <Filter>Source\DS1\AI\Task</Filter>
+    </ClCompile>
+    <Filter Include="Source\DS1\Animation">
+      <UniqueIdentifier>{D19BA582-4AF0-3560-BA7B-F739E8ECD946}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\DS1\Animation\AnimNotifyState_DS1ComboWindow.cpp">
+      <Filter>Source\DS1\Animation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\DS1\Animation\AnimNotifyState_DS1ComboWindow.h">
+      <Filter>Source\DS1\Animation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\DS1\Animation\AnimNotifyState_DS1Flying.cpp">
+      <Filter>Source\DS1\Animation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\DS1\Animation\AnimNotifyState_DS1Flying.h">
+      <Filter>Source\DS1\Animation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\DS1\Animation\AnimNotifyState_DS1IFrames.cpp">
+      <Filter>Source\DS1\Animation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\DS1\Animation\AnimNotifyState_DS1IFrames.h">
+      <Filter>Source\DS1\Animation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\DS1\Animation\AnimNotifyState_DS1Parry.cpp">
+      <Filter>Source\DS1\Animation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\DS1\Animation\AnimNotifyState_DS1Parry.h">
+      <Filter>Source\DS1\Animation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\DS1\Animation\AnimNotifyState_DS1PotionSpawn.cpp">
+      <Filter>Source\DS1\Animation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\DS1\Animation\AnimNotifyState_DS1PotionSpawn.h">
+      <Filter>Source\DS1\Animation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\DS1\Animation\AnimNotifyState_DS1RotateTo.cpp">
+      <Filter>Source\DS1\Animation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\DS1\Animation\AnimNotifyState_DS1RotateTo.h">
+      <Filter>Source\DS1\Animation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\DS1\Animation\AnimNotify_DS1AttackFinished.cpp">
+      <Filter>Source\DS1\Animation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\DS1\Animation\AnimNotify_DS1AttackFinished.h">
+      <Filter>Source\DS1\Animation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\DS1\Animation\AnimNotify_DS1EquipWeapon.cpp">
+      <Filter>Source\DS1\Animation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\DS1\Animation\AnimNotify_DS1EquipWeapon.h">
+      <Filter>Source\DS1\Animation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\DS1\Animation\AnimNotify_DS1KnockBack.cpp">
+      <Filter>Source\DS1\Animation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\DS1\Animation\AnimNotify_DS1KnockBack.h">
+      <Filter>Source\DS1\Animation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\DS1\Animation\AnimNotify_DS1PotionDrink.cpp">
+      <Filter>Source\DS1\Animation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\DS1\Animation\AnimNotify_DS1PotionDrink.h">
+      <Filter>Source\DS1\Animation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\DS1\Animation\DS1AnimInstance.cpp">
+      <Filter>Source\DS1\Animation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\DS1\Animation\DS1AnimInstance.h">
+      <Filter>Source\DS1\Animation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\DS1\Animation\NotifyState_DS1WeaponCollision.cpp">
+      <Filter>Source\DS1\Animation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\DS1\Animation\NotifyState_DS1WeaponCollision.h">
+      <Filter>Source\DS1\Animation</Filter>
+    </ClCompile>
+    <Filter Include="Source\DS1\Characters">
+      <UniqueIdentifier>{B2CFEF3E-AE03-3999-B697-27E22529D8B3}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\DS1\Characters\DS1Character.cpp">
+      <Filter>Source\DS1\Characters</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\DS1\Characters\DS1Character.h">
+      <Filter>Source\DS1\Characters</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\DS1\Characters\DS1Enemy.cpp">
+      <Filter>Source\DS1\Characters</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\DS1\Characters\DS1Enemy.h">
+      <Filter>Source\DS1\Characters</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\DS1\Characters\DS1EnemyBoss.cpp">
+      <Filter>Source\DS1\Characters</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\DS1\Characters\DS1EnemyBoss.h">
+      <Filter>Source\DS1\Characters</Filter>
+    </ClCompile>
+    <Filter Include="Source\DS1\Components">
+      <UniqueIdentifier>{19354D5C-CEAF-319B-A587-65347B2AE5B6}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\DS1\Components\DS1AttributeComponent.cpp">
+      <Filter>Source\DS1\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\DS1\Components\DS1AttributeComponent.h">
+      <Filter>Source\DS1\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\DS1\Components\DS1CombatComponent.cpp">
+      <Filter>Source\DS1\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\DS1\Components\DS1CombatComponent.h">
+      <Filter>Source\DS1\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\DS1\Components\DS1PotionInventoryComponent.cpp">
+      <Filter>Source\DS1\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\DS1\Components\DS1PotionInventoryComponent.h">
+      <Filter>Source\DS1\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\DS1\Components\DS1RotationComponent.cpp">
+      <Filter>Source\DS1\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\DS1\Components\DS1RotationComponent.h">
+      <Filter>Source\DS1\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\DS1\Components\DS1StateComponent.cpp">
+      <Filter>Source\DS1\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\DS1\Components\DS1StateComponent.h">
+      <Filter>Source\DS1\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\DS1\Components\DS1TargetingComponent.cpp">
+      <Filter>Source\DS1\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\DS1\Components\DS1TargetingComponent.h">
+      <Filter>Source\DS1\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\DS1\Components\DS1WeaponCollisionComponent.cpp">
+      <Filter>Source\DS1\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\DS1\Components\DS1WeaponCollisionComponent.h">
+      <Filter>Source\DS1\Components</Filter>
+    </ClCompile>
+    <Filter Include="Source\DS1\Data">
+      <UniqueIdentifier>{E2747F6F-F195-3976-98D9-2D34DD064374}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\DS1\Data\DS1MontageActionData.cpp">
+      <Filter>Source\DS1\Data</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\DS1\Data\DS1MontageActionData.h">
+      <Filter>Source\DS1\Data</Filter>
+    </ClCompile>
+    <Filter Include="Source\DS1\Equipments">
+      <UniqueIdentifier>{E4B2EEB0-B8C0-3BDE-8581-2CB11B744B30}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\DS1\Equipments\DS1Armour.cpp">
+      <Filter>Source\DS1\Equipments</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\DS1\Equipments\DS1Armour.h">
+      <Filter>Source\DS1\Equipments</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\DS1\Equipments\DS1Equipment.cpp">
+      <Filter>Source\DS1\Equipments</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\DS1\Equipments\DS1Equipment.h">
+      <Filter>Source\DS1\Equipments</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\DS1\Equipments\DS1FistWeapon.cpp">
+      <Filter>Source\DS1\Equipments</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\DS1\Equipments\DS1FistWeapon.h">
+      <Filter>Source\DS1\Equipments</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\DS1\Equipments\DS1Shield.cpp">
+      <Filter>Source\DS1\Equipments</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\DS1\Equipments\DS1Shield.h">
+      <Filter>Source\DS1\Equipments</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\DS1\Equipments\DS1Weapon.cpp">
+      <Filter>Source\DS1\Equipments</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\DS1\Equipments\DS1Weapon.h">
+      <Filter>Source\DS1\Equipments</Filter>
+    </ClCompile>
+    <Filter Include="Source\DS1\GameModes">
+      <UniqueIdentifier>{75A7517F-D496-34AD-A915-96A1EA4AA193}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\DS1\GameModes\DS1GameMode.cpp">
+      <Filter>Source\DS1\GameModes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\DS1\GameModes\DS1GameMode.h">
+      <Filter>Source\DS1\GameModes</Filter>
+    </ClCompile>
+    <Filter Include="Source\DS1\Interfaces">
+      <UniqueIdentifier>{2FAB7BDF-5DD9-3718-A18E-D44D656CFF97}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\DS1\Interfaces\DS1CombatInterface.cpp">
+      <Filter>Source\DS1\Interfaces</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\DS1\Interfaces\DS1CombatInterface.h">
+      <Filter>Source\DS1\Interfaces</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\DS1\Interfaces\DS1Interact.cpp">
+      <Filter>Source\DS1\Interfaces</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\DS1\Interfaces\DS1Interact.h">
+      <Filter>Source\DS1\Interfaces</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\DS1\Interfaces\DS1Targeting.cpp">
+      <Filter>Source\DS1\Interfaces</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\DS1\Interfaces\DS1Targeting.h">
+      <Filter>Source\DS1\Interfaces</Filter>
+    </ClCompile>
+    <Filter Include="Source\DS1\Items">
+      <UniqueIdentifier>{EB88B1AF-343D-327A-97B8-F9B2DBCB6322}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\DS1\Items\DS1PickupItem.cpp">
+      <Filter>Source\DS1\Items</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\DS1\Items\DS1PickupItem.h">
+      <Filter>Source\DS1\Items</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\DS1\Items\DS1Potion.cpp">
+      <Filter>Source\DS1\Items</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\DS1\Items\DS1Potion.h">
+      <Filter>Source\DS1\Items</Filter>
+    </ClCompile>
+    <Filter Include="Source\DS1\Player">
+      <UniqueIdentifier>{BD24D458-EB07-3BEB-BB25-62557692F253}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\DS1\Player\DS1PlayerController.cpp">
+      <Filter>Source\DS1\Player</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\DS1\Player\DS1PlayerController.h">
+      <Filter>Source\DS1\Player</Filter>
+    </ClCompile>
+    <Filter Include="Source\DS1\UI">
+      <UniqueIdentifier>{08F8F6C9-399F-3298-AEEE-E61EC3281F8A}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\DS1\UI\DS1BossHealthBarWidget.cpp">
+      <Filter>Source\DS1\UI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\DS1\UI\DS1BossHealthBarWidget.h">
+      <Filter>Source\DS1\UI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\DS1\UI\DS1PlayerHUDWidget.cpp">
+      <Filter>Source\DS1\UI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\DS1\UI\DS1PlayerHUDWidget.h">
+      <Filter>Source\DS1\UI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\DS1\UI\DS1PotionWidget.cpp">
+      <Filter>Source\DS1\UI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\DS1\UI\DS1PotionWidget.h">
+      <Filter>Source\DS1\UI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\DS1\UI\DS1StatBarWidget.cpp">
+      <Filter>Source\DS1\UI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\DS1\UI\DS1StatBarWidget.h">
+      <Filter>Source\DS1\UI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\DS1\UI\DS1WeaponWidget.cpp">
+      <Filter>Source\DS1\UI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\DS1\UI\DS1WeaponWidget.h">
+      <Filter>Source\DS1\UI</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

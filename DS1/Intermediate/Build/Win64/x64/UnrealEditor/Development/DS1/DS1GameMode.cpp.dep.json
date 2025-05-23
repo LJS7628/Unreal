@@ -1,0 +1,19 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "d:\\unrealproject\\ds1\\source\\ds1\\gamemodes\\ds1gamemode.cpp",
+        "ProvidedModule": "",
+        "PCH": "d:\\unrealproject\\ds1\\intermediate\\build\\win64\\x64\\ds1editor\\development\\unrealed\\sharedpch.unrealed.project.valapi.cpp20.h.pch",
+        "Includes": [
+            "d:\\unrealproject\\ds1\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\ds1\\definitions.ds1.h",
+            "d:\\unrealproject\\ds1\\source\\ds1\\gamemodes\\ds1gamemode.h",
+            "c:\\program files\\epic games\\ue_5.5\\engine\\source\\runtime\\engine\\classes\\gameframework\\gamemodebase.h",
+            "c:\\program files\\epic games\\ue_5.5\\engine\\source\\runtime\\engine\\classes\\engine\\serverstatreplicator.h",
+            "c:\\program files\\epic games\\ue_5.5\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\serverstatreplicator.generated.h",
+            "c:\\program files\\epic games\\ue_5.5\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\gamemodebase.generated.h",
+            "d:\\unrealproject\\ds1\\intermediate\\build\\win64\\unrealeditor\\inc\\ds1\\uht\\ds1gamemode.generated.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

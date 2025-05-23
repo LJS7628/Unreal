@@ -1,0 +1,20 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "d:\\unrealproject\\ds1\\source\\ds1\\animation\\notifystate_ds1weaponcollision.cpp",
+        "ProvidedModule": "",
+        "PCH": "d:\\unrealproject\\ds1\\intermediate\\build\\win64\\x64\\ds1editor\\development\\unrealed\\sharedpch.unrealed.project.valapi.cpp20.h.pch",
+        "Includes": [
+            "d:\\unrealproject\\ds1\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\ds1\\definitions.ds1.h",
+            "d:\\unrealproject\\ds1\\source\\ds1\\animation\\notifystate_ds1weaponcollision.h",
+            "d:\\unrealproject\\ds1\\source\\ds1\\ds1define.h",
+            "c:\\program files\\epic games\\ue_5.5\\engine\\source\\runtime\\engine\\classes\\animation\\animnotifies\\animnotifystate.h",
+            "c:\\program files\\epic games\\ue_5.5\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\animnotifystate.generated.h",
+            "d:\\unrealproject\\ds1\\intermediate\\build\\win64\\unrealeditor\\inc\\ds1\\uht\\notifystate_ds1weaponcollision.generated.h",
+            "d:\\unrealproject\\ds1\\source\\ds1\\interfaces\\ds1combatinterface.h",
+            "d:\\unrealproject\\ds1\\intermediate\\build\\win64\\unrealeditor\\inc\\ds1\\uht\\ds1combatinterface.generated.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

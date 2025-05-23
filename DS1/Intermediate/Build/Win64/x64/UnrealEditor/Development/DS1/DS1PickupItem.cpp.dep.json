@@ -1,0 +1,20 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "d:\\unrealproject\\ds1\\source\\ds1\\items\\ds1pickupitem.cpp",
+        "ProvidedModule": "",
+        "PCH": "d:\\unrealproject\\ds1\\intermediate\\build\\win64\\x64\\ds1editor\\development\\unrealed\\sharedpch.unrealed.project.valapi.cpp20.h.pch",
+        "Includes": [
+            "d:\\unrealproject\\ds1\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\ds1\\definitions.ds1.h",
+            "d:\\unrealproject\\ds1\\source\\ds1\\items\\ds1pickupitem.h",
+            "d:\\unrealproject\\ds1\\source\\ds1\\interfaces\\ds1interact.h",
+            "d:\\unrealproject\\ds1\\intermediate\\build\\win64\\unrealeditor\\inc\\ds1\\uht\\ds1interact.generated.h",
+            "d:\\unrealproject\\ds1\\intermediate\\build\\win64\\unrealeditor\\inc\\ds1\\uht\\ds1pickupitem.generated.h",
+            "d:\\unrealproject\\ds1\\source\\ds1\\ds1define.h",
+            "d:\\unrealproject\\ds1\\source\\ds1\\equipments\\ds1equipment.h",
+            "d:\\unrealproject\\ds1\\intermediate\\build\\win64\\unrealeditor\\inc\\ds1\\uht\\ds1equipment.generated.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

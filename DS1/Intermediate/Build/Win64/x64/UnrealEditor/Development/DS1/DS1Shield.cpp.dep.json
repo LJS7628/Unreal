@@ -1,0 +1,25 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "d:\\unrealproject\\ds1\\source\\ds1\\equipments\\ds1shield.cpp",
+        "ProvidedModule": "",
+        "PCH": "d:\\unrealproject\\ds1\\intermediate\\build\\win64\\x64\\ds1editor\\development\\unrealed\\sharedpch.unrealed.project.valapi.cpp20.h.pch",
+        "Includes": [
+            "d:\\unrealproject\\ds1\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\ds1\\definitions.ds1.h",
+            "d:\\unrealproject\\ds1\\source\\ds1\\equipments\\ds1shield.h",
+            "d:\\unrealproject\\ds1\\source\\ds1\\equipments\\ds1equipment.h",
+            "d:\\unrealproject\\ds1\\intermediate\\build\\win64\\unrealeditor\\inc\\ds1\\uht\\ds1equipment.generated.h",
+            "d:\\unrealproject\\ds1\\intermediate\\build\\win64\\unrealeditor\\inc\\ds1\\uht\\ds1shield.generated.h",
+            "d:\\unrealproject\\ds1\\source\\ds1\\equipments\\ds1weapon.h",
+            "d:\\unrealproject\\ds1\\source\\ds1\\ds1define.h",
+            "c:\\program files\\epic games\\ue_5.5\\engine\\source\\runtime\\gameplaytags\\classes\\gameplaytagcontainer.h",
+            "c:\\program files\\epic games\\ue_5.5\\engine\\source\\runtime\\core\\public\\misc\\comparisonutility.h",
+            "c:\\program files\\epic games\\ue_5.5\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\gameplaytags\\uht\\gameplaytagcontainer.generated.h",
+            "d:\\unrealproject\\ds1\\intermediate\\build\\win64\\unrealeditor\\inc\\ds1\\uht\\ds1weapon.generated.h",
+            "d:\\unrealproject\\ds1\\source\\ds1\\components\\ds1combatcomponent.h",
+            "d:\\unrealproject\\ds1\\intermediate\\build\\win64\\unrealeditor\\inc\\ds1\\uht\\ds1combatcomponent.generated.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

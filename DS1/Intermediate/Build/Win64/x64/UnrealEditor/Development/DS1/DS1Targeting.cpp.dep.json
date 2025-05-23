@@ -1,0 +1,15 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "d:\\unrealproject\\ds1\\source\\ds1\\interfaces\\ds1targeting.cpp",
+        "ProvidedModule": "",
+        "PCH": "d:\\unrealproject\\ds1\\intermediate\\build\\win64\\x64\\ds1editor\\development\\unrealed\\sharedpch.unrealed.project.valapi.cpp20.h.pch",
+        "Includes": [
+            "d:\\unrealproject\\ds1\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\ds1\\definitions.ds1.h",
+            "d:\\unrealproject\\ds1\\source\\ds1\\interfaces\\ds1targeting.h",
+            "d:\\unrealproject\\ds1\\intermediate\\build\\win64\\unrealeditor\\inc\\ds1\\uht\\ds1targeting.generated.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}
