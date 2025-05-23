@@ -1,0 +1,8 @@
+{
+	"SourceFiles": [
+		"D:\\UnrealProject\\DS1\\Source\\DS1\\DS1.Build.cs",
+		"D:\\UnrealProject\\DS1\\Source\\DS1.Target.cs",
+		"D:\\UnrealProject\\DS1\\Source\\DS1Editor.Target.cs"
+	],
+	"EngineVersion": "5.5.4"
+}
