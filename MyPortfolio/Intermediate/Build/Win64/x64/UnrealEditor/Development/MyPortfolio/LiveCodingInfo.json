@@ -64,11 +64,13 @@
 			"CGameMode.cpp.obj",
 			"CAIController.cpp.obj",
 			"CAnimInstance.cpp.obj",
+			"CEnemy.cpp.obj",
 			"CPlayer.cpp.obj",
 			"CAIBehaviorComponent.cpp.obj",
 			"CHealthPointComponent.cpp.obj",
 			"CMovementComponent.cpp.obj",
 			"CStateComponent.cpp.obj",
+			"CWeaponComponent.cpp.obj",
 			"IStatable.cpp.obj",
 			"MyPortfolio.cpp.obj",
 			"CAnimNotifyState_Collision.cpp.obj",
@@ -85,6 +87,7 @@
 			"CGhostTrail.cpp.obj",
 			"CAttachment_Bow.cpp.obj",
 			"CAnimInstance_Bow.cpp.obj",
+			"CAttachment.cpp.obj",
 			"CDoAction.cpp.obj",
 			"CEquipment.cpp.obj",
 			"CSubAction.cpp.obj",
@@ -96,10 +99,7 @@
 			"CDoAction_Combo.cpp.obj",
 			"CDoAction_Warp.cpp.obj",
 			"CSubAction_Aiming.cpp.obj",
-			"CEnemy.cpp.obj",
-			"CEnemy_AI.cpp.obj",
-			"CWeaponComponent.cpp.obj",
-			"CAttachment.cpp.obj"
+			"CEnemy_AI.cpp.obj"
 		]
 	}
 }

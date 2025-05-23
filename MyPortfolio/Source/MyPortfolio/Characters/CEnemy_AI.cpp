@@ -33,16 +33,6 @@ void ACEnemy_AI::End_Damaged()
 void ACEnemy_AI::Dead()
 {
 	Super::Dead();
-	
-	if (Weapon && Weapon->GetAttachment()) 
-	{
-		Weapon->GetAttachment()->Destroy();
-		CLog::Log("Attachment is destroyed");
-	}
-		
-	
-	else
-		CLog::Log("Attachment is nullptr or already destroyed");
 }
 
 void ACEnemy_AI::End_Dead()
