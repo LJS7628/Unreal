@@ -1,7 +1,7 @@
 {
   "format": 1,
   "restore": {
-    "D:\\UnrealProject\\DS1\\Intermediate\\Build\\BuildRulesProjects\\DS1ModuleRules\\DS1ModuleRules.csproj": {}
+    "D:\\UnrealProject\\Unreal\\DS1\\Intermediate\\Build\\BuildRulesProjects\\DS1ModuleRules\\DS1ModuleRules.csproj": {}
   },
   "projects": {
     "C:\\Program Files\\Epic Games\\UE_5.5\\Engine\\Intermediate\\Build\\BuildRulesProjects\\UE5ProgramRules\\UE5ProgramRules.csproj": {
@@ -1105,14 +1105,14 @@
         }
       }
     },
-    "D:\\UnrealProject\\DS1\\Intermediate\\Build\\BuildRulesProjects\\DS1ModuleRules\\DS1ModuleRules.csproj": {
+    "D:\\UnrealProject\\Unreal\\DS1\\Intermediate\\Build\\BuildRulesProjects\\DS1ModuleRules\\DS1ModuleRules.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\UnrealProject\\DS1\\Intermediate\\Build\\BuildRulesProjects\\DS1ModuleRules\\DS1ModuleRules.csproj",
+        "projectUniqueName": "D:\\UnrealProject\\Unreal\\DS1\\Intermediate\\Build\\BuildRulesProjects\\DS1ModuleRules\\DS1ModuleRules.csproj",
         "projectName": "DS1ModuleRules",
-        "projectPath": "D:\\UnrealProject\\DS1\\Intermediate\\Build\\BuildRulesProjects\\DS1ModuleRules\\DS1ModuleRules.csproj",
+        "projectPath": "D:\\UnrealProject\\Unreal\\DS1\\Intermediate\\Build\\BuildRulesProjects\\DS1ModuleRules\\DS1ModuleRules.csproj",
         "packagesPath": "C:\\Users\\dlwot\\.nuget\\packages\\",
-        "outputPath": "D:\\UnrealProject\\DS1\\Intermediate\\Build\\BuildRulesProjects\\DS1ModuleRules\\obj\\",
+        "outputPath": "D:\\UnrealProject\\Unreal\\DS1\\Intermediate\\Build\\BuildRulesProjects\\DS1ModuleRules\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\dlwot\\AppData\\Roaming\\NuGet\\NuGet.Config",

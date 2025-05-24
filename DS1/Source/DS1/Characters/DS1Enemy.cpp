@@ -100,7 +100,7 @@ float ADS1Enemy::TakeDamage(float Damage, const FDamageEvent& DamageEvent, ACont
 	if (AttributeComponent)
 	{
 		AttributeComponent->TakeDamageAmount(ActualDamage);
-		GEngine->AddOnScreenDebugMessage(0, 1.5f, FColor::Cyan, FString::Printf(TEXT("Damaged : %f"), ActualDamage));
+		//GEngine->AddOnScreenDebugMessage(0, 1.5f, FColor::Cyan, FString::Printf(TEXT("Damaged : %f"), ActualDamage));
 	}
 
 	if (DamageEvent.IsOfType(FPointDamageEvent::ClassID))
@@ -162,6 +162,9 @@ void ADS1Enemy::OnDeath()
 	}
 
 	SetDeathState();
+
+
+	GetWorld()->GetTimerManager().SetTimer(DestroyHandle, this, &ThisClass::DestoryActor, 3.f, false);
 }
 
 void ADS1Enemy::SetDeathState()
@@ -362,6 +365,18 @@ void ADS1Enemy::ToggleHealthBarVisibility(bool bVisibility)
 void ADS1Enemy::SeesTarget(AActor* InTargetActor)
 {
 
+}
+
+void ADS1Enemy::DestoryActor()
+{
+	if (const ADS1Weapon* MainWeapon = CombatComponent->GetMainWeapon())
+	{
+		if (MainWeapon->Mesh)
+		{
+			MainWeapon->Mesh->DestroyComponent();
+		}
+	}
+	Destroy();
 }
 
 

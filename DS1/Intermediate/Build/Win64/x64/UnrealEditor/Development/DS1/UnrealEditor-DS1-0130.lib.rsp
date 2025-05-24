@@ -1,0 +1,15 @@
+/NOLOGO
+/errorReport:prompt
+/MACHINE:x64
+/SUBSYSTEM:WINDOWS
+/DEF
+/NAME:"UnrealEditor-DS1-0130.dll"
+/IGNORE:4221
+/NODEFAULTLIB
+"D:\UnrealProject\Unreal\DS1\Intermediate\Build\Win64\x64\DS1Editor\Development\UnrealEd\SharedPCH.UnrealEd.Project.ValApi.Cpp20.h.obj"
+"D:\UnrealProject\Unreal\DS1\Intermediate\Build\Win64\x64\UnrealEditor\Development\DS1\Module.DS1.cpp.obj"
+"D:\UnrealProject\Unreal\DS1\Intermediate\Build\Win64\x64\UnrealEditor\Development\DS1\DS1Character.cpp.obj"
+"D:\UnrealProject\Unreal\DS1\Intermediate\Build\Win64\x64\UnrealEditor\Development\DS1\DS1Enemy.cpp.obj"
+"D:\UnrealProject\Unreal\DS1\Intermediate\Build\Win64\x64\UnrealEditor\Development\DS1\DS1Weapon.cpp.obj"
+"D:\UnrealProject\Unreal\DS1\Intermediate\Build\Win64\x64\UnrealEditor\Development\DS1\Default.rc2.res"
+/OUT:"D:\UnrealProject\Unreal\DS1\Intermediate\Build\Win64\x64\UnrealEditor\Development\DS1\UnrealEditor-DS1-0130.lib"

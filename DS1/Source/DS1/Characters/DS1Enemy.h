@@ -128,4 +128,8 @@ public:
 	{
 		PatrolIndex = (PatrolIndex + 1) % PatrolPoints.Num();
 	}
+
+public:
+	FTimerHandle DestroyHandle;
+	void DestoryActor();
 };

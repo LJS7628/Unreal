@@ -366,6 +366,8 @@ void ADS1Character::OnDeath()
 		MeshComp->SetCollisionResponseToChannel(ECC_Camera, ECR_Ignore);
 		MeshComp->SetSimulatePhysics(true);
 	}
+
+	GetWorldTimerManager().SetTimer(ResetLevelTimerHandle, this, &ThisClass::ReloadLevel, 3.0f, false);
 }
 
 bool ADS1Character::IsMoving() const
@@ -564,7 +566,7 @@ void ADS1Character::Interact()
 		ObjectTypes,
 		false,
 		ActorsToIgnore,
-		EDrawDebugTrace::ForDuration,
+		EDrawDebugTrace::None,
 		OutHit,
 		true);
 
@@ -980,5 +982,11 @@ void ADS1Character::DeactivateWeaponCollision(EWeaponCollisionType WeaponCollisi
 void ADS1Character::ToggleIFrames(const bool bEnabled)
 {
 	bEnabledIFrames = bEnabled;
+}
+
+// 플레이어 사망시 레벨 리로드 
+void ADS1Character::ReloadLevel()
+{
+	UGameplayStatics::OpenLevel(this, FName(*GetWorld()->GetName()), false);
 }
 

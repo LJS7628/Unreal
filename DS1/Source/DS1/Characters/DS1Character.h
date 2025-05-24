@@ -195,6 +195,10 @@ protected:
 	UPROPERTY(EditAnywhere, Category = "Montage")
 	UAnimMontage* DrinkingMontage;
 
+// 플레이어가 죽었을 경우 리로드
+private:
+	FTimerHandle ResetLevelTimerHandle;
+
 public:
 	ADS1Character();
 
@@ -300,4 +304,7 @@ public:
 	virtual void DeactivateWeaponCollision(EWeaponCollisionType WeaponCollisionType) override;
 
 	virtual void ToggleIFrames(const bool bEnabled) override;
+
+private:
+	void ReloadLevel();
 };
