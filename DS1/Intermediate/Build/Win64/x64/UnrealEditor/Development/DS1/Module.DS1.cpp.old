@@ -72,7 +72,6 @@
 #include "D:/UnrealProject/Unreal/DS1/Source/DS1/Animation/AnimNotify_DS1PotionDrink.cpp"
 #include "D:/UnrealProject/Unreal/DS1/Source/DS1/Animation/DS1AnimInstance.cpp"
 #include "D:/UnrealProject/Unreal/DS1/Source/DS1/Animation/NotifyState_DS1WeaponCollision.cpp"
-#include "D:/UnrealProject/Unreal/DS1/Source/DS1/Components/DS1AttributeComponent.cpp"
 #include "D:/UnrealProject/Unreal/DS1/Source/DS1/Components/DS1CombatComponent.cpp"
 #include "D:/UnrealProject/Unreal/DS1/Source/DS1/Components/DS1PotionInventoryComponent.cpp"
 #include "D:/UnrealProject/Unreal/DS1/Source/DS1/Components/DS1RotationComponent.cpp"

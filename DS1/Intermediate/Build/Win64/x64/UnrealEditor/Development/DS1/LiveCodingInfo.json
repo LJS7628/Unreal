@@ -75,6 +75,10 @@
 			"AnimNotify_DS1PotionDrink.cpp.obj",
 			"DS1AnimInstance.cpp.obj",
 			"NotifyState_DS1WeaponCollision.cpp.obj",
+			"DS1Character.cpp.obj",
+			"DS1Enemy.cpp.obj",
+			"DS1EnemyBoss.cpp.obj",
+			"DS1AttributeComponent.cpp.obj",
 			"DS1CombatComponent.cpp.obj",
 			"DS1PotionInventoryComponent.cpp.obj",
 			"DS1RotationComponent.cpp.obj",
@@ -101,11 +105,7 @@
 			"DS1PlayerHUDWidget.cpp.obj",
 			"DS1PotionWidget.cpp.obj",
 			"DS1StatBarWidget.cpp.obj",
-			"DS1WeaponWidget.cpp.obj",
-			"DS1Character.cpp.obj",
-			"DS1Enemy.cpp.obj",
-			"DS1EnemyBoss.cpp.obj",
-			"DS1AttributeComponent.cpp.obj"
+			"DS1WeaponWidget.cpp.obj"
 		]
 	}
 }

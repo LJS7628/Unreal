@@ -8,9 +8,5 @@
 /NODEFAULTLIB
 "D:\UnrealProject\Unreal\DS1\Intermediate\Build\Win64\x64\DS1Editor\Development\UnrealEd\SharedPCH.UnrealEd.Project.ValApi.Cpp20.h.obj"
 "D:\UnrealProject\Unreal\DS1\Intermediate\Build\Win64\x64\UnrealEditor\Development\DS1\Module.DS1.cpp.obj"
-"D:\UnrealProject\Unreal\DS1\Intermediate\Build\Win64\x64\UnrealEditor\Development\DS1\DS1Character.cpp.obj"
-"D:\UnrealProject\Unreal\DS1\Intermediate\Build\Win64\x64\UnrealEditor\Development\DS1\DS1Enemy.cpp.obj"
-"D:\UnrealProject\Unreal\DS1\Intermediate\Build\Win64\x64\UnrealEditor\Development\DS1\DS1EnemyBoss.cpp.obj"
-"D:\UnrealProject\Unreal\DS1\Intermediate\Build\Win64\x64\UnrealEditor\Development\DS1\DS1AttributeComponent.cpp.obj"
 "D:\UnrealProject\Unreal\DS1\Intermediate\Build\Win64\x64\UnrealEditor\Development\DS1\Default.rc2.res"
 /OUT:"D:\UnrealProject\Unreal\DS1\Intermediate\Build\Win64\x64\UnrealEditor\Development\DS1\UnrealEditor-DS1.lib"
